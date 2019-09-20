@@ -1,0 +1,232 @@
+.kirki-host-font-locally {
+	display: none;
+}
+
+.wp-color-result .color-alpha {
+	height: 22px !important;
+}
+
+.wp-picker-active .iris-picker {
+	margin-bottom: 12px;
+}
+
+.customize-control-kirki-dimensions .wrapper .control > div h5 {
+	margin-top: 0;
+}
+
+.customize-control-kirki-typography .wrapper {
+	padding-top: 0;
+}
+
+.customize-control-kirki-box-shadow .kirki-input-container {
+	margin-bottom: 12px;
+}
+
+.customize-control-kirki-box-shadow .preview-wrapper {
+	height: 130px;
+	border: 1px solid #ddd;
+	background: #fff !important;
+}
+
+.customize-control-kirki-box-shadow .preview-object {
+	position: absolute;
+	top: calc(50% - 25px);
+	left: calc(50% - 25px);
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	width: 50px;
+	height: 50px;
+	padding: 10px;
+	color: #333 !important;
+	background: #f2f2f2 !important;
+}
+
+.customize-control-kirki-box-shadow .preview-object .dashicons {
+	width: 30px;
+	height: 30px;
+	font-size: 30px;
+}
+
+.customize-control-kirki-box-shadow input[type="range"] {
+	width: 100%;
+}
+
+.customize-control-kirki-box-shadow .coordinates {
+	display: block;
+	margin-top: -5px;
+	margin-right: -5px;
+	margin-left: -5px;
+	font-size: 9px;
+	text-align: center;
+}
+
+.background-wrapper .background-color {
+	display: none;
+}
+
+.customize-control-kirki-radio-image label {
+	padding: 0 8px 8px 0;
+}
+
+.customize-control-kirki-radio-image input:checked + label img {
+	border: 0;
+	box-shadow: none;
+}
+
+.customize-control-kirki-radio-image input:not(:checked) + label img {
+	background: #bdc3c7;
+}
+
+.customize-control-kirki-sortable ul.ui-sortable li {
+	border-color: #ddd;
+}
+
+.customize-control-kirki-dimensions .wrapper,
+.customize-control-kirki-typography .wrapper {
+	padding: 0;
+	border: 0;
+}
+
+.customize-control-kirki-dimensions .wrapper .control > div h5 {
+	margin-bottom: 1px;
+}
+
+.customize-control hr {
+	margin-bottom: 0;
+}
+
+.customize-control-code_editor .CodeMirror {
+	height: calc(100vh - 320px);
+}
+
+.CodeMirror-sizer {
+	min-height: 62px !important;
+	margin-bottom: 0 !important;
+	margin-left: 46px !important;
+	padding-right: 0 !important;
+	padding-bottom: 0 !important;
+	border-right-width: 30px !important;
+}
+
+.CodeMirror-gutter.CodeMirror-linenumbers {
+	width: 29px !important;
+}
+
+#customize-control-footer_widgets_columns img,
+#customize-control-header_above_layout img,
+#customize-control-header_below_layout img,
+#customize-control-content_above_layout img,
+#customize-control-content_below_layout img,
+#customize-control-footer_above_layout img,
+#customize-control-footer_below_layout img,
+#customize-control-header_primary_layout img {
+	width: 76px;
+}
+
+#customize-control-header_primary_mobile-layout img {
+	width: 60px;
+}
+
+#accordion-section-customize-pro_pro h3 {
+	position: relative;
+	margin: 0;
+	padding: 1px 0;
+	border: 0;
+	cursor: pointer;
+}
+
+#accordion-section-customize-pro_pro a {
+	display: block;
+	padding: 11px 10px 12px 14px;
+	border-left: 4px solid #fff;
+	background: #fff;
+	text-decoration: none;
+}
+
+#accordion-section-customize-pro_pro a:after {
+	display: block;
+	float: right;
+	position: absolute;
+	z-index: 1;
+	top: 11px;
+	right: 10px;
+	padding: 0;
+	border: none;
+	background: 0 0;
+	font: normal 20px/1 dashicons;
+	text-align: center;
+	text-indent: 0;
+	content: "\f345";
+	speak: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+div.tooltip-wrapper .tooltip-content {
+	color: #fff;
+	background: #0084ba;
+}
+
+div.tooltip-wrapper .tooltip-content:after {
+	color: #0084ba;
+}
+
+.customize-control-kirki-radio-buttonset .buttonset .switch-label {
+	line-height: 1.5;
+}
+
+.customize-control-kirki-radio-buttonset .buttonset .switch-input:checked + .switch-label {
+	color: #fff;
+	background-color: #1e8cbe;
+	text-shadow: 0 1px 3px #069;
+}
+
+.customize-control-kirki-slider .wrapper {
+	padding: 17px 0 7px;
+}
+
+.customize-control-kirki-slider .wrapper input[type="text"] {
+	width: 48px;
+	margin-left: 1em;
+	padding: 0 0.5em;
+	border: 1px solid #ddd;
+	background: #fff;
+	box-shadow: inset 0 1px 2px rgba(0,0,0,0.07);
+}
+
+.customize-control-kirki-slider .wrapper input[type="text"]:focus {
+	border-color: #5b9dd9;
+	outline: 2px solid transparent;
+	box-shadow: 0 0 2px rgba(30,140,190,0.8);
+}
+
+.customize-control-kirki-box-shadow .preview-object .dashicons {
+	font-size: 24px;
+}
+
+.customize-control-kirki-radio-buttonset .buttonset {
+	border: 1px solid #ddd;
+}
+
+.customize-control-kirki-radio-buttonset .buttonset .switch-label {
+	background: #ddd;
+}
+
+.customize-control-kirki-radio-buttonset .buttonset .switch-input:checked + .switch-label {
+	color: #555d66;
+	background-color: #fff;
+	text-shadow: none;
+}
+
+.customize-control-kirki-radio-buttonset svg {
+	display: block;
+	width: 12px;
+	height: 12px;
+	margin: 0 auto;
+	-webkit-font-smoothing: antialiased;
+	fill: #555d66;
+}
+
+#accordion-section-customize-pro {
+	display: none !important;
+}

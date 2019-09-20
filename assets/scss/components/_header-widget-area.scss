@@ -1,0 +1,73 @@
+////
+/// Header widget area component.
+///
+/// @group  Components
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://CustomizePro.com/
+////
+
+.site-header {
+
+	.widget {
+		margin-bottom: 0;
+	}
+}
+
+.header-left {
+	display: flex;
+	align-items: center;
+
+	@include mq(m) {
+
+		.has-logo-above &,
+		.has-logo-center & {
+			margin-right: auto;
+		}
+
+		.has-logo-side & {
+			margin-right: auto;
+			margin-left: auto;
+			text-align: center;
+		}
+	}
+
+	@include mq(0, m) {
+
+		.has-logo-above-mobile &,
+		.has-logo-below-mobile & {
+			margin-right: auto;
+			flex: 1;
+		}
+	}
+}
+
+.header-right {
+	display: flex;
+	text-align: right;
+	align-items: center;
+
+	@include mq(m) {
+
+		.has-logo-above &,
+		.has-logo-center & {
+			margin-left: auto;
+		}
+
+		.has-logo-side & {
+			margin-right: auto;
+			margin-left: auto;
+			text-align: center;
+			align-self: flex-end;
+		}
+	}
+
+	@include mq(0, m) {
+
+		.has-logo-above-mobile &,
+		.has-logo-below-mobile & {
+			margin-left: auto;
+			flex: 1;
+		}
+	}
+}
+

@@ -1,0 +1,54 @@
+////
+/// Primary header component.
+///
+/// @group  Components
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://CustomizePro.com/
+////
+
+.primary-header {
+	display: flex;
+	position: relative;
+	z-index: 3;
+	flex-wrap: wrap;
+	align-items: center;
+
+	@include mq(m) {
+
+		.has-logo-side & {
+			height: 100%;
+
+			.wrap {
+				height: 100%;
+			}
+		}
+	}
+
+	> .wrap {
+		position: relative;
+
+		@include mq(0, m) {
+
+			.has-logo-above-mobile &,
+			.has-logo-below-mobile & {
+				justify-content: center;
+			}
+		}
+
+		@include mq(m) {
+
+			.has-logo-above & {
+				justify-content: center;
+			}
+
+			.has-logo-left &,
+			.has-logo-right & {
+				flex-wrap: nowrap;
+			}
+
+			.has-logo-center & {
+				justify-content: center;
+			}
+		}
+	}
+}

@@ -1,0 +1,30 @@
+////
+/// Search form component.
+///
+/// @group  Components
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://CustomizePro.com/
+////
+
+.search-form {
+
+	&-input {
+	}
+
+	&-submit {
+		display: none;
+
+		.header-search & {
+			display: block;
+		}
+	}
+
+	input[value*="icon"] {
+		letter-spacing: -1em;
+		color: transparent !important;
+		background-image: url(../../assets/img/search.svg);
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+}
+

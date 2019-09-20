@@ -1,0 +1,122 @@
+////
+/// Menu component.
+///
+/// @group  Components
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://CustomizePro.com/
+////
+
+.menu {
+	display: flex;
+	position: relative;
+	width: auto;
+	margin-bottom: 0;
+	border: 0;
+	font-size: $base--font-size / $major-second;
+	font-weight: $font-weight--semibold;
+	list-style-type: none;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+
+	@include overlay();
+
+	@include mq(0, m) {
+		width: 100%;
+		margin: 0;
+	}
+
+	.no-js & {
+		width: 100%;
+		border: 0;
+	}
+
+	.sidebar & {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	// Menu item.
+	&-item {
+		display: block;
+		position: relative;
+		width: auto;
+		margin: 0;
+
+		@include margin(null auto);
+
+		@include mq(0, m) {
+			display: flex;
+			width: 90%;
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: space-between;
+
+			.nav-footer & {
+				width: auto;
+			}
+		}
+
+		&:last-of-type {
+			padding-right: 0 !important;
+		}
+
+		&:first-of-type {
+			padding-left: 0 !important;
+		}
+
+		.has-logo-side & {
+			width: 100%;
+			padding: 0;
+
+			a {
+				text-align: center;
+				justify-content: center;
+			}
+		}
+
+		.no-js & {
+			width: 100%;
+			padding: 0;
+		}
+
+		.sidebar & {
+			width: 100%;
+		}
+
+		&.bold a {
+			font-weight: $font-weight--bold;
+		}
+	}
+
+	// Link
+	a {
+		display: block;
+		text-decoration: none;
+	}
+
+	.flex-start & {
+		justify-content: flex-start;
+	}
+
+	.center & {
+
+		.menu-item {
+			justify-content: center;
+		}
+	}
+
+	.flex-end & {
+
+		.menu-item {
+			padding-right: 3em;
+			text-align: right;
+			justify-content: flex-end;
+		}
+
+		.menu-item-has-children {
+			padding-right: 0;
+		}
+	}
+}

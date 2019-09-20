@@ -1,0 +1,13 @@
+.has-logo-side .elementor-element {
+	left: 0 !important;
+	max-width: 100%;
+}
+
+.elementor-button.elementor-size-sm {
+	padding: 1em 2em;
+	font-size: smaller;
+}
+
+.elementor-image-gallery .gallery-item {
+	width: 100% !important;
+}

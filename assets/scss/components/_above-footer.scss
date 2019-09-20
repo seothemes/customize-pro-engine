@@ -1,0 +1,20 @@
+////
+/// Above footer component.
+///
+/// @group  Components
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://CustomizePro.com/
+////
+
+.above-footer {
+
+	@include overlay();
+
+	.wrap {
+		position: relative;
+	}
+
+	.widget {
+		margin-bottom: 0;
+	}
+}

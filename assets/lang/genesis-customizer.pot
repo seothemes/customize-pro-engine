@@ -1,0 +1,1631 @@
+# Copyright (C) 2019 Customize Pro 0.2.3
+# This file is distributed under the same license as the Customize Pro 0.2.3 package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Customize Pro 0.2.3\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: functions.php:99
+msgid "You should <a href=\"%s\">delete the theme</a> and activate as a plugin instead."
+msgstr ""
+
+#: functions.php:104
+msgid "Customize Pro appears to already exist as a plugin."
+msgstr ""
+
+#: functions.php:109
+msgid "Customize Pro could not be moved to your plugins folder automatically. You should move it manually."
+msgstr ""
+
+#: functions.php:113
+msgid "<strong>Customize Pro is not a theme.</strong> It should be installed as a plugin."
+msgstr ""
+
+#: functions.php:114
+msgid "Would you like to move it now?"
+msgstr ""
+
+#: config/archive/description.php:9, config/archive/entries.php:9, config/archive/pagination.php:9, config/archive/post-info.php:46, config/archive/read-more.php:77, config/archive/settings.php:9, config/base/blockquotes.php:9, config/base/body.php:9, config/base/buttons.php:9, config/base/code.php:9, config/base/headings.php:9, config/base/inputs.php:9, config/base/links.php:9, config/content/author-box.php:9, config/content/avatar.php:9, config/content/breadcrumbs.php:9, config/footer/credits.php:20, config/footer/widgets.php:31, config/header/primary.php:61, config/header/right.php:48, config/header/title-area.php:9, config/menus/footer.php:37, config/menus/menu-toggle.php:20, config/menus/mobile.php:9, config/menus/primary.php:9, config/menus/secondary.php:20, config/menus/social.php:25, config/menus/sub-menu-toggle.php:20, config/menus/sub-menu.php:20, config/sidebars/featured-content.php:9, config/sidebars/primary.php:9, config/sidebars/secondary.php:9, config/single/after-entry.php:9, config/single/comments.php:9, config/single/entry.php:9, src/classes/class-admin-settings.php:199
+msgid "Colors"
+msgstr ""
+
+#: config/archive/description.php:11, config/archive/entries.php:11, config/archive/pagination.php:11, config/archive/settings.php:11, config/base/blockquotes.php:13, config/base/body.php:12, config/base/buttons.php:11, config/base/code.php:12, config/base/inputs.php:12, config/content/author-box.php:11, config/content/breadcrumbs.php:11, config/footer/credits.php:22, config/footer/widgets.php:33, config/header/primary.php:63, config/menus/footer.php:39, config/menus/menu-toggle.php:22, config/menus/mobile.php:11, config/menus/secondary.php:22, config/menus/social.php:36, config/menus/sub-menu-toggle.php:22, config/single/after-entry.php:11, config/single/comments.php:11, config/single/entry.php:11
+msgid "Background"
+msgstr ""
+
+#: config/archive/description.php:12, config/content/author-box.php:12, config/content/author-box.php:49, config/single/comments.php:74
+msgid "Title"
+msgstr ""
+
+#: config/archive/description.php:13
+msgid "Description"
+msgstr ""
+
+#: config/archive/description.php:46, config/footer/widgets.php:119, config/sidebars/featured-content.php:130
+msgid "Title Typography"
+msgstr ""
+
+#: config/archive/description.php:70, config/base/body.php:125, config/base/headings.php:82
+msgid "Margin Top"
+msgstr ""
+
+#: config/archive/description.php:71, config/base/body.php:126, config/base/headings.php:83
+msgid "Margin Bottom"
+msgstr ""
+
+#: config/archive/description.php:95, config/base/blockquotes.php:193, config/footer/credits.php:132, config/single/post-meta.php:64
+msgid "Text Alignment"
+msgstr ""
+
+#: config/archive/description.php:117, config/archive/pagination.php:60, config/base/blockquotes.php:149, config/content/author-box.php:60, config/content/breadcrumbs.php:103, config/single/after-entry.php:32, config/single/comments.php:32
+msgid "Spacing"
+msgstr ""
+
+#: config/archive/entries.php:12
+msgid "Entry Title Link"
+msgstr ""
+
+#: config/archive/entries.php:13
+msgid "Entry Title Link Hover"
+msgstr ""
+
+#: config/archive/entries.php:46, config/single/entry.php:43
+msgid "Entry Title Typography"
+msgstr ""
+
+#: config/archive/entries.php:69
+msgid "Entry Content Typography"
+msgstr ""
+
+#: config/archive/entries.php:92, config/sidebars/featured-content.php:71, config/single/entry.php:83
+msgid "Entry Spacing"
+msgstr ""
+
+#: config/archive/entries.php:133
+msgid "Entry Title Spacing Top"
+msgstr ""
+
+#: config/archive/entries.php:151
+msgid "Entry Title Spacing Bottom"
+msgstr ""
+
+#: config/archive/entries.php:169
+msgid "Entry Border Radius"
+msgstr ""
+
+#: config/archive/entries.php:197
+msgid "Entry Shadow"
+msgstr ""
+
+#: config/archive/pagination.php:12
+msgid "Link Background"
+msgstr ""
+
+#: config/archive/pagination.php:13
+msgid "Link Background Hover"
+msgstr ""
+
+#: config/archive/pagination.php:14
+msgid "Link Text"
+msgstr ""
+
+#: config/archive/pagination.php:15
+msgid "Link Text Hover"
+msgstr ""
+
+#: config/archive/pagination.php:78
+msgid "Link Spacing"
+msgstr ""
+
+#: config/archive/pagination.php:101, config/footer/credits.php:114, config/header/primary.php:42, config/menus/footer.php:112, config/menus/secondary.php:92, config/single/featured-image.php:40
+msgid "Alignment"
+msgstr ""
+
+#: config/archive/pagination.php:104
+msgid "Align Left"
+msgstr ""
+
+#: config/archive/pagination.php:105
+msgid "Align Center"
+msgstr ""
+
+#: config/archive/pagination.php:106
+msgid "Align Right"
+msgstr ""
+
+#: config/archive/pagination.php:107
+msgid "Align Full"
+msgstr ""
+
+#: config/archive/pagination.php:118
+msgid "Previous Link Text"
+msgstr ""
+
+#: config/archive/pagination.php:119
+msgid "← Previous"
+msgstr ""
+
+#: config/archive/pagination.php:124
+msgid "Next Link Text"
+msgstr ""
+
+#: config/archive/pagination.php:125
+msgid "Next →"
+msgstr ""
+
+#: config/archive/post-info.php:11, config/archive/settings.php:29, config/base/headings.php:104, config/header/title-area.php:43, config/header/title-area.php:100, config/menus/footer.php:28, config/menus/primary.php:47, config/menus/secondary.php:11, config/menus/sub-menu-toggle.php:11, config/menus/sub-menu.php:11, config/single/post-meta.php:11, src/customizer/extra.php:204
+msgid "Tip: "
+msgstr ""
+
+#: config/archive/post-info.php:12, config/single/post-meta.php:12
+msgid "For a list of available post shortcodes, please see the "
+msgstr ""
+
+#: config/archive/post-info.php:14, config/single/post-meta.php:14
+msgid "Post Shortcode Reference"
+msgstr ""
+
+#: config/archive/post-info.php:15, config/single/post-meta.php:15
+msgid "provided by StudioPress."
+msgstr ""
+
+#: config/archive/post-info.php:21, config/single/post-meta.php:21, src/customizer/sections.php:80
+msgid "Post Info"
+msgstr ""
+
+#: config/archive/post-info.php:31, config/single/post-meta.php:31, src/customizer/sections.php:73
+msgid "Post Meta"
+msgstr ""
+
+#: config/archive/post-info.php:48, config/archive/read-more.php:30, config/base/blockquotes.php:12, config/base/body.php:11, config/base/buttons.php:13, config/base/code.php:11, config/base/headings.php:11, config/base/inputs.php:13, config/base/links.php:11, config/content/breadcrumbs.php:12, config/footer/credits.php:23, config/footer/credits.php:152, config/footer/credits.php:159, config/footer/widgets.php:34, config/menus/menu-toggle.php:9, config/sidebars/featured-content.php:12, config/sidebars/primary.php:12, config/sidebars/secondary.php:12
+msgid "Text"
+msgstr ""
+
+#: config/archive/post-info.php:49, config/archive/read-more.php:23, config/archive/read-more.php:79, config/menus/footer.php:41, config/menus/primary.php:11, config/menus/secondary.php:24
+msgid "Link"
+msgstr ""
+
+#: config/archive/post-info.php:50, config/archive/read-more.php:80, config/menus/footer.php:42, config/menus/primary.php:12, config/menus/secondary.php:25
+msgid "Link Hover"
+msgstr ""
+
+#: config/archive/post-info.php:83, config/archive/read-more.php:54, config/base/blockquotes.php:63, config/base/body.php:47, config/base/buttons.php:95, config/base/code.php:51, config/base/headings.php:46, config/base/inputs.php:67, config/base/links.php:39, config/base/lists.php:71, config/content/breadcrumbs.php:53, config/footer/credits.php:64, config/footer/widgets.php:96, config/menus/footer.php:88, config/menus/mobile.php:60, config/menus/primary.php:57, config/menus/secondary.php:68, config/menus/sub-menu.php:67, config/sidebars/primary.php:70, config/sidebars/secondary.php:70, config/single/post-meta.php:46
+msgid "Typography"
+msgstr ""
+
+#: config/archive/post-info.php:106, config/footer/credits.php:183, config/footer/widgets.php:177, config/menus/footer.php:135, config/single/featured-image.php:56
+msgid "Spacing Top"
+msgstr ""
+
+#: config/archive/post-info.php:124, config/base/lists.php:48, config/footer/credits.php:201, config/footer/widgets.php:195, config/menus/footer.php:153, config/single/featured-image.php:74
+msgid "Spacing Bottom"
+msgstr ""
+
+#: config/archive/read-more.php:9
+msgid "Display"
+msgstr ""
+
+#: config/archive/read-more.php:12, config/content/search-form.php:12
+msgid "Inline"
+msgstr ""
+
+#: config/archive/read-more.php:13, config/content/search-form.php:13
+msgid "Block"
+msgstr ""
+
+#: config/archive/read-more.php:14, config/base/lists.php:15, config/content/search-form.php:14, config/header/right.php:31, config/menus/social.php:102
+msgid "None"
+msgstr ""
+
+#: config/archive/read-more.php:20
+msgid "Style"
+msgstr ""
+
+#: config/archive/read-more.php:24
+msgid "Button"
+msgstr ""
+
+#: config/archive/read-more.php:31
+msgid "Read more"
+msgstr ""
+
+#: config/archive/read-more.php:43
+msgid "Show ellipses"
+msgstr ""
+
+#: config/archive/settings.php:30
+msgid "Genesis blog and archive settings can be changed from the"
+msgstr ""
+
+#: config/archive/settings.php:32
+msgid "Content Archives Section"
+msgstr ""
+
+#: config/base/blockquotes.php:11, config/base/blockquotes.php:91, config/base/buttons.php:15, config/base/inputs.php:15, config/content/avatar.php:11, config/footer/widgets.php:38, config/header/primary.php:120, config/menus/footer.php:40, config/menus/menu-toggle.php:27, config/menus/primary.php:13, config/menus/secondary.php:23, config/menus/secondary.php:194, config/menus/social.php:38, config/menus/sub-menu-toggle.php:26
+msgid "Border"
+msgstr ""
+
+#: config/base/blockquotes.php:14
+msgid "Quotation Mark"
+msgstr ""
+
+#: config/base/blockquotes.php:15
+msgid "Citation"
+msgstr ""
+
+#: config/base/blockquotes.php:100, config/footer/widgets.php:261, config/header/primary.php:127, config/menus/footer.php:221, config/menus/primary.php:147, config/menus/secondary.php:201
+msgid "Border Top Width"
+msgstr ""
+
+#: config/base/blockquotes.php:101
+msgid "Border Right Width"
+msgstr ""
+
+#: config/base/blockquotes.php:102, config/footer/widgets.php:262, config/header/primary.php:128, config/menus/footer.php:222, config/menus/primary.php:148, config/menus/secondary.php:202
+msgid "Border Bottom Width"
+msgstr ""
+
+#: config/base/blockquotes.php:103
+msgid "Border Left Width"
+msgstr ""
+
+#: config/base/blockquotes.php:172
+msgid "Quotation Mark Typography"
+msgstr ""
+
+#: config/base/blockquotes.php:222
+msgid "Citation Typography"
+msgstr ""
+
+#: config/base/body.php:75, config/content/breadcrumbs.php:70, config/footer/credits.php:81
+msgid "Font Size"
+msgstr ""
+
+#: config/base/body.php:82, config/header/right.php:30
+msgid "Mobile"
+msgstr ""
+
+#: config/base/body.php:83, config/header/right.php:29
+msgid "Desktop"
+msgstr ""
+
+#: config/base/body.php:118
+msgid "Paragraphs"
+msgstr ""
+
+#: config/base/buttons.php:12, config/menus/social.php:37
+msgid "Background Hover"
+msgstr ""
+
+#: config/base/buttons.php:14, config/base/inputs.php:14, config/base/links.php:12
+msgid "Text Hover"
+msgstr ""
+
+#: config/base/buttons.php:16, config/base/inputs.php:16, config/menus/social.php:39
+msgid "Border Hover"
+msgstr ""
+
+#: config/base/buttons.php:122
+msgid "Typography Desktop"
+msgstr ""
+
+#: config/base/buttons.php:142, config/base/inputs.php:90, config/header/right.php:78, config/header/title-area.php:130
+msgid "Vertical Spacing"
+msgstr ""
+
+#: config/base/buttons.php:165, config/base/inputs.php:113, config/menus/social.php:165
+msgid "Horizontal Spacing"
+msgstr ""
+
+#: config/base/buttons.php:188, config/base/global.php:268, config/base/inputs.php:136, config/content/avatar.php:32, config/menus/menu-toggle.php:211, config/menus/social.php:188
+msgid "Border Radius"
+msgstr ""
+
+#: config/base/buttons.php:212, config/base/inputs.php:154, config/content/avatar.php:50, config/footer/widgets.php:254, config/menus/footer.php:214, config/menus/menu-toggle.php:163, config/menus/primary.php:140, config/menus/social.php:206, config/menus/sub-menu-toggle.php:138
+msgid "Border Width"
+msgstr ""
+
+#: config/base/buttons.php:241, config/base/inputs.php:183
+msgid "Shadow"
+msgstr ""
+
+#: config/base/buttons.php:258, config/base/inputs.php:200
+msgid "Shadow Hover"
+msgstr ""
+
+#: config/base/global.php:27
+msgid "Gutters"
+msgstr ""
+
+#: config/base/global.php:28
+msgid "Controls the spacing between common page elements such as entries, breadcrumbs, widgets, comments etc."
+msgstr ""
+
+#: config/base/global.php:212
+msgid "Wrap Max Width"
+msgstr ""
+
+#: config/base/global.php:213
+msgid "Controls the maximum percentage of the screen that element wrappers can span."
+msgstr ""
+
+#: config/base/global.php:269
+msgid "Controls the border radius for common page elements such as entries, breadcrumbs, widgets, comments etc."
+msgstr ""
+
+#: config/base/global.php:307, config/header/primary.php:152
+msgid "Drop Shadow"
+msgstr ""
+
+#: config/base/global.php:308
+msgid "Controls the drop shadow for common page elements such as entries, breadcrumbs, widgets, comments etc."
+msgstr ""
+
+#: config/base/global.php:335
+msgid "Transitions"
+msgstr ""
+
+#: config/base/global.php:336
+msgid "Duration"
+msgstr ""
+
+#: config/base/global.php:369
+msgid "Delay"
+msgstr ""
+
+#: config/base/global.php:387
+msgid "Function"
+msgstr ""
+
+#: config/base/global.php:390
+msgid "Ease"
+msgstr ""
+
+#: config/base/global.php:391
+msgid "Ease in"
+msgstr ""
+
+#: config/base/global.php:392
+msgid "Ease in out"
+msgstr ""
+
+#: config/base/global.php:393
+msgid "Ease out"
+msgstr ""
+
+#: config/base/global.php:394
+msgid "Linear"
+msgstr ""
+
+#: config/base/global.php:395
+msgid "Step end"
+msgstr ""
+
+#: config/base/global.php:396
+msgid "Step middle"
+msgstr ""
+
+#: config/base/global.php:397
+msgid "Step start"
+msgstr ""
+
+#: config/base/headings.php:105
+msgid "Entry title typography settings can be customized from the "
+msgstr ""
+
+#: config/base/headings.php:107
+msgid "Entry Section"
+msgstr ""
+
+#: config/base/headings.php:113
+msgid "H1 Font Size"
+msgstr ""
+
+#: config/base/headings.php:149
+msgid "H2 Font Size"
+msgstr ""
+
+#: config/base/headings.php:176
+msgid "H3 Font Size"
+msgstr ""
+
+#: config/base/headings.php:203
+msgid "H4 Font Size"
+msgstr ""
+
+#: config/base/headings.php:230
+msgid "H5 Font Size"
+msgstr ""
+
+#: config/base/headings.php:257
+msgid "H6 Font Size"
+msgstr ""
+
+#: config/base/inputs.php:11
+msgid "Placeholder Text"
+msgstr ""
+
+#: config/base/links.php:57
+msgid "Typography Hover"
+msgstr ""
+
+#: config/base/lists.php:9
+msgid "Default type"
+msgstr ""
+
+#: config/base/lists.php:12
+msgid "Disc"
+msgstr ""
+
+#: config/base/lists.php:13
+msgid "Circle"
+msgstr ""
+
+#: config/base/lists.php:14
+msgid "Square"
+msgstr ""
+
+#: config/base/lists.php:27
+msgid "Default position"
+msgstr ""
+
+#: config/base/lists.php:30
+msgid "Inside"
+msgstr ""
+
+#: config/base/lists.php:31
+msgid "Outside"
+msgstr ""
+
+#: config/content/author-box.php:13
+msgid "Content"
+msgstr ""
+
+#: config/content/author-box.php:78
+msgid "Title Bottom Spacing"
+msgstr ""
+
+#: config/content/breadcrumbs.php:13, config/footer/credits.php:24, config/footer/widgets.php:36, config/menus/mobile.php:13, config/sidebars/featured-content.php:13, config/sidebars/primary.php:13, config/sidebars/secondary.php:13, src/customizer/sections.php:28
+msgid "Links"
+msgstr ""
+
+#: config/content/breadcrumbs.php:14, config/footer/credits.php:25, config/footer/widgets.php:37, config/menus/mobile.php:14, config/sidebars/featured-content.php:14, config/sidebars/primary.php:14, config/sidebars/secondary.php:14
+msgid "Links Hover"
+msgstr ""
+
+#: config/content/breadcrumbs.php:77, config/footer/credits.php:88
+msgid "Font Size Mobile"
+msgstr ""
+
+#: config/content/breadcrumbs.php:78, config/footer/credits.php:89
+msgid "Font Size Desktop"
+msgstr ""
+
+#: config/content/breadcrumbs.php:126
+msgid "Home"
+msgstr ""
+
+#: config/content/breadcrumbs.php:127
+msgid "You are here: "
+msgstr ""
+
+#: config/content/breadcrumbs.php:128, config/content/breadcrumbs.php:129, config/content/breadcrumbs.php:130, config/content/breadcrumbs.php:131, config/content/breadcrumbs.php:133, config/content/breadcrumbs.php:134
+msgid "Archives for "
+msgstr ""
+
+#: config/content/breadcrumbs.php:132
+msgid "Search for "
+msgstr ""
+
+#: config/content/breadcrumbs.php:135
+msgid "Not found: "
+msgstr ""
+
+#: config/content/breadcrumbs.php:141
+msgid "Changes the %s label. Default value is \"%s\"."
+msgstr ""
+
+#: config/content/breadcrumbs.php:149
+msgid " Label"
+msgstr ""
+
+#: config/content/main.php:9
+msgid "Content Area Width"
+msgstr ""
+
+#: config/content/main.php:10
+msgid "Controls the maximum width of the main content area. The main content area consists of the content and sidebars."
+msgstr ""
+
+#: config/content/main.php:47
+msgid "Vertical Spacing Mobile"
+msgstr ""
+
+#: config/content/main.php:76
+msgid "Vertical Spacing Desktop"
+msgstr ""
+
+#: config/content/search-form.php:9
+msgid "Button Style"
+msgstr ""
+
+#: config/content/search-form.php:32
+msgid "Use icon for submit button"
+msgstr ""
+
+#: config/content/search-form.php:67
+msgid "Button Vertical Spacing"
+msgstr ""
+
+#: config/content/search-form.php:90
+msgid "Button Horizontal Spacing"
+msgstr ""
+
+#: config/content/search-form.php:113, config/menus/menu-toggle.php:270, config/menus/social.php:129, config/menus/sub-menu-toggle.php:113
+msgid "Icon Size"
+msgstr ""
+
+#: config/footer/credits.php:9, config/footer/credits.php:172
+msgid "Display Footer Credits section"
+msgstr ""
+
+#: config/footer/credits.php:117, config/menus/footer.php:115, config/menus/secondary.php:95
+msgid "Full Width"
+msgstr ""
+
+#: config/footer/credits.php:118, config/menus/footer.php:118, config/menus/primary.php:85, config/menus/secondary.php:98
+msgid "Center"
+msgstr ""
+
+#: config/footer/credits.php:119, config/menus/footer.php:116, config/menus/primary.php:84, config/menus/secondary.php:96
+msgid "Left"
+msgstr ""
+
+#: config/footer/credits.php:120, config/menus/footer.php:117, config/menus/primary.php:86, config/menus/secondary.php:97
+msgid "Right"
+msgstr ""
+
+#: config/footer/credits.php:149
+msgid "Type"
+msgstr ""
+
+#: config/footer/credits.php:153
+msgid "Widget Area"
+msgstr ""
+
+#: config/footer/site-footer.php:9
+msgid "Gradient Overlay"
+msgstr ""
+
+#: config/footer/site-footer.php:12
+msgid "Background Left"
+msgstr ""
+
+#: config/footer/site-footer.php:13
+msgid "Background Right"
+msgstr ""
+
+#: config/footer/site-footer.php:23
+msgid "Gradient Angle"
+msgstr ""
+
+#: config/footer/site-footer.php:39
+msgid "Background Image"
+msgstr ""
+
+#: config/footer/site-footer.php:61, config/footer/widgets.php:159, config/header/primary.php:93
+msgid "Container Width"
+msgstr ""
+
+#: config/footer/widgets.php:9
+msgid "Columns"
+msgstr ""
+
+#: config/footer/widgets.php:35, src/customizer/sections.php:27
+msgid "Headings"
+msgstr ""
+
+#: config/footer/widgets.php:137, config/single/entry.php:61
+msgid "Title Text Alignment"
+msgstr ""
+
+#: config/footer/widgets.php:213
+msgid "Widget Spacing Top"
+msgstr ""
+
+#: config/footer/widgets.php:231
+msgid "Widget Spacing Bottom"
+msgstr ""
+
+#: config/header/primary.php:9
+msgid "Desktop Layout"
+msgstr ""
+
+#: config/header/primary.php:24
+msgid "Additional desktop and mobile header layouts available in"
+msgstr ""
+
+#: config/header/primary.php:25, config/header/right.php:12, config/menus/mobile.php:117, src/admin/notices.php:36, src/customizer/extra.php:149
+msgid "Customize Pro"
+msgstr ""
+
+#: config/header/primary.php:26, config/header/right.php:13, config/menus/mobile.php:118, src/customizer/extra.php:150
+msgid "!"
+msgstr ""
+
+#: config/header/primary.php:28, config/header/right.php:15, config/menus/mobile.php:120, src/admin/notices.php:39, src/customizer/extra.php:152
+msgid "Go Pro →"
+msgstr ""
+
+#: config/header/primary.php:40
+msgid "Tip:"
+msgstr ""
+
+#: config/header/primary.php:41
+msgid "Menu not aligning correctly? Try adjusting the"
+msgstr ""
+
+#: config/header/primary.php:43
+msgid "in the"
+msgstr ""
+
+#: config/header/primary.php:45
+msgid "Primary Menu Section"
+msgstr ""
+
+#: config/header/primary.php:46, src/customizer/extra.php:208
+msgid "or the"
+msgstr ""
+
+#: config/header/primary.php:48
+msgid "Secondary Menu Section"
+msgstr ""
+
+#: config/header/primary.php:64
+msgid "Border Top"
+msgstr ""
+
+#: config/header/primary.php:65
+msgid "Border Bottom"
+msgstr ""
+
+#: config/header/right.php:11
+msgid "Header Left widget also available in"
+msgstr ""
+
+#: config/header/right.php:24
+msgid "Enable on"
+msgstr ""
+
+#: config/header/right.php:28
+msgid "Desktop and Mobile"
+msgstr ""
+
+#: config/header/right.php:39
+msgid "Quick Link: "
+msgstr ""
+
+#: config/header/right.php:40
+msgid "Edit  "
+msgstr ""
+
+#: config/header/right.php:42
+msgid "Header Right Widgets"
+msgstr ""
+
+#: config/header/right.php:50, config/sidebars/primary.php:16, config/sidebars/secondary.php:16
+msgid "Widget Title"
+msgstr ""
+
+#: config/header/right.php:51
+msgid "Widget Content"
+msgstr ""
+
+#: config/header/right.php:101, config/header/title-area.php:153
+msgid "Spacing Left"
+msgstr ""
+
+#: config/header/right.php:119, config/header/title-area.php:171
+msgid "Spacing Right"
+msgstr ""
+
+#: config/header/title-area.php:11
+msgid "Site Title"
+msgstr ""
+
+#: config/header/title-area.php:12
+msgid "Site Title Hover"
+msgstr ""
+
+#: config/header/title-area.php:13
+msgid "Site Description"
+msgstr ""
+
+#: config/header/title-area.php:44
+msgid "Looking for the Custom Logo settings? Change them in the "
+msgstr ""
+
+#: config/header/title-area.php:46, config/header/title-area.php:103
+msgid "Site Identity Section"
+msgstr ""
+
+#: config/header/title-area.php:52
+msgid "Site Title Typography"
+msgstr ""
+
+#: config/header/title-area.php:79
+msgid "Site Description Typography"
+msgstr ""
+
+#: config/header/title-area.php:101
+msgid "The site title and site description can be changed from the "
+msgstr ""
+
+#: config/header/title-area.php:109
+msgid "Site Title Bottom Spacing"
+msgstr ""
+
+#: config/menus/footer-widgets.php:9
+msgid "Footer Widgets Menu Columns"
+msgstr ""
+
+#: config/menus/footer-widgets.php:10
+msgid "Changes the number of columns for menu items in Navigation Menu widgets."
+msgstr ""
+
+#: config/menus/footer-widgets.php:13
+msgid "1 Column"
+msgstr ""
+
+#: config/menus/footer-widgets.php:14
+msgid "2 Column"
+msgstr ""
+
+#: config/menus/footer-widgets.php:15
+msgid "3 Column"
+msgstr ""
+
+#: config/menus/footer-widgets.php:16
+msgid "4 Column"
+msgstr ""
+
+#: config/menus/footer-widgets.php:33
+msgid "Menu Spacing Top"
+msgstr ""
+
+#: config/menus/footer-widgets.php:51
+msgid "Menu Spacing Bottom"
+msgstr ""
+
+#: config/menus/footer-widgets.php:69
+msgid "Menu Item Spacing Top"
+msgstr ""
+
+#: config/menus/footer-widgets.php:87
+msgid "Menu Item Spacing Bottom"
+msgstr ""
+
+#: config/menus/footer.php:9, config/single/featured-image.php:21
+msgid "Position"
+msgstr ""
+
+#: config/menus/footer.php:12
+msgid "Above Site Footer"
+msgstr ""
+
+#: config/menus/footer.php:13
+msgid "Above Footer Widgets"
+msgstr ""
+
+#: config/menus/footer.php:14
+msgid "Above Footer Credits"
+msgstr ""
+
+#: config/menus/footer.php:15
+msgid "Below Footer Credits"
+msgstr ""
+
+#: config/menus/footer.php:29
+msgid "Footer Menu not showing? Make sure it has been assigned from the"
+msgstr ""
+
+#: config/menus/footer.php:31, config/menus/secondary.php:14
+msgid "Menu Locations Screen"
+msgstr ""
+
+#: config/menus/footer.php:171, config/menus/mobile.php:84, config/menus/primary.php:97, config/menus/secondary.php:151
+msgid "Menu Item Vertical Spacing"
+msgstr ""
+
+#: config/menus/footer.php:190, config/menus/primary.php:116, config/menus/secondary.php:170
+msgid "Menu Item Horizontal Spacing"
+msgstr ""
+
+#: config/menus/menu-toggle.php:23, config/menus/sub-menu-toggle.php:23
+msgid "Background Active"
+msgstr ""
+
+#: config/menus/menu-toggle.php:24
+msgid "Menu Toggle Bar"
+msgstr ""
+
+#: config/menus/menu-toggle.php:25
+msgid "Text and Icon"
+msgstr ""
+
+#: config/menus/menu-toggle.php:26
+msgid "Text and Icon Active"
+msgstr ""
+
+#: config/menus/menu-toggle.php:28, config/menus/sub-menu-toggle.php:27
+msgid "Border Active"
+msgstr ""
+
+#: config/menus/menu-toggle.php:123
+msgid "Button Spacing"
+msgstr ""
+
+#: config/menus/menu-toggle.php:141
+msgid "Menu Toggle Bar Spacing"
+msgstr ""
+
+#: config/menus/menu-toggle.php:142
+msgid "This setting is only applied if the Primary Header mobile layout is set to display the logo above the menu."
+msgstr ""
+
+#: config/menus/menu-toggle.php:187
+msgid "Menu Toggle Bar Border Width"
+msgstr ""
+
+#: config/menus/menu-toggle.php:234
+msgid "Display menu toggle icon"
+msgstr ""
+
+#: config/menus/menu-toggle.php:240
+msgid "Round icon corners"
+msgstr ""
+
+#: config/menus/menu-toggle.php:314
+msgid "Icon Line Size"
+msgstr ""
+
+#: config/menus/mobile.php:12
+msgid "Overlay"
+msgstr ""
+
+#: config/menus/mobile.php:116
+msgid "More mobile menu options available in"
+msgstr ""
+
+#: config/menus/primary.php:48
+msgid "These settings are for the default desktop colors only and will be overridden by the "
+msgstr ""
+
+#: config/menus/primary.php:50, src/customizer/sections.php:44, src/functions/widget-areas.php:57
+msgid "Mobile Menu"
+msgstr ""
+
+#: config/menus/primary.php:51
+msgid "settings on smaller screens."
+msgstr ""
+
+#: config/menus/primary.php:81
+msgid "Align Menu"
+msgstr ""
+
+#: config/menus/secondary.php:12
+msgid "Secondary Menu not showing? Make sure it has been assigned from the"
+msgstr ""
+
+#: config/menus/secondary.php:115, config/menus/sub-menu.php:91
+msgid "Width"
+msgstr ""
+
+#: config/menus/secondary.php:133
+msgid "Height"
+msgstr ""
+
+#: config/menus/social.php:9
+msgid "Color Style"
+msgstr ""
+
+#: config/menus/social.php:12
+msgid "Brand Icon"
+msgstr ""
+
+#: config/menus/social.php:13
+msgid "Brand Background"
+msgstr ""
+
+#: config/menus/social.php:14
+msgid "Custom"
+msgstr ""
+
+#: config/menus/social.php:34, config/menus/sub-menu-toggle.php:24, config/menus/sub-menu-toggle.php:98
+msgid "Icon"
+msgstr ""
+
+#: config/menus/social.php:35
+msgid "Icon Hover"
+msgstr ""
+
+#: config/menus/social.php:97
+msgid "Hover Effect"
+msgstr ""
+
+#: config/menus/social.php:100
+msgid "Scale"
+msgstr ""
+
+#: config/menus/social.php:101
+msgid "Lighten"
+msgstr ""
+
+#: config/menus/social.php:147
+msgid "Padding"
+msgstr ""
+
+#: config/menus/sub-menu-toggle.php:12
+msgid "Sub menu toggle buttons are displayed on mobile screen sizes only. Sub menus for desktop devices can be customized from the "
+msgstr ""
+
+#: config/menus/sub-menu-toggle.php:14
+msgid "Sub Menu Section"
+msgstr ""
+
+#: config/menus/sub-menu-toggle.php:25
+msgid "Text Active"
+msgstr ""
+
+#: config/menus/sub-menu-toggle.php:101
+msgid "Arrow"
+msgstr ""
+
+#: config/menus/sub-menu-toggle.php:102
+msgid "Plus"
+msgstr ""
+
+#: config/menus/sub-menu.php:12
+msgid "These settings apply to desktop screen sizes only. To customize the sub menu toggle buttons for mobile devices, navigate to the "
+msgstr ""
+
+#: config/menus/sub-menu.php:14
+msgid "Sub Menu Toggle Section"
+msgstr ""
+
+#: config/menus/sub-menu.php:22
+msgid "Sub Menu Background"
+msgstr ""
+
+#: config/menus/sub-menu.php:23
+msgid "Sub Menu Link"
+msgstr ""
+
+#: config/menus/sub-menu.php:24
+msgid "Sub Menu Link Hover"
+msgstr ""
+
+#: config/menus/sub-menu.php:110
+msgid "Menu Item Spacing"
+msgstr ""
+
+#: config/sidebars/featured-content.php:11
+msgid "Entry Background"
+msgstr ""
+
+#: config/sidebars/featured-content.php:53
+msgid "Space Between"
+msgstr ""
+
+#: config/sidebars/featured-content.php:89
+msgid "Entry Title Spacing"
+msgstr ""
+
+#: config/sidebars/featured-content.php:107
+msgid "Image Width"
+msgstr ""
+
+#: config/sidebars/primary.php:11, config/sidebars/secondary.php:11
+msgid "Sidebar Background"
+msgstr ""
+
+#: config/sidebars/primary.php:15, config/sidebars/secondary.php:15
+msgid "Widget Background"
+msgstr ""
+
+#: config/sidebars/primary.php:93, config/sidebars/secondary.php:93
+msgid "Widget Title Typography"
+msgstr ""
+
+#: config/sidebars/primary.php:116, config/sidebars/secondary.php:116
+msgid "Sidebar Width"
+msgstr ""
+
+#: config/sidebars/primary.php:164, config/sidebars/secondary.php:150
+msgid "Widget Spacing"
+msgstr ""
+
+#: config/sidebars/primary.php:187, config/sidebars/secondary.php:173
+msgid "Widget Shadow"
+msgstr ""
+
+#: config/single/comments.php:68
+msgid "Says Label"
+msgstr ""
+
+#: config/single/comments.php:69
+msgid "says"
+msgstr ""
+
+#: config/single/comments.php:75, src/customizer/sections.php:74
+msgid "Comments"
+msgstr ""
+
+#: config/single/comments.php:80
+msgid "Reply"
+msgstr ""
+
+#: config/single/comments.php:81
+msgid "Leave a Reply"
+msgstr ""
+
+#: config/single/comments.php:86
+msgid "Submit Button"
+msgstr ""
+
+#: config/single/comments.php:87
+msgid "Post Comment"
+msgstr ""
+
+#: config/single/entry.php:12
+msgid "Entry Title"
+msgstr ""
+
+#: config/single/featured-image.php:9
+msgid "Display on"
+msgstr ""
+
+#: config/single/featured-image.php:24
+msgid "Before Entry"
+msgstr ""
+
+#: config/single/featured-image.php:25
+msgid "Entry Header"
+msgstr ""
+
+#: config/single/featured-image.php:26
+msgid "Entry Content"
+msgstr ""
+
+#: config/single/featured-image.php:27
+msgid "Entry Footer"
+msgstr ""
+
+#: config/single/featured-image.php:33
+msgid "Size"
+msgstr ""
+
+#: config/single/featured-image.php:43
+msgid "Default"
+msgstr ""
+
+#: config/single/featured-image.php:44
+msgid "Wide"
+msgstr ""
+
+#: config/single/featured-image.php:45
+msgid "Full"
+msgstr ""
+
+#: src/admin/child-theme-compat.php:53
+msgid " is not supported by the active child theme and may not work as expected. Please install a compatible child theme or refer to the"
+msgstr ""
+
+#: src/admin/child-theme-compat.php:55
+msgid "adding theme support guide"
+msgstr ""
+
+#: src/admin/child-theme-compat.php:56
+msgid "for instructions on how to declare Customize Pro support in your theme."
+msgstr ""
+
+#: src/admin/demo-import.php:35
+msgid "Theme Dependency"
+msgstr ""
+
+#: src/admin/demo-import.php:54, src/admin/demo-import.php:55
+msgid "Demo Import"
+msgstr ""
+
+#. translators: 1: Opening div and paragraph tags 2: Line break 3: Opening strong tag 4: Closing strong tag 5: closing div and paragraph tags.
+#: src/admin/demo-import.php:173
+msgid "%1$s%3$sThat's it, all done!%4$s%2$sThe demo import has finished. Please check your page and make sure that everything has imported correctly. "
+msgstr ""
+
+#: src/admin/demo-import.php:173
+msgid "View Site"
+msgstr ""
+
+#: src/admin/meta-box.php:108
+msgid "Disable "
+msgstr ""
+
+#: src/admin/notices.php:35
+msgid "Thank you for using Customize Pro! Upgrade to"
+msgstr ""
+
+#: src/admin/notices.php:37
+msgid "to access even more features!"
+msgstr ""
+
+#: src/admin/notices.php:40
+msgid "Dismiss this notice."
+msgstr ""
+
+#: src/admin/settings.php:32
+msgid "Go Pro"
+msgstr ""
+
+#: src/bootstrap/compat.php:57
+msgid "Customize Pro"
+msgstr ""
+
+#: src/bootstrap/compat.php:58
+msgid "requires the Genesis Framework to run and has been deactivated."
+msgstr ""
+
+#: src/classes/class-admin-api.php:99
+msgid "active"
+msgstr ""
+
+#: src/classes/class-admin-api.php:105
+msgid "Deactivate License"
+msgstr ""
+
+#: src/classes/class-admin-api.php:116
+msgid "Activate License"
+msgstr ""
+
+#: src/classes/class-admin-settings.php:135
+msgid "General"
+msgstr ""
+
+#: src/classes/class-admin-settings.php:136
+msgid "Change the default settings for Customize Pro."
+msgstr ""
+
+#: src/classes/class-admin-settings.php:141
+msgid "Global Breakpoint"
+msgstr ""
+
+#: src/classes/class-admin-settings.php:142
+msgid "Select the screen size at which the global media query should change."
+msgstr ""
+
+#: src/classes/class-admin-settings.php:148
+msgid "Load child theme CSS"
+msgstr ""
+
+#: src/classes/class-admin-settings.php:149
+msgid "Load the child theme style.css file on the front end of the site."
+msgstr ""
+
+#: src/classes/class-admin-settings.php:152, src/classes/class-admin-settings.php:163, src/classes/class-admin-settings.php:174
+msgid "Enable &nbsp;"
+msgstr ""
+
+#: src/classes/class-admin-settings.php:153, src/classes/class-admin-settings.php:164, src/classes/class-admin-settings.php:175
+msgid "Disable"
+msgstr ""
+
+#: src/classes/class-admin-settings.php:159
+msgid "Genesis style trump"
+msgstr ""
+
+#: src/classes/class-admin-settings.php:160
+msgid "Load the child theme stylesheet at a later priority to override plugin styles."
+msgstr ""
+
+#: src/classes/class-admin-settings.php:170
+msgid "Load FontAwesome"
+msgstr ""
+
+#: src/classes/class-admin-settings.php:171
+msgid "Load FontAwesome CSS for use throughout your site. Visit "
+msgstr ""
+
+#: src/classes/class-admin-settings.php:171
+msgid " for basic usage instructions."
+msgstr ""
+
+#: src/classes/class-admin-settings.php:200
+msgid "Sets the color palette defaults for Customizer color settings."
+msgstr ""
+
+#: src/classes/class-admin-settings.php:293
+msgid "Customize Pro Settings"
+msgstr ""
+
+#: src/classes/class-admin-settings.php:348
+msgid "Save Settings"
+msgstr ""
+
+#: src/classes/class-admin-settings.php:381, src/classes/class-admin-settings.php:390
+msgid "Cheatin&#8217; huh?"
+msgstr ""
+
+#: src/classes/class-mega-menu-admin.php:48, src/functions/widget-areas.php:62
+msgid "Mega Menu"
+msgstr ""
+
+#: src/compat/beaver-builder.php:27
+msgid "Toggle Header"
+msgstr ""
+
+#: src/customizer/customizer.php:64
+msgid "Default Background"
+msgstr ""
+
+#: src/customizer/customizer.php:184
+msgid "System"
+msgstr ""
+
+#: src/customizer/customizer.php:222
+msgid "Upgrade to Customize Pro"
+msgstr ""
+
+#: src/customizer/extra.php:38
+msgid "Logo Width"
+msgstr ""
+
+#: src/customizer/extra.php:65
+msgid "Logo Width Mobile"
+msgstr ""
+
+#: src/customizer/extra.php:88
+msgid "Logo Width Desktop"
+msgstr ""
+
+#: src/customizer/extra.php:112
+msgid "Logo Spacing"
+msgstr ""
+
+#: src/customizer/extra.php:148
+msgid "Responsive logo settings (desktop and mobile width) available in"
+msgstr ""
+
+#: src/customizer/extra.php:174
+msgid "Display site title?"
+msgstr ""
+
+#: src/customizer/extra.php:183
+msgid "Display tagline?"
+msgstr ""
+
+#: src/customizer/extra.php:205
+msgid "Using a transparent or sticky header? Set an alternative logo from the "
+msgstr ""
+
+#: src/customizer/extra.php:207
+msgid "Transparent Header Logo Setting"
+msgstr ""
+
+#: src/customizer/extra.php:210
+msgid "Sticky Header Logo Setting"
+msgstr ""
+
+#: src/customizer/output.php:114
+msgid "Invalid nonce."
+msgstr ""
+
+#: src/customizer/panels.php:24
+msgid "Base Styles"
+msgstr ""
+
+#: src/customizer/panels.php:25
+msgid "Header"
+msgstr ""
+
+#: src/customizer/panels.php:26
+msgid "Menus"
+msgstr ""
+
+#: src/customizer/panels.php:27
+msgid "Hero Section"
+msgstr ""
+
+#: src/customizer/panels.php:28
+msgid "Content Area"
+msgstr ""
+
+#: src/customizer/panels.php:29
+msgid "Sidebars"
+msgstr ""
+
+#: src/customizer/panels.php:30
+msgid "Single Post / Page"
+msgstr ""
+
+#: src/customizer/panels.php:31
+msgid "Blog / Archive"
+msgstr ""
+
+#: src/customizer/panels.php:32
+msgid "Footer"
+msgstr ""
+
+#: src/customizer/sections.php:25
+msgid "Global"
+msgstr ""
+
+#: src/customizer/sections.php:26
+msgid "Body"
+msgstr ""
+
+#: src/customizer/sections.php:29
+msgid "Buttons"
+msgstr ""
+
+#: src/customizer/sections.php:30
+msgid "Inputs"
+msgstr ""
+
+#: src/customizer/sections.php:31
+msgid "Blockquotes"
+msgstr ""
+
+#: src/customizer/sections.php:32
+msgid "Code"
+msgstr ""
+
+#: src/customizer/sections.php:33
+msgid "Lists"
+msgstr ""
+
+#: src/customizer/sections.php:34
+msgid "Tables"
+msgstr ""
+
+#: src/customizer/sections.php:37
+msgid "Primary Header"
+msgstr ""
+
+#: src/customizer/sections.php:38
+msgid "Title Area"
+msgstr ""
+
+#: src/customizer/sections.php:39, src/functions/widget-areas.php:53
+msgid "Header Right"
+msgstr ""
+
+#: src/customizer/sections.php:42, src/functions/theme-support.php:53
+msgid "Primary Menu"
+msgstr ""
+
+#: src/customizer/sections.php:43, src/functions/theme-support.php:54
+msgid "Secondary Menu"
+msgstr ""
+
+#: src/customizer/sections.php:45
+msgid "Menu Toggle"
+msgstr ""
+
+#: src/customizer/sections.php:46
+msgid "Sub Menu"
+msgstr ""
+
+#: src/customizer/sections.php:47
+msgid "Sub Menu Toggle"
+msgstr ""
+
+#: src/customizer/sections.php:48, src/functions/theme-support.php:55
+msgid "Footer Menu"
+msgstr ""
+
+#: src/customizer/sections.php:49
+msgid "Footer Widgets Menu"
+msgstr ""
+
+#: src/customizer/sections.php:50
+msgid "Social Menu"
+msgstr ""
+
+#: src/customizer/sections.php:53, src/customizer/sections.php:77
+msgid "Settings"
+msgstr ""
+
+#: src/customizer/sections.php:56
+msgid "Main Content"
+msgstr ""
+
+#: src/customizer/sections.php:57
+msgid "Breadcrumbs"
+msgstr ""
+
+#: src/customizer/sections.php:58
+msgid "Author Box"
+msgstr ""
+
+#: src/customizer/sections.php:59, src/customizer/sections.php:72
+msgid "Featured Image"
+msgstr ""
+
+#: src/customizer/sections.php:60
+msgid "Avatar"
+msgstr ""
+
+#: src/customizer/sections.php:61
+msgid "Sidebar"
+msgstr ""
+
+#: src/customizer/sections.php:62
+msgid "Search Form"
+msgstr ""
+
+#: src/customizer/sections.php:65, src/functions/widget-areas.php:81
+msgid "Primary Sidebar"
+msgstr ""
+
+#: src/customizer/sections.php:66, src/functions/widget-areas.php:85
+msgid "Secondary Sidebar"
+msgstr ""
+
+#: src/customizer/sections.php:67
+msgid "Featured Content"
+msgstr ""
+
+#: src/customizer/sections.php:70
+msgid "Entry"
+msgstr ""
+
+#: src/customizer/sections.php:71, src/functions/widget-areas.php:77
+msgid "After Entry"
+msgstr ""
+
+#: src/customizer/sections.php:78
+msgid "Entries"
+msgstr ""
+
+#: src/customizer/sections.php:79
+msgid "Archive Description"
+msgstr ""
+
+#: src/customizer/sections.php:81
+msgid "Read More"
+msgstr ""
+
+#: src/customizer/sections.php:82
+msgid "Pagination"
+msgstr ""
+
+#: src/customizer/sections.php:85
+msgid "Site Footer"
+msgstr ""
+
+#: src/customizer/sections.php:86
+msgid "Footer Widgets"
+msgstr ""
+
+#: src/customizer/sections.php:87, src/functions/widget-areas.php:154
+msgid "Footer Credits"
+msgstr ""
+
+#: src/functions/custom-header.php:20
+msgid "Default image"
+msgstr ""
+
+#: src/functions/layouts.php:25
+msgid "Center Content"
+msgstr ""
+
+#: src/functions/scripts.php:67
+msgid "Toggle Menu"
+msgstr ""
+
+#: src/functions/scripts.php:78
+msgid "Toggle Submenu"
+msgstr ""
+
+#: src/functions/widget-areas.php:43
+msgid "Above Header"
+msgstr ""
+
+#: src/functions/widget-areas.php:44
+msgid "This is the Above Header widget area."
+msgstr ""
+
+#: src/functions/widget-areas.php:48
+msgid "Header Left"
+msgstr ""
+
+#: src/functions/widget-areas.php:49
+msgid "This is the Header Left widget area. It typically appears next to the site title or logo. This widget area is not suitable to display every type of widget, and works best with a custom menu, a search form, or possibly a text widget."
+msgstr ""
+
+#: src/functions/widget-areas.php:54
+msgid "This is the Header Right widget area. It typically appears next to the site title or logo. This widget area is not suitable to display every type of widget, and works best with a custom menu, a search form, or possibly a text widget."
+msgstr ""
+
+#: src/functions/widget-areas.php:58
+msgid "This is the Mobile Menu widget area. It is displayed inside the responsive mobile menu on smaller screens."
+msgstr ""
+
+#: src/functions/widget-areas.php:63
+msgid "This is the Mega Menu widget area."
+msgstr ""
+
+#: src/functions/widget-areas.php:67
+msgid "Below Header"
+msgstr ""
+
+#: src/functions/widget-areas.php:68
+msgid "This is the Below Header widget area."
+msgstr ""
+
+#: src/functions/widget-areas.php:72
+msgid "Above Content"
+msgstr ""
+
+#: src/functions/widget-areas.php:73
+msgid "This is the Above Content widget area."
+msgstr ""
+
+#: src/functions/widget-areas.php:78
+msgid "Widgets in this widget area will display after single entries."
+msgstr ""
+
+#: src/functions/widget-areas.php:82
+msgid "This is the sidebar widget area if you are using a two column site layout option."
+msgstr ""
+
+#: src/functions/widget-areas.php:86
+msgid "This is the sidebar widget area if you are using a three column site layout option."
+msgstr ""
+
+#: src/functions/widget-areas.php:89
+msgid "Below Content"
+msgstr ""
+
+#: src/functions/widget-areas.php:90
+msgid "This is the Below Content widget area."
+msgstr ""
+
+#: src/functions/widget-areas.php:94
+msgid "Above Footer"
+msgstr ""
+
+#: src/functions/widget-areas.php:95
+msgid "This is the Above Footer widget area."
+msgstr ""
+
+#: src/functions/widget-areas.php:99
+msgid "Below Footer"
+msgstr ""
+
+#: src/functions/widget-areas.php:100
+msgid "This is the Below Footer widget area."
+msgstr ""
+
+#: src/functions/widget-areas.php:134
+msgid "Footer "
+msgstr ""
+
+#: src/functions/widget-areas.php:135
+msgid "This is the Footer "
+msgstr ""
+
+#: src/functions/widget-areas.php:135
+msgid " widget area."
+msgstr ""
+
+#: src/functions/widget-areas.php:155
+msgid "This is the Footer Credits widget area."
+msgstr ""

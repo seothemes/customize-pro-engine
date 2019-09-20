@@ -1,0 +1,47 @@
+{
+  "name": "seothemes/customize-pro-engine",
+  "description": "Core functionality plugin for the Customize Pro child theme.",
+  "type": "wordpress-plugin",
+  "license": "GPL-2.0-or-later",
+  "authors": [
+    {
+      "name": "seothemes",
+      "email": "seothemeswp@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "php": "^5.6|^7"
+  },
+  "require-dev": {
+    "php": "^5.6|^7",
+    "brain/monkey": "^2.2",
+    "dealerdirect/phpcodesniffer-composer-installer": "v0.5.0",
+    "phpcompatibility/phpcompatibility-wp": "2.0.0",
+    "phpunit/phpunit": "~5.7.9",
+    "squizlabs/php_codesniffer": "^3.4.2",
+    "wp-coding-standards/wpcs": "2.1.0",
+    "wp-phpunit/wp-phpunit": "^5.1"
+  },
+  "autoload": {
+    "classmap": [
+      "lib/classes"
+    ]
+  },
+  "config": {
+    "preferred-install": {
+      "*": "dist"
+    },
+    "sort-packages": true
+  },
+  "scripts": {
+    "install-codestandards": "Dealerdirect\\Composer\\Plugin\\Installers\\PHPCodeSniffer\\Plugin::run",
+    "phpcs": "phpcs --standard=WordPress --extensions=php -p -s lib config assets/templates init.php",
+    "phpcbf": "phpcbf --standard=WordPress --extensions=php -p lib config assets/templates init.php",
+    "test-unit": "composer dump && \"vendor/bin/phpunit\" --testsuite unit --color=always",
+    "test-integration": "composer dump && \"vendor/bin/phpunit\" --testsuite integration --configuration tests/phpunit/integration/phpunit.xml.dist --color=always",
+    "post-update-cmd": [
+      "rm -Rf vendor/aristath/kirki/.gitignore"
+    ]
+  }
+}

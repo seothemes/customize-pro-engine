@@ -1,0 +1,26 @@
+////
+/// Table elements.
+///
+/// @group  Elements
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://CustomizePro.com/
+////
+
+table {
+	width: 100%;
+	margin: $spacing--s 0;
+	border-radius: $base--border--radius;
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+
+th,
+td {
+	padding: $spacing--s;
+	border: $base--border;
+	text-align: left;
+}
+
+th {
+	font-weight: $font-weight--semibold;
+}

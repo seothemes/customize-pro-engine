@@ -1,0 +1,37 @@
+////
+/// Content component.
+///
+/// @group  Components
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://CustomizePro.com/
+////
+
+.content {
+	position: relative;
+	width: 100%;
+
+	@include mq(m) {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.sidebar-content & {
+
+		@include mq(m) {
+			order: 1;
+		}
+	}
+
+	.center-content & {
+
+		@include margin(null auto);
+	}
+
+	.full-width-content & {
+
+		@include mq(m) {
+
+			@include margin(null auto);
+		}
+	}
+}

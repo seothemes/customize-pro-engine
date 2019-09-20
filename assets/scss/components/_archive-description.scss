@@ -1,0 +1,26 @@
+////
+/// Archive description component.
+///
+/// @group  Components
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://CustomizePro.com/
+////
+
+.archive {
+
+	// Archive description box.
+	&-description {
+		width: 100%;
+		column-span: all;
+
+		p {
+
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	// Archive description title.
+	&-title {}
+}

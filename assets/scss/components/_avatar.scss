@@ -1,0 +1,16 @@
+////
+/// Avatar component.
+///
+/// @group  Components
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://CustomizePro.com/
+////
+
+.avatar {
+	float: left;
+	margin-right: $spacing--m;
+
+	.alignleft & {
+		margin-right: 0;
+	}
+}

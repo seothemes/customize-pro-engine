@@ -1,0 +1,206 @@
+////
+/// Gutenberg block component.
+///
+/// @group  Components
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://CustomizePro.com/
+////
+
+.wp-block {
+
+	// Audio block.
+	&-audio {
+	}
+
+	// Button block.
+	&-button {
+
+		&__link {
+
+			@include button;
+		}
+	}
+
+	// Categories block.
+	&-categories {
+
+		&-list {
+		}
+
+		&-dropdown {
+		}
+	}
+
+	// Code block.
+	&-code {
+	}
+
+	// Columns block.
+	&-columns {
+
+		@include mq($until: m) {
+			flex-wrap: wrap;
+		}
+	}
+
+	&-column {
+
+		@include mq($until: m) {
+			flex: none;
+			width: 100%;
+		}
+
+		&:not(:first-child),
+		&:nth-child(2n) {
+			margin-left: 0;
+		}
+	}
+
+	// Cover image block.
+	&-cover-image {
+
+		&.has-parallax {
+		}
+
+		&.has-background-dim {
+		}
+
+		&-text {
+		}
+
+		&.has-left-content {
+		}
+
+		&.has-right-content {
+		}
+
+		&.has-left-content &-text {
+		}
+
+		&.has-right-content &-text {
+		}
+	}
+
+	// Embed block.
+	&-embed {
+
+		@include margin($spacing--m null);
+	}
+
+	// File block.
+	&-file {
+
+		&__button {
+		}
+	}
+
+	// Gallery block.
+	&-gallery {
+
+		@include margin($spacing--m null);
+
+		&.is-cropped {
+		}
+
+		&.columns-1 {
+		}
+
+		&.columns-2 {
+		}
+
+		&.columns-3 {
+		}
+
+		.blocks-gallery-item {
+		}
+
+		&.is-cropped .blocks-gallery-item {
+		}
+
+		.blocks-gallery-item {
+
+			img {
+				align-self: center;
+			}
+		}
+
+		&.columns-1 .blocks-gallery-item {
+		}
+	}
+
+	// Image block.
+	&-image {
+
+		&.alignleft {
+			margin-right: 1em;
+		}
+
+		&.alignright {
+			margin-left: 1em;
+		}
+
+		&.alignwide,
+		&.alignfull {
+			max-width: none;
+
+			@include margin(1em null);
+		}
+	}
+
+	// Latest posts block.
+	&-latest-posts {
+
+		&.is-grid {
+		}
+
+		&__post-date {
+		}
+	}
+
+	// Preformatted block.
+	&-preformatted {
+	}
+
+	// Pullquote block.
+	&-pullquote {
+		border-left: 0;
+
+		@include margin($spacing--l null);
+
+		&.aligncenter {
+
+			@include margin($spacing--l null);
+		}
+
+		&.is-style-solid-color {
+
+			blockquote {
+				max-width: 100%;
+			}
+		}
+
+		blockquote {
+			border-left: 0;
+		}
+	}
+
+	// Quote block.
+	&-quote {
+	}
+
+	// Separator block.
+	&-separator {
+	}
+
+	// Subhead block.
+	&-subhead {
+	}
+
+	// Table block.
+	&-table {
+	}
+
+	// Verse block.
+	&-verse {
+	}
+}

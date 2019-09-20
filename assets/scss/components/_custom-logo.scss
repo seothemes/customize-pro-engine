@@ -1,0 +1,20 @@
+////
+/// Custom logo component.
+///
+/// @group  Components
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://CustomizePro.com/
+////
+
+.custom-logo {
+	width: 100%;
+
+	// Custom logo link.
+	&-link {
+		display: block;
+
+		.menu & {
+			padding: 0;
+		}
+	}
+}

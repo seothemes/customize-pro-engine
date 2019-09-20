@@ -1,0 +1,121 @@
+
+.components-panel .edit-post-meta-boxes-area #poststuff h2.hndle {
+	border-bottom: 0;
+	color: #23282d;
+	font-size: 13px;
+}
+
+.components-panel .edit-post-meta-boxes-area #poststuff h2.hndle:focus:not(:disabled):not([aria-disabled=true]) {
+	outline: 1px dotted #555d66;
+	outline-offset: -2px;
+}
+
+.edit-post-meta-boxes-area .postbox > .inside {
+	border-bottom: 0;
+}
+
+.components-panel .toggle-indicator {
+	display: block;
+	background-image: url("../img/arrow.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	transform: rotate(180deg);
+}
+
+.components-panel .closed .toggle-indicator {
+	transform: none;
+}
+
+.components-panel .toggle-indicator:before {
+	content: "" !important;
+}
+
+#customize-pro-settings form h2 {
+	opacity: 0;
+	font-size: 0;
+}
+
+#customize-pro-settings th {
+	width: 150px;
+}
+
+a.button.tooltip-toggle {
+	display: inline-flex;
+	display: none;
+	width: 16px;
+	height: 16px;
+	margin-left: 10px;
+	padding: 0;
+	border: none;
+	border-radius: 16px;
+	color: #fff;
+	background: #9ea3a8;
+	box-shadow: none;
+	font-size: 10px;
+	font-weight: bold;
+	line-height: 16px;
+	align-items: center;
+	justify-content: center;
+}
+
+a.button.tooltip-toggle:hover,
+a.button.tooltip-toggle:active,
+a.button.tooltip-toggle:focus {
+	color: #fff;
+	background-color: #0085ba;
+	transform: none;
+}
+
+.tooltip {
+	display: block;
+	margin-top: 6px;
+}
+
+.about-wrap h1 {
+	display: flex;
+	margin-bottom: 0.618em;
+	align-items: center;
+}
+
+.about-wrap h1:before {
+	margin-right: 0.2em;
+}
+
+.ocdi__gl-header {
+	border: 1px solid #ddd;
+	box-shadow: 0 1px 1px -1px rgba(0,0,0,0.1);
+}
+
+.elementor-not-active div[data-categories*="elementor"] .button-primary,
+.bb-not-active div[data-categories*="beaverbuilder"] .button-primary,
+.pro-not-active div[data-categories*="pro"] .button-primary {
+	display: none;
+}
+
+.elementor-not-active div[data-categories*="elementor"] h4,
+.bb-not-active div[data-categories*="beaverbuilder"] h4,
+.pro-not-active div[data-categories*="pro"] h4 {
+	width: calc(100% - 100px);
+}
+
+.elementor-not-active div[data-categories*="elementor"] h4:after,
+.bb-not-active div[data-categories*="beaverbuilder"] h4:after,
+.pro-not-active div[data-categories*="pro"] h4:after {
+	margin-left: 0.5em;
+	color: #5e5e5e;
+	font-size: xx-small;
+	font-weight: lighter;
+	content: "(Requires Pro)";
+}
+
+.elementor-not-active div[data-categories*="elementor"] h4:after {
+	content: "(Requires Elementor)";
+}
+
+.bb-not-active div[data-categories*="beaverbuilder"] h4:after {
+	content: "(Requires Beaver Builder)";
+}
+
+.ocdi.about-wrap p {
+	font-size: 13px;
+}

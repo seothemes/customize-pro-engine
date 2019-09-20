@@ -1,0 +1,105 @@
+////
+/// Header search component.
+///
+/// @group  Components
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://CustomizePro.com/
+////
+
+.header-search {
+	display: none;
+	width: 100%;
+	order: 3;
+
+	&.drop-down {
+		position: absolute;
+		top: 100%;
+	}
+
+	&-toggle {
+		position: relative;
+		border: 0;
+		box-shadow: none;
+
+		&.left {
+			left: 0;
+			order: -1;
+
+			svg {
+				transform: rotate(90deg);
+			}
+		}
+
+		&.right {
+			right: 0;
+			order: 2;
+		}
+
+		@include mq(0, m) {
+
+			.has-logo-above-mobile &,
+			.has-logo-below-mobile & {
+				position: absolute;
+			}
+		}
+
+		@include mq(m) {
+
+			.has-logo-side & {
+				display: none;
+			}
+		}
+	}
+
+	&-close {
+		display: none;
+
+		@include position(fixed, 5vw 5vw null null);
+	}
+
+	.wrap {
+		justify-content: center;
+	}
+
+	.search-form {
+		display: flex;
+		width: 100%;
+
+		&-submit {
+			display: none;
+			margin-left: 0.618em;
+		}
+	}
+
+	.has-search-button {
+
+		.search-form-submit {
+			display: block;
+		}
+	}
+
+	input {
+		margin-bottom: 0;
+	}
+
+	&.full-screen {
+		display: flex;
+		z-index: 4;
+		opacity: 0;
+		transition: opacity $base--transition-duration $base--transition-timing-function;
+
+		@include size(0);
+		@include position(fixed, -100vh -100vw null null);
+
+		&.visible {
+			opacity: 1;
+
+			@include size(auto);
+			@include position(fixed, 0 0 0 0);
+
+			.header-search-close {
+				display: block;
+			}
+		}
+	}
+}

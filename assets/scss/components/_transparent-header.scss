@@ -1,0 +1,44 @@
+////
+/// Transparent header component.
+///
+/// @group  Components
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://CustomizePro.com/
+////
+
+.has-transparent-header {
+
+	.site-header {
+		position: absolute;
+	}
+
+	.transparent-logo-link {
+		display: block;
+	}
+
+	&.elementor-editor-active:hover {
+
+		.site-header {
+			display: none;
+		}
+	}
+
+	&.has-transparent-logo {
+
+		.custom-logo-link {
+			display: none;
+		}
+	}
+}
+
+.transparent-logo {
+	display: none;
+
+	&-link {
+		display: block;
+	}
+
+	.has-transparent-header.has-transparent-logo & {
+		display: block;
+	}
+}

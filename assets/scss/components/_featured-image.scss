@@ -1,0 +1,16 @@
+////
+/// Featured image component.
+///
+/// @group  Components
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://CustomizePro.com/
+////
+
+.featured-image {
+
+	@include clearfix();
+
+	img {
+		margin-bottom: 0;
+	}
+}

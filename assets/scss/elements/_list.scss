@@ -1,0 +1,31 @@
+////
+/// List elements.
+///
+/// @group  Elements
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://CustomizePro.com/
+////
+
+ul,
+ol,
+dl {
+	margin: 0 0 $spacing--m;
+	padding: 0;
+	list-style-position: inside;
+	list-style-type: none;
+
+	ul,
+	ol,
+	dl {
+		margin: $spacing--s $spacing--m;
+	}
+}
+
+dd,
+dt {
+	margin: 0;
+}
+
+dt {
+	font-weight: $font-weight--semibold;
+}

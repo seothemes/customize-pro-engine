@@ -1,0 +1,19 @@
+////
+/// Site title component.
+///
+/// @group  Components
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://CustomizePro.com/
+////
+
+.site-title {
+
+	.title-area & {
+		margin: 0;
+		font-weight: $font-weight--bold;
+	}
+
+	&-link {
+		display: block;
+	}
+}

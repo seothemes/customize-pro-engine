@@ -1,0 +1,72 @@
+////
+/// Hero section component.
+///
+/// @group  Components
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://CustomizePro.com/
+////
+
+.hero-section {
+	display: flex;
+	background-position: center;
+	background-size: cover;
+	text-align: center;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+
+	@include overlay();
+
+	.wp-custom-header {
+		display: flex;
+		overflow: hidden;
+		z-index: -1;
+		align-items: center;
+		justify-content: center;
+
+		@include size(100%);
+		@include position(absolute, 0 0 0 0);
+	}
+
+	.wrap {
+		position: relative;
+		justify-content: center;
+	}
+
+	h1 {
+		width: 100%;
+		margin-bottom: 0;
+
+		&:after {
+			display: none;
+			width: 1.618em;
+			height: 3px;
+			margin: 0.4em auto 0;
+			background-color: currentColor;
+			content: "";
+		}
+	}
+
+	p {
+		margin-top: 1em;
+		margin-bottom: 0;
+
+		&:empty {
+			display: none;
+		}
+	}
+}
+
+.hero-inner {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+}
+
+.wp-custom-header {
+
+	img {
+		min-width: 100%;
+		min-height: 100%;
+	}
+}

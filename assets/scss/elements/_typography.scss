@@ -1,0 +1,96 @@
+////
+/// Typography elements.
+///
+/// @group  Elements
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://CustomizePro.com/
+////
+
+body {
+	height: 100%;
+	font-family: $base--font-family;
+}
+
+a {
+	text-decoration: none;
+
+	@include hover-focus {
+		text-decoration: underline;
+	}
+}
+
+p {
+
+	@include padding(0);
+	@include margin(null 0);
+}
+
+hr {
+	clear: both;
+	margin: 0 0 $spacing--m;
+	padding: $spacing--m 0 0;
+	border: 0;
+	border-bottom: $base--border;
+	border-collapse: collapse;
+}
+
+b,
+strong,
+.bold {
+	font-weight: $font-weight--bold;
+}
+
+blockquote,
+cite,
+em,
+i {
+	font-style: italic;
+}
+
+blockquote {
+	border-left-width: $base--border--width;
+	border-left-style: $base--border--style;
+
+	@include margin($spacing--m auto);
+
+	&:before {
+		content: '\201C';
+		display: inline-block;
+	}
+
+	p {
+
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+}
+
+cite {
+	display: block;
+	font-style: normal;
+	padding: 1em;
+}
+
+code,
+kbd,
+samp {
+	padding: 0.05em 0.5em;
+	border-radius: $base--border--radius;
+	font-family: $font-family--code;
+}
+
+pre {
+	overflow-x: scroll;
+	padding: $spacing--m;
+	border-radius: $base--border--radius;
+	font-family: $font-family--code;
+
+	code,
+	kbd,
+	samp {
+		padding: 0;
+		background-color: transparent;
+		font-size: initial;
+	}
+}

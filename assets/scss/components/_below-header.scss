@@ -1,0 +1,13 @@
+////
+/// Below header component.
+///
+/// @group  Components
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://CustomizePro.com/
+////
+
+.below-header {
+	width: 100%;
+
+	@include overlay();
+}

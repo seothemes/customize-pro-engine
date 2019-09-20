@@ -1,0 +1,69 @@
+////
+/// Pagination component.
+///
+/// @group  Components
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://CustomizePro.com/
+////
+
+.pagination {
+	width: 100%;
+	column-span: all;
+
+	ul {
+		display: flex;
+		margin: 0;
+		list-style-type: none;
+		flex-wrap: wrap;
+		align-items: flex-end; // Pagination ommission.
+	}
+
+	&.align-center,
+	&.align-full {
+
+		ul {
+			justify-content: center;
+		}
+	}
+
+	&.align-right {
+
+		ul {
+			justify-content: flex-end;
+		}
+	}
+
+	&.align-full {
+
+		.pagination-previous {
+			margin-right: auto;
+			margin-left: 0;
+		}
+
+		.pagination-next {
+			margin-right: 0;
+			margin-left: auto;
+		}
+	}
+
+	li {
+		margin-right: 1em;
+	}
+
+	a {
+		display: block;
+	}
+
+	// Active item.
+	.active {
+	}
+
+	// Previous item.
+	&-prev {
+	}
+
+	// Next item.
+	&-next {
+	}
+
+}

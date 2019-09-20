@@ -1,0 +1,80 @@
+# Normalize text file line endings to LF on checkin
+# and prevent conversion to CRLF on checkout.
+* text=auto eol=lf
+
+# Text files.
+*.css text
+*.dist text
+*.js text
+*.json text
+*.md text
+*.php text
+*.po text
+*.pot text
+*.xml text
+
+# Binary files.
+*.eot binary
+*.gif binary
+*.ico binary
+*.jpg binary
+*.mo binary
+*.png binary
+*.ttf binary
+*.woff binary
+*.woff2 binary
+
+# Omit during export.
+.editorconfig export-ignore
+.eslintignore export-ignore
+.eslintrc.js export-ignore
+.gitattributes export-ignore
+.gitignore export-ignore
+.github/ export-ignore
+.scripts/ export-ignore
+.stylelintrc.json export-ignore
+style.css.map export-ignore
+composer.json export-ignore
+composer.lock export-ignore
+phpcs.xml.dist export-ignore
+phpunit.xml.dist export-ignore
+package-lock.json export-ignore
+package.json export-ignore
+yarn.lock export-ignore
+README.md export-ignore
+CHANGELOG.md export-ignore
+LICENSE.md export-ignore
+Gulpfile.js export-ignore
+yarn.lock export-ignore
+
+/do-not-edit/assets/scss/ export-ignore
+/do-not-edit/tests/ export-ignore
+
+/do-not-edit/vendor/alledia/edd-sl-plugin-updater/.gitignore export-ignore
+/do-not-edit/vendor/alledia/edd-sl-plugin-updater/README.md export-ignore
+/do-not-edit/vendor/alledia/edd-sl-plugin-updater/composer.json export-ignore
+
+/do-not-edit/vendor/aristath/kirki/.github/ export-ignore
+/do-not-edit/vendor/aristath/kirki/docs/ export-ignore
+/do-not-edit/vendor/aristath/kirki/tests/ export-ignore
+/do-not-edit/vendor/aristath/kirki/controls/scss/ export-ignore
+/do-not-edit/vendor/aristath/kirki/.* export-ignore
+/do-not-edit/vendor/aristath/kirki/*.sh export-ignore
+/do-not-edit/vendor/aristath/kirki/*.md export-ignore
+/do-not-edit/vendor/aristath/kirki/*.txt export-ignore
+/do-not-edit/vendor/aristath/kirki/*.xml export-ignore
+/do-not-edit/vendor/aristath/kirki/*.dist export-ignore
+/do-not-edit/vendor/aristath/kirki/*.yml export-ignore
+/do-not-edit/vendor/aristath/kirki/*.json export-ignore
+/do-not-edit/vendor/aristath/kirki/LICENSE export-ignore
+/do-not-edit/vendor/aristath/kirki/package* export-ignore
+/do-not-edit/vendor/aristath/kirki/Gruntfile.js export-ignore
+/do-not-edit/vendor/aristath/kirki/example.php export-ignore
+
+/do-not-edit/vendor/proteusthemes/one-click-demo-import/readme.md export-ignore
+/do-not-edit/vendor/proteusthemes/wp-content-importer-v2/README.md export-ignore
+
+/do-not-edit/vendor/yahnis-elsts/plugin-update-checker/examples/ export-ignore
+/do-not-edit/vendor/yahnis-elsts/plugin-update-checker/.editorconfig export-ignore
+/do-not-edit/vendor/yahnis-elsts/plugin-update-checker/license.txt export-ignore
+/do-not-edit/vendor/yahnis-elsts/plugin-update-checker/README.md export-ignore

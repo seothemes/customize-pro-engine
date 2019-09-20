@@ -1,0 +1,27 @@
+////
+/// Sticky header component.
+///
+/// @group  Components
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://CustomizePro.com/
+////
+
+.sticky-logo {
+	display: none;
+
+	&-link {
+		display: block;
+	}
+
+	.has-sticky-header .shrink & {
+		display: block;
+	}
+}
+
+.has-sticky-logo .site-header.shrink {
+
+	.custom-logo,
+	.transparent-logo {
+		display: none;
+	}
+}

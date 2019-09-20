@@ -1,0 +1,19 @@
+////
+/// Containers.
+///
+/// @group  Generic
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://CustomizePro.com/
+////
+
+.site-container {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	min-height: 100%;
+
+	> * {
+		width: 100%;
+	}
+}

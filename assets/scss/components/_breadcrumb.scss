@@ -1,0 +1,25 @@
+////
+/// Breadcrumb component.
+///
+/// @group  Components
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://CustomizePro.com/
+////
+
+.breadcrumb {
+	width: 100%;
+	margin: 0 0 $gutter;
+	column-span: all;
+
+	.hero-section & {
+		margin: $gutter 0 0;
+		padding: 0;
+		background: transparent;
+	}
+
+	// Link wrapper.
+	&-link-wrap {}
+
+	// Breadcrumb separator.
+	&-separator {}
+}
