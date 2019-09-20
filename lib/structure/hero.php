@@ -17,6 +17,11 @@ namespace CustomizePro;
 // Enable excerpts on pages.
 add_post_type_support( 'page', 'excerpt' );
 
+// Enable title toggle.
+add_post_type_support( 'post', 'genesis-title-toggle' );
+add_post_type_support( 'portfolio', 'genesis-title-toggle' );
+add_post_type_support( 'product', 'genesis-title-toggle' );
+
 // Enable theme support by default.
 add_theme_support(
 	'custom-header',

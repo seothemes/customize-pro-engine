@@ -72,7 +72,7 @@ function footer_credits_div() {
 		display_footer_credits();
 
 	} else {
-		$text = _get_value( 'footer_credits_text' );
+		$text = \genesis_get_option( 'footer_text' );
 
 		printf( '<p>%s %s</p>', do_shortcode( $text ), wp_kses_post( scroll_to_top_link() ) );
 	}

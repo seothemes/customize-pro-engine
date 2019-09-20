@@ -16,18 +16,6 @@ namespace CustomizePro;
 
 return [
 	[
-		'type'     => 'multicheck',
-		'settings' => 'enabled',
-		'label'    => __( 'Display on', 'customize-pro' ),
-		'default'  => [ 'post' ],
-		'choices'  => \Kirki_Helper::get_post_types(),
-	],
-	[
-		'type'     => 'custom',
-		'settings' => 'divider',
-		'default'  => '<hr>',
-	],
-	[
 		'type'     => 'select',
 		'settings' => 'position',
 		'label'    => __( 'Position', 'customize-pro' ),
@@ -37,24 +25,6 @@ return [
 			'genesis_entry_header'  => __( 'Entry Header', 'customize-pro' ),
 			'genesis_entry_content' => __( 'Entry Content', 'customize-pro' ),
 			'genesis_entry_footer'  => __( 'Entry Footer', 'customize-pro' ),
-		],
-	],
-	[
-		'type'     => 'select',
-		'settings' => 'size',
-		'label'    => __( 'Size', 'customize-pro' ),
-		'default'  => 'large',
-		'choices'  => _get_image_sizes(),
-	],
-	[
-		'type'     => 'select',
-		'settings' => 'alignment',
-		'label'    => __( 'Alignment', 'customize-pro' ),
-		'default'  => '',
-		'choices'  => [
-			''     => __( 'Default', 'customize-pro' ),
-			'wide' => __( 'Wide', 'customize-pro' ),
-			'full' => __( 'Full', 'customize-pro' ),
 		],
 	],
 	[
@@ -74,7 +44,7 @@ return [
 		],
 		'output'   => [
 			[
-				'element'  => '.featured-image',
+				'element'  => '.singular-image',
 				'property' => 'padding-top',
 				'units'    => 'px',
 			],
@@ -92,7 +62,7 @@ return [
 		],
 		'output'   => [
 			[
-				'element'  => '.featured-image',
+				'element'  => '.singular-image',
 				'property' => 'padding-bottom',
 				'units'    => 'px',
 			],

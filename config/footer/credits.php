@@ -166,17 +166,15 @@ return [
 		],
 	],
 	[
-		'type'     => 'textarea',
-		'settings' => 'text',
-		'label'    => __( 'Text', 'customize-pro' ),
-		'default'  => '[footer_copyright] &middot; <a href="https://mydomain.com">My Custom Link</a> &middot; Built with <a href="https://CustomizePro.com" title="Customize Pro">Customize Pro</a>',
-		'required' => [
-			[
-				'setting'  => _get_setting( 'type' ),
-				'value'    => 'text',
-				'operator' => '===',
-			],
-		],
+		'type'     => 'custom',
+		'settings' => 'tip',
+		'default'  => sprintf(
+			'<hr><p><strong>%s</strong>%s<a href="javascript:wp.customize.section( %s ).focus();">%s</a></p>',
+			esc_html__( 'Tip: ', 'customize-pro' ),
+			esc_html__( 'The footer credits text can be changed from the ', 'customize-pro' ),
+			esc_attr( '"genesis_footer"' ),
+			esc_html__( 'Genesis Footer Section', 'customize-pro' )
+		),
 	],
 	[
 		'type'     => 'checkbox',

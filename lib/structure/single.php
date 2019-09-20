@@ -14,6 +14,12 @@
 
 namespace CustomizePro;
 
+// Enable singular images.
+add_post_type_support( 'post', 'genesis-singular-images' );
+add_post_type_support( 'page', 'genesis-singular-images' );
+add_post_type_support( 'portfolio', 'genesis-singular-images' );
+add_post_type_support( 'product', 'genesis-singular-images' );
+
 add_action( 'genesis_before', __NAMESPACE__ . '\single_setup', 15 );
 /**
  * Add hooks to single pages.
@@ -31,70 +37,12 @@ function single_setup() {
 	add_filter( 'genesis_post_info', __NAMESPACE__ . '\single_post_info' );
 	add_filter( 'genesis_post_meta', __NAMESPACE__ . '\single_post_meta' );
 
-	$post_types = _get_value( 'single_featured-image_enabled' );
+	if ( is_singular() && post_type_supports( get_post_type(), 'genesis-singular-images' ) ) {
+		$hook = _get_value( 'single_featured-image_position' );
 
-	if ( ! is_array( $post_types ) ) {
-		return;
+		remove_action( 'genesis_entry_content', 'genesis_do_singular_image', 8 );
+		add_action( $hook, 'genesis_do_singular_image' );
 	}
-
-	foreach ( $post_types as $post_type ) {
-		if ( is_singular( $post_type ) ) {
-			$hook = _get_value( 'single_featured-image_position' );
-
-			add_action( $hook, __NAMESPACE__ . '\display_featured_image' );
-		}
-	}
-}
-
-/**
- * Conditionally display the featured image.
- *
- * @since 0.1.0
- *
- * @return void
- */
-function display_featured_image() {
-	$img = genesis_get_image(
-		[
-			'format'  => 'html',
-			'size'    => _get_value( 'single_featured-image_size' ),
-			'context' => 'single',
-			'attr'    => genesis_parse_attr( 'entry-image', [] ),
-		]
-	);
-
-	if ( ! empty( $img ) ) {
-		genesis_markup(
-			[
-				'open'    => '<figure %s>',
-				'close'   => '</figure>',
-				'content' => wp_make_content_images_responsive( $img ),
-				'context' => 'featured-image',
-			]
-		);
-	}
-}
-
-add_filter( 'genesis_attr_featured-image', __NAMESPACE__ . '\featured_image_alignment' );
-/**
- * Apply featured image width settings.
- *
- * @since 0.1.0
- *
- * @param array $attr Array of element attributes.
- *
- * @return array
- */
-function featured_image_alignment( $attr ) {
-	$setting = _get_value( 'single_featured-image_alignment' );
-
-	if ( '' === $setting ) {
-		return $attr;
-	}
-
-	$attr['class'] = $attr['class'] . ' wp-block-image align' . $setting;
-
-	return $attr;
 }
 
 /**

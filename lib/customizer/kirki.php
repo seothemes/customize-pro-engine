@@ -78,22 +78,6 @@ function disable_kirki_loader( $config ) {
 	);
 }
 
-add_filter( 'kirki/config', __NAMESPACE__ . '\kirki_url' );
-/**
- * Manually set the Kirki URL.
- *
- * @since 0.1.0
- *
- * @param array $config The configuration array.
- *
- * @return array
- */
-function kirki_url( $config ) {
-	$config['url_path'] = _get_url() . 'vendor/aristath/kirki';
-
-	return $config;
-}
-
 add_filter( 'kirki_control_types', __NAMESPACE__ . '\register_controls' );
 /**
  * Registers new Customizer controls with Kirki.
@@ -110,7 +94,7 @@ function register_controls( $controls ) {
 	return $controls;
 }
 
-add_action( 'genesis_setup', __NAMESPACE__ . '\add_proxy_panel', 15 );
+add_action( 'genesis_setup', __NAMESPACE__ . '\add_proxy_panel' );
 /**
  * Description of expected behavior.
  *
