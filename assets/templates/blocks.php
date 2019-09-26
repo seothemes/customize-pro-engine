@@ -15,12 +15,12 @@
 namespace CustomizePro;
 
 // Removes the entry header markup and page title.
-remove_action( 'genesis_entry_header', 'genesis_entry_header_markup_open', 5 );
-remove_action( 'genesis_entry_header', 'genesis_entry_header_markup_close', 15 );
-remove_action( 'genesis_entry_header', 'genesis_do_post_title' );
+\remove_action( 'genesis_entry_header', 'genesis_entry_header_markup_open', 5 );
+\remove_action( 'genesis_entry_header', 'genesis_entry_header_markup_close', 15 );
+\remove_action( 'genesis_entry_header', 'genesis_do_post_title' );
 
 // Removes the breadcrumbs.
-remove_action( 'genesis_before_loop', 'genesis_do_breadcrumbs' );
+\remove_action( 'genesis_before_loop', 'genesis_do_breadcrumbs' );
 
 // Remove content sidebar wrap.
 \add_filter( 'genesis_markup_content-sidebar-wrap', '__return_null' );
@@ -34,7 +34,7 @@ remove_action( 'genesis_before_loop', 'genesis_do_breadcrumbs' );
  * @return string
  */
 function block_template_layout() {
-	$custom_field = genesis_get_custom_field( '_genesis_layout', \get_the_ID() );
+	$custom_field = \genesis_get_custom_field( '_genesis_layout', \get_the_ID() );
 	$full_width   = __genesis_return_full_width_content();
 
 	if ( $custom_field === $full_width ) {
