@@ -1,5 +1,18 @@
 <?php
-/* Path to the WordPress codebase you'd like to test. Add a forward slash in the end. */
+/**
+ * Customize Pro.
+ *
+ * WARNING: This file should never be modified under any circumstances.
+ * Customizations should be made in the form of a core-functionality
+ * plugin so that the theme can be updated without losing changes.
+ *
+ * @package   CustomizePro
+ * @author    SEO Themes
+ * @copyright 2019 SEO Themes
+ * @license   GPL-2.0-or-later
+ */
+
+// Path to the WordPress codebase you'd like to test. Add a forward slash in the end.
 define( 'ABSPATH', dirname( dirname( dirname( dirname( __DIR__ ) ) ) ) . DIRECTORY_SEPARATOR );
 
 /*
@@ -32,12 +45,12 @@ define( 'DB_HOST', 'localhost' );
 define( 'DB_CHARSET', 'utf8' );
 define( 'DB_COLLATE', '' );
 
-/**#@+
+/**
  * Authentication Unique Keys and Salts.
  *
  * Change these to different unique phrases!
- * You can generate these using the
- * {@link https://api.wordpress.org/secret-key/1.1/salt/ WordPress.org secret-key service}
+ *
+ * @link https://api.wordpress.org/secret-key/1.1/salt/ WordPress.org secret-key service
  */
 define( 'AUTH_KEY', 'put your unique phrase here' );
 define( 'SECURE_AUTH_KEY', 'put your unique phrase here' );
@@ -48,9 +61,12 @@ define( 'SECURE_AUTH_SALT', 'put your unique phrase here' );
 define( 'LOGGED_IN_SALT', 'put your unique phrase here' );
 define( 'NONCE_SALT', 'put your unique phrase here' );
 
-$table_prefix = 'wpphpunittests_';   // Only numbers, letters, and underscores please!
+// Tests constants.
 define( 'WP_TESTS_DOMAIN', 'example.org' );
 define( 'WP_TESTS_EMAIL', 'admin@example.org' );
 define( 'WP_TESTS_TITLE', 'Test Blog' );
 define( 'WP_PHP_BINARY', 'php' );
 define( 'WPLANG', '' );
+
+// phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+$table_prefix = 'wpphpunittests_';

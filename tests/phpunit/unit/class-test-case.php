@@ -23,25 +23,23 @@ abstract class Test_Case extends TestCase {
 	/**
 	 * Prepares the test environment before each test.
 	 */
-	protected function setUp() {
+	protected function setUp(): void {
 		parent::setUp();
 		Monkey\setUp();
 
-		require_once customize_pro_THEME_DIR . '/src/bootstrap/helpers.php';
+		require_once CUSTOMIZE_PRO_THEME_DIR . '/lib/utilities/helpers.php';
 	}
 
 	/**
 	 * Cleans up the test environment after each test.
 	 */
-	protected function tearDown() {
+	protected function tearDown(): void {
 		Monkey\tearDown();
 		parent::tearDown();
 	}
 
 	/**
 	 * Setup the stubs for the common WordPress escaping and internationalization functions.
-	 *
-	 * @throws Monkey\Expectation\Exception\InvalidArgumentForStub
 	 */
 	protected function setup_common_wp_stubs() {
 

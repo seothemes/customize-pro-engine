@@ -14,13 +14,13 @@
     "php": "^5.6|^7"
   },
   "require-dev": {
-    "php": "^5.6|^7",
+    "php": "^7.1",
     "brain/monkey": "^2.2",
     "dealerdirect/phpcodesniffer-composer-installer": "v0.5.0",
     "phpcompatibility/phpcompatibility-wp": "2.0.0",
-    "phpunit/phpunit": "~5.7.9",
+    "phpunit/phpunit": "^8",
     "squizlabs/php_codesniffer": "^3.4.2",
-    "wp-coding-standards/wpcs": "2.1.0",
+    "wp-coding-standards/wpcs": "^2.1.0",
     "wp-phpunit/wp-phpunit": "^5.1"
   },
   "config": {
@@ -31,8 +31,14 @@
   },
   "scripts": {
     "install-codestandards": "Dealerdirect\\Composer\\Plugin\\Installers\\PHPCodeSniffer\\Plugin::run",
-    "phpcs": "phpcs --standard=WordPress --extensions=php -p -s lib config assets/templates",
-    "phpcbf": "phpcbf --standard=WordPress --extensions=php -p lib config assets/templates",
+    "phpcs": "phpcs --standard=WordPress --extensions=php -p -s lib config assets/templates tests",
+    "phpcs-lib": "phpcs --standard=WordPress --extensions=php -p -s lib",
+    "phpcs-config": "phpcs --standard=WordPress --extensions=php -p -s config",
+    "phpcs-tests": "phpcs --standard=WordPress --extensions=php -p -s tests",
+    "phpcbf": "phpcbf --standard=WordPress --extensions=php -p lib config assets/templates tests",
+    "phpcbf-lib": "phpcbf --standard=WordPress --extensions=php -p lib",
+    "phpcbf-config": "phpcbf --standard=WordPress --extensions=php -p config",
+    "phpcbf-tests": "phpcbf --standard=WordPress --extensions=php -p tests",
     "test-unit": "composer dump && \"vendor/bin/phpunit\" --testsuite unit --color=always",
     "test-integration": "composer dump && \"vendor/bin/phpunit\" --testsuite integration --configuration tests/phpunit/integration/phpunit.xml.dist --color=always",
     "post-update-cmd": [

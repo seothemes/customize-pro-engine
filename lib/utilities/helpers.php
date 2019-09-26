@@ -375,17 +375,3 @@ function _get_elements( $element, $hover = false, $array = false ) {
 		return \implode( ',', $elements[ $element ] );
 	}
 }
-
-/**
- * Returns the path to the theme backup.
- *
- * @since 1.0.0
- *
- * @return string
- */
-function _get_theme_backup_path() {
-	$theme   = \get_stylesheet_directory();
-	$version = \wp_get_theme()->get( 'Version' );
-
-	return "{$theme}-backup-{$version}";
-}
