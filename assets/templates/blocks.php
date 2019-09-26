@@ -23,9 +23,9 @@ remove_action( 'genesis_entry_header', 'genesis_do_post_title' );
 remove_action( 'genesis_before_loop', 'genesis_do_breadcrumbs' );
 
 // Remove content sidebar wrap.
-add_filter( 'genesis_markup_content-sidebar-wrap', '__return_null' );
+\add_filter( 'genesis_markup_content-sidebar-wrap', '__return_null' );
 
-add_filter( 'genesis_site_layout', __NAMESPACE__ . '\block_template_layout' );
+\add_filter( 'genesis_site_layout', __NAMESPACE__ . '\block_template_layout' );
 /**
  * Sets the correct page layout for this template.
  *
@@ -34,7 +34,7 @@ add_filter( 'genesis_site_layout', __NAMESPACE__ . '\block_template_layout' );
  * @return string
  */
 function block_template_layout() {
-	$custom_field = genesis_get_custom_field( '_genesis_layout', get_the_ID() );
+	$custom_field = genesis_get_custom_field( '_genesis_layout', \get_the_ID() );
 	$full_width   = __genesis_return_full_width_content();
 
 	if ( $custom_field === $full_width ) {

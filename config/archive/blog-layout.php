@@ -42,37 +42,37 @@ return [
 	[
 		'type'            => 'custom',
 		'settings'        => 'tip',
-		'default'         => sprintf(
+		'default'         => \sprintf(
 			'<hr><p><strong>%s</strong> %s <a href="%s" target="_blank">%s</a></p><hr>',
-			esc_html__( 'Tip: ', 'customize-pro' ),
-			esc_html__( 'The Blog page layout can be changed from the ', 'customize-pro' ),
-			admin_url( 'post.php?post=' . get_option( 'page_for_posts' ) . '&action=edit' ),
-			esc_html__( 'Edit Page screen', 'customize-pro' )
+			\esc_html__( 'Tip: ', 'customize-pro' ),
+			\esc_html__( 'The Blog page layout can be changed from the ', 'customize-pro' ),
+			\admin_url( 'post.php?post=' . \get_option( 'page_for_posts' ) . '&action=edit' ),
+			\esc_html__( 'Edit Page screen', 'customize-pro' )
 		),
 		'active_callback' => function () {
-			return 'page' === get_option( 'show_on_front' );
+			return 'page' === \get_option( 'show_on_front' );
 		},
 	],
 	[
 		'type'            => 'custom',
 		'settings'        => 'tip',
-		'default'         => sprintf(
+		'default'         => \sprintf(
 			'<hr><p><strong>%s</strong> %s <a href="%s">%s</a>%s</p><hr>',
-			esc_html__( 'Tip: ', 'customize-pro' ),
-			esc_html__( 'To change the Blog page layout, first set a Static Front Page and a Page for posts from ', 'customize-pro' ),
-			admin_url( 'options-reading.php' ),
-			esc_html__( 'Reading Settings', 'customize-pro' ),
-			esc_html__( 'page, then navigate to the Edit Page screen for the Posts Page and select the layout.', 'customize-pro' )
+			\esc_html__( 'Tip: ', 'customize-pro' ),
+			\esc_html__( 'To change the Blog page layout, first set a Static Front Page and a Page for posts from ', 'customize-pro' ),
+			\admin_url( 'options-reading.php' ),
+			\esc_html__( 'Reading Settings', 'customize-pro' ),
+			\esc_html__( 'page, then navigate to the Edit Page screen for the Posts Page and select the layout.', 'customize-pro' )
 		),
 		'active_callback' => function () {
-			return 'posts' === get_option( 'show_on_front' );
+			return 'posts' === \get_option( 'show_on_front' );
 		},
 	],
 	[
 		'type'        => 'sortable',
 		'settings'    => 'order',
 		'label'       => __( 'Element Order', 'customize-pro' ),
-		'description' => esc_html__( 'Drag and drop the sortable items below to change the order of post elements. Click the eye icon to toggle an elements visibility.', 'customize-pro' ) . '<br>&nbsp;',
+		'description' => \esc_html__( 'Drag and drop the sortable items below to change the order of post elements. Click the eye icon to toggle an elements visibility.', 'customize-pro' ) . '<br>&nbsp;',
 		'default'     => [
 			'genesis_do_post_title',
 			'genesis_post_info',
@@ -91,12 +91,12 @@ return [
 	[
 		'type'     => 'custom',
 		'settings' => 'tip',
-		'default'  => sprintf(
+		'default'  => \sprintf(
 			'<hr><p><strong>%s</strong> %s <a href="javascript:wp.customize.control( %s ).focus();">%s</a></p><hr>',
-			esc_html__( 'Tip: ', 'customize-pro' ),
-			esc_html__( 'The Featured Image Size and the Content Limit settings can be changed from the', 'customize-pro' ),
-			esc_attr( '"genesis_image_size"' ),
-			esc_html__( 'Content Archives Section', 'customize-pro' )
+			\esc_html__( 'Tip: ', 'customize-pro' ),
+			\esc_html__( 'The Featured Image Size and the Content Limit settings can be changed from the', 'customize-pro' ),
+			\esc_attr( '"genesis_image_size"' ),
+			\esc_html__( 'Content Archives Section', 'customize-pro' )
 		),
 	],
 ];

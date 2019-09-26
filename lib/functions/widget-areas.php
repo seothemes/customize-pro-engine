@@ -14,33 +14,33 @@
 
 namespace CustomizePro;
 
-add_action( 'genesis_setup', __NAMESPACE__ . '\unregister_widget_areas', 19 );
+\add_action( 'genesis_setup', __NAMESPACE__ . '\unregister_widget_areas', 19 );
 /**
  * Unregister widget areas (registered manually for custom ordering).
  *
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @return void
  */
 function unregister_widget_areas() {
-	unregister_sidebar( 'sidebar' );
-	unregister_sidebar( 'sidebar-alt' );
-	unregister_sidebar( 'header-right' );
+	\unregister_sidebar( 'sidebar' );
+	\unregister_sidebar( 'sidebar-alt' );
+	\unregister_sidebar( 'header-right' );
 }
 
-add_action( 'genesis_setup', __NAMESPACE__ . '\register_widget_areas', 20 );
+\add_action( 'genesis_setup', __NAMESPACE__ . '\register_widget_areas', 20 );
 /**
  * Register widget areas.
  *
  * Pro widgets registered here for correct ordering. Can be enabled/disabled
  * with module key.
  *
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @return void
  */
 function register_widget_areas() {
-	$widget_areas = apply_filters(
+	$widget_areas = \apply_filters(
 		'customize_pro_widget_areas',
 		[
 			'above-header'        => [
@@ -99,7 +99,7 @@ function register_widget_areas() {
 	);
 
 	foreach ( $widget_areas as $id => $args ) {
-		genesis_register_sidebar(
+		\genesis_register_sidebar(
 			[
 				'id'          => $id,
 				'name'        => $args['name'],
@@ -109,21 +109,21 @@ function register_widget_areas() {
 	}
 }
 
-add_action( 'genesis_setup', __NAMESPACE__ . '\register_footer_widgets', 20 );
+\add_action( 'genesis_setup', __NAMESPACE__ . '\register_footer_widgets', 20 );
 /**
  * Register footer widget areas depending on selected option.
  *
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @return void
  */
 function register_footer_widgets() {
 	$setting = _get_value( 'footer_widgets_columns' );
-	$columns = count( explode( '-', $setting ) );
-	$count   = is_customize_preview() ? 4 : $columns;
+	$columns = \count( explode( '-', $setting ) );
+	$count   = \is_customize_preview() ? 4 : $columns;
 
 	for ( $i = 1; $i <= $count; $i++ ) {
-		genesis_register_sidebar(
+		\genesis_register_sidebar(
 			[
 				'id'          => 'footer-' . $i,
 				'name'        => __( 'Footer ', 'customize-pro' ) . $i,
@@ -133,19 +133,19 @@ function register_footer_widgets() {
 	}
 }
 
-add_action( 'genesis_setup', __NAMESPACE__ . '\register_footer_credits', 20 );
+\add_action( 'genesis_setup', __NAMESPACE__ . '\register_footer_credits', 20 );
 /**
  * Display footer credits widget area.
  *
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @return void
  */
 function register_footer_credits() {
 	$footer_credits = _get_value( 'footer_credits_type' );
 
-	if ( 'widget' === $footer_credits || is_customize_preview() ) {
-		genesis_register_sidebar(
+	if ( 'widget' === $footer_credits || \is_customize_preview() ) {
+		\genesis_register_sidebar(
 			[
 				'id'          => 'footer-credits',
 				'name'        => __( 'Footer Credits', 'customize-pro' ),
@@ -155,11 +155,11 @@ function register_footer_credits() {
 	}
 }
 
-add_action( 'genesis_after_title_area', __NAMESPACE__ . '\header_right', 15 );
+\add_action( 'genesis_after_title_area', __NAMESPACE__ . '\header_right', 15 );
 /**
  * Display Header Right widget area.
  *
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @return void
  */
@@ -170,7 +170,7 @@ function header_right() {
 		return;
 	}
 
-	genesis_widget_area(
+	\genesis_widget_area(
 		'header-right-widget',
 		[
 			'before' => '<div class="header-right widget-area ' . $enabled . '">',
@@ -179,20 +179,20 @@ function header_right() {
 	);
 }
 
-add_action( 'genesis_after_entry', __NAMESPACE__ . '\after_entry', 9 );
+\add_action( 'genesis_after_entry', __NAMESPACE__ . '\after_entry', 9 );
 /**
  * Display After Entry widget area.
  *
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @return void
  */
 function after_entry() {
-	if ( ! is_single() ) {
+	if ( ! \is_single() ) {
 		return;
 	}
 
-	genesis_widget_area(
+	\genesis_widget_area(
 		'after-entry',
 		[
 			'before' => '<div class="after-entry widget-area">',

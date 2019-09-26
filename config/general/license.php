@@ -14,20 +14,20 @@
 
 namespace CustomizePro;
 
-$license_status = get_option( 'customize-pro_license_key_status', 'inactive' );
+$license_status = \get_option( 'customize-pro_license_key_status', 'inactive' );
 
 return [
 	[
 		'type'     => 'custom',
 		'settings' => 'license-key',
-		'default'  => sprintf(
+		'default'  => \sprintf(
 			'<p>%s <b style="color:%s">%s</b>.</p><p>%s <a href="%s" target="_blank">%s</a></p>',
-			esc_html__( 'Your license key is ', 'customize-pro' ),
+			\esc_html__( 'Your license key is ', 'customize-pro' ),
 			( 'valid' === $license_status ? 'green' : 'red' ),
 			$license_status,
-			esc_html__( 'License key settings can be managed from the admin screen.', 'customize-pro' ),
-			admin_url( 'admin.php?page=customize-pro-license' ),
-			esc_html__( 'License Settings →', 'customize-pro' )
+			\esc_html__( 'License key settings can be managed from the admin screen.', 'customize-pro' ),
+			\admin_url( 'admin.php?page=customize-pro-license' ),
+			\esc_html__( 'License Settings →', 'customize-pro' )
 		),
 	],
 ];

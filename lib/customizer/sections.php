@@ -17,7 +17,7 @@ namespace CustomizePro;
 /**
  * Returns array of default Customizer panels and sections.
  *
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @return array
  */
@@ -116,17 +116,17 @@ function _get_default_sections() {
 	];
 }
 
-add_action( 'genesis_setup', __NAMESPACE__ . '\add_sections' );
+\add_action( 'genesis_setup', __NAMESPACE__ . '\add_sections' );
 /**
  * Adds Kirki sections.
  *
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @return void
  */
 function add_sections() {
 	$handle = _get_handle();
-	$panels = apply_filters( 'customize_pro_sections', _get_default_sections() );
+	$panels = \apply_filters( 'customize_pro_sections', _get_default_sections() );
 
 	foreach ( $panels as $panel => $sections ) {
 		$priority = 10;

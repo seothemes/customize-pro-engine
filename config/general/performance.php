@@ -18,8 +18,8 @@ return [
 	[
 		'type'        => 'toggle',
 		'settings'    => 'load-stylesheet',
-		'label'       => esc_html__( 'Load child theme CSS', 'customize-pro' ),
-		'description' => esc_html__( 'Load the child theme style.css file on the front end of the site.', 'customize-pro' ),
+		'label'       => \esc_html__( 'Load child theme CSS', 'customize-pro' ),
+		'description' => \esc_html__( 'Load the child theme style.css file on the front end of the site.', 'customize-pro' ),
 	],
 	[
 		'type'     => 'custom',
@@ -29,8 +29,8 @@ return [
 	[
 		'type'        => 'toggle',
 		'settings'    => 'style-trump',
-		'label'       => esc_html__( 'Genesis style trump', 'customize-pro' ),
-		'description' => esc_html__( 'Load the child theme stylesheet at a later priority to override plugin styles.', 'customize-pro' ),
+		'label'       => \esc_html__( 'Genesis style trump', 'customize-pro' ),
+		'description' => \esc_html__( 'Load the child theme stylesheet at a later priority to override plugin styles.', 'customize-pro' ),
 	],
 	[
 		'type'     => 'custom',
@@ -40,13 +40,13 @@ return [
 	[
 		'type'        => 'toggle',
 		'settings'    => 'fontawesome',
-		'label'       => esc_html__( 'Load FontAwesome', 'customize-pro' ),
-		'description' => sprintf(
+		'label'       => \esc_html__( 'Load FontAwesome', 'customize-pro' ),
+		'description' => \sprintf(
 			'%s <a href="%s" target="_blank">%s</a> %s',
-			esc_html__( 'Load FontAwesome CSS for use throughout your site. Visit', 'customize-pro' ),
+			\esc_html__( 'Load FontAwesome CSS for use throughout your site. Visit', 'customize-pro' ),
 			esc_url( 'https://fontawesome.com/how-to-use/on-the-web/referencing-icons/basic-use' ),
-			esc_html__( 'FontAwesome', 'customize-pro' ),
-			esc_html__( 'for basic usage instructions.', 'customize-pro' )
+			\esc_html__( 'FontAwesome', 'customize-pro' ),
+			\esc_html__( 'for basic usage instructions.', 'customize-pro' )
 		),
 	],
 

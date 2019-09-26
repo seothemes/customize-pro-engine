@@ -18,24 +18,24 @@ return [
 	[
 		'type'     => 'radio-buttonset',
 		'settings' => 'size',
-		'label'    => esc_html__( 'Screen Size', 'customize-pro' ),
+		'label'    => \esc_html__( 'Screen Size', 'customize-pro' ),
 		'default'  => 'all',
 		'choices'  => [
-			'all'     => esc_html__( 'All', 'customize-pro' ),
-			'mobile'  => esc_html__( 'Mobile', 'customize-pro' ),
-			'desktop' => esc_html__( 'Desktop', 'customize-pro' ),
+			'all'     => \esc_html__( 'All', 'customize-pro' ),
+			'mobile'  => \esc_html__( 'Mobile', 'customize-pro' ),
+			'desktop' => \esc_html__( 'Desktop', 'customize-pro' ),
 		],
 	],
 	[
 		'type'     => 'custom',
 		'settings' => 'tip',
-		'default'  => sprintf(
+		'default'  => \sprintf(
 			'<p><strong>%s</strong> %s <a href="%s" target="_blank">%s</a> %s</p><hr>',
-			esc_html__( 'Tip: ', 'customize-pro' ),
-			esc_html__( 'The responsive breakpoint setting can be changed from the ', 'customize-pro' ),
-			admin_url( 'admin.php?page=customize-pro&tab=general' ),
-			esc_html__( 'General Settings', 'customize-pro' ),
-			esc_html__( 'page', 'customize-pro' )
+			\esc_html__( 'Tip: ', 'customize-pro' ),
+			\esc_html__( 'The responsive breakpoint setting can be changed from the ', 'customize-pro' ),
+			\admin_url( 'admin.php?page=customize-pro&tab=general' ),
+			\esc_html__( 'General Settings', 'customize-pro' ),
+			\esc_html__( 'page', 'customize-pro' )
 		),
 	],
 	[

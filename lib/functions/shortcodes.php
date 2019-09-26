@@ -15,18 +15,18 @@
 namespace CustomizePro;
 
 // Enable shortcodes in widgets.
-add_filter( 'widget_text', 'do_shortcode' );
+\add_filter( 'widget_text', 'do_shortcode' );
 
 // Add search form shortcode.
-add_shortcode(
+\add_shortcode(
 	'search_form',
 	function () {
 
 		// Gutenberg fix.
-		if ( is_admin() ) {
+		if ( \is_admin() ) {
 			return '';
 		}
 
-		return get_search_form( false );
+		return \get_search_form( false );
 	}
 );

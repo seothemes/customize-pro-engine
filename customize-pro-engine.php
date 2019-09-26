@@ -3,7 +3,7 @@
  * Customize Pro.
  *
  * Plugin Name:  Customize Pro Engine
- * Plugin URI:   https://wordpress.org/plugins/debug-toolkit
+ * Plugin URI:   https://wordpress.org/plugins/customize-pro-engine
  * Description:  Core functionality plugin for the Customize Pro child theme.
  * Version:      1.0.0
  * Author:       SEO Themes
@@ -15,7 +15,7 @@
  * Requires PHP: 5.6
  * Requires WP:  5.2.8
  *
- * @package   CustomizePro
+ * @package   SeoThemes\CustomizeProEngine
  * @author    SEO Themes
  * @copyright 2019 SEO Themes
  * @license   GPL-2.0-or-later

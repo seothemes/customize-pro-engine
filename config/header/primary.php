@@ -30,8 +30,19 @@ return [
 	],
 	[
 		'type'     => 'custom',
-		'settings' => 'divider',
-		'default'  => '<hr>',
+		'settings' => 'tip',
+		'default'  => \sprintf(
+			'<hr><p><strong>%s</strong> %s <strong>%s</strong> %s <a href="javascript:wp.customize.control( %s ).focus();">%s</a> %s <a href="javascript:wp.customize.control( %s ).focus();">%s</a></p><hr>',
+			\esc_html__( 'Tip:', 'customize-pro' ),
+			\esc_html__( 'Menu not aligning correctly? Try adjusting the', 'customize-pro' ),
+			\esc_html__( 'Alignment', 'customize-pro' ),
+			\esc_html__( 'in the', 'customize-pro' ),
+			\esc_attr( '"menus_primary_alignment"' ),
+			\esc_html__( 'Primary Menu Section', 'customize-pro' ),
+			\esc_html__( 'or the', 'customize-pro' ),
+			\esc_attr( '"menus_secondary_alignment"' ),
+			\esc_html__( 'Secondary Menu Section', 'customize-pro' )
+		),
 	],
 	[
 		'type'     => 'radio-image',
@@ -47,19 +58,8 @@ return [
 	],
 	[
 		'type'     => 'custom',
-		'settings' => 'tip',
-		'default'  => sprintf(
-			'<hr><p><strong>%s</strong> %s <strong>%s</strong> %s <a href="javascript:wp.customize.control( %s ).focus();">%s</a> %s <a href="javascript:wp.customize.control( %s ).focus();">%s</a></p><hr>',
-			esc_html__( 'Tip:', 'customize-pro' ),
-			esc_html__( 'Menu not aligning correctly? Try adjusting the', 'customize-pro' ),
-			esc_html__( 'Alignment', 'customize-pro' ),
-			esc_html__( 'in the', 'customize-pro' ),
-			esc_attr( '"menus_primary_alignment"' ),
-			esc_html__( 'Primary Menu Section', 'customize-pro' ),
-			esc_html__( 'or the', 'customize-pro' ),
-			esc_attr( '"menus_secondary_alignment"' ),
-			esc_html__( 'Secondary Menu Section', 'customize-pro' )
-		),
+		'settings' => 'divider',
+		'default'  => '<hr>',
 	],
 	[
 		'type'     => 'multicolor',
@@ -96,12 +96,12 @@ return [
 	[
 		'type'     => 'custom',
 		'settings' => 'tip',
-		'default'  => sprintf(
+		'default'  => \sprintf(
 			'<hr><p><strong>%s</strong>%s<a href="javascript:wp.customize.section( %s ).focus();">%s</a></p><hr>',
-			esc_html__( 'Tip: ', 'customize-pro' ),
-			esc_html__( 'Transparent header colors override the Primary Header defaults. They can be customized from the ', 'customize-pro' ),
-			esc_attr( '"customize-pro_header_transparent"' ),
-			esc_html__( 'Transparent Header Section', 'customize-pro' )
+			\esc_html__( 'Tip: ', 'customize-pro' ),
+			\esc_html__( 'Transparent header colors override the Primary Header defaults. They can be customized from the ', 'customize-pro' ),
+			\esc_attr( '"customize-pro_header_transparent"' ),
+			\esc_html__( 'Transparent Header Section', 'customize-pro' )
 		),
 	],
 	[

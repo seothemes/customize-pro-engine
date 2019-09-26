@@ -31,12 +31,12 @@ return [
 	[
 		'type'     => 'custom',
 		'settings' => 'tip',
-		'default'  => sprintf(
+		'default'  => \sprintf(
 			'<hr><p><strong>%s</strong> %s <a href="javascript:wp.customize.section( %s ).focus();">%s</a></p><hr>',
-			esc_html__( 'Quick Link: ', 'customize-pro' ),
-			esc_html__( 'Edit  ', 'customize-pro' ),
-			esc_attr( '"sidebar-widgets-header-right-widget"' ),
-			esc_html__( 'Header Right Widgets', 'customize-pro' )
+			\esc_html__( 'Quick Link: ', 'customize-pro' ),
+			\esc_html__( 'Edit  ', 'customize-pro' ),
+			\esc_attr( '"sidebar-widgets-header-right-widget"' ),
+			\esc_html__( 'Header Right Widgets', 'customize-pro' )
 		),
 	],
 	[

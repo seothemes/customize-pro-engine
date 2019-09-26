@@ -14,11 +14,11 @@
 
 namespace CustomizePro;
 
-add_action( 'customize_register', __NAMESPACE__ . '\modify_customizer_defaults', 100 );
+\add_action( 'customize_register', __NAMESPACE__ . '\modify_customizer_defaults', 100 );
 /**
  * Modify default Customizer controls and sections.
  *
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @param \WP_Customize_Manager $wp_customize WordPress Customizer object.
  *
@@ -40,16 +40,16 @@ function modify_customizer_defaults( $wp_customize ) {
 	$wp_customize->get_section( 'header_image' )->priority = 15;
 }
 
-add_action( 'customize_controls_print_styles', __NAMESPACE__ . '\customizer_styles', 99 );
+\add_action( 'customize_controls_print_styles', __NAMESPACE__ . '\customizer_styles', 99 );
 /**
  * Adds custom styles to Customizer screen.
  *
- * @since  0.1.0
+ * @since  1.0.0
  *
  * @return void
  */
 function customizer_styles() {
-	wp_register_style(
+	\wp_register_style(
 		_get_handle() . '-customizer',
 		_get_url() . 'assets/css/customizer.css',
 		[ 'dashicons' ],
@@ -57,19 +57,19 @@ function customizer_styles() {
 		'all'
 	);
 
-	wp_enqueue_style( _get_handle() . '-customizer' );
+	\wp_enqueue_style( _get_handle() . '-customizer' );
 }
 
-add_action( 'customize_controls_print_scripts', __NAMESPACE__ . '\customizer_scripts', 999 );
+\add_action( 'customize_controls_print_scripts', __NAMESPACE__ . '\customizer_scripts', 999 );
 /**
  * Adds custom inline scripts to Customizer screen.
  *
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @return void
  */
 function customizer_scripts() {
-	wp_register_script(
+	\wp_register_script(
 		_get_handle() . '-customizer',
 		_get_url() . 'assets/js/customizer.js',
 		null,
@@ -77,14 +77,14 @@ function customizer_scripts() {
 		'all'
 	);
 
-	wp_enqueue_script( _get_handle() . '-customizer' );
+	\wp_enqueue_script( _get_handle() . '-customizer' );
 }
 
-add_filter( 'customize_pro_field', __NAMESPACE__ . '\add_font_choices', 10, 2 );
+\add_filter( 'customize_pro_field', __NAMESPACE__ . '\add_font_choices', 10, 2 );
 /**
  * Allows custom fonts to be added to typography controls.
  *
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @param array $field Field settings.
  *
@@ -93,18 +93,18 @@ add_filter( 'customize_pro_field', __NAMESPACE__ . '\add_font_choices', 10, 2 );
 function add_font_choices( $field ) {
 	if ( 'typography' === $field['type'] ) {
 		$field['choices'] = [
-			'fonts' => apply_filters( 'customize_pro_font_choices', [] ),
+			'fonts' => \apply_filters( 'customize_pro_font_choices', [] ),
 		];
 	}
 
 	return $field;
 }
 
-add_filter( 'customize_pro_font_choices', __NAMESPACE__ . '\add_font_group', 20 );
+\add_filter( 'customize_pro_font_choices', __NAMESPACE__ . '\add_font_group', 20 );
 /**
  * Adds system fonts to typography controls.
  *
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @param array $custom Array of custom fonts.
  *
@@ -120,10 +120,10 @@ function add_font_group( $custom ) {
 		'Courier, monospace',
 	];
 
-	$custom['families']['system']['text'] = esc_attr__( 'System', 'customize-pro' );
+	$custom['families']['system']['text'] = \esc_attr__( 'System', 'customize-pro' );
 
 	foreach ( $fonts as $font ) {
-		$text = explode( ', ', $font );
+		$text = \explode( ', ', $font );
 
 		$custom['families']['system']['children'][] = [
 			'id'   => $font,

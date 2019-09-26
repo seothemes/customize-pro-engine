@@ -14,12 +14,12 @@
 
 namespace CustomizePro;
 
-add_action( 'setup_theme', __NAMESPACE__ . '\load_genesis', 100 );
+\add_action( 'setup_theme', __NAMESPACE__ . '\load_genesis', 100 );
 /**
  * Starts the engine.
  *
  * Enables the use of `genesis_*` functions in the child theme functions.php file,
- * without the need for require_once get_template_directory() . '/lib/init.php'
+ * without the need for require_once \get_template_directory() . '/lib/init.php'
  *
  * @since 1.0.0
  *
@@ -27,36 +27,35 @@ add_action( 'setup_theme', __NAMESPACE__ . '\load_genesis', 100 );
  */
 function load_genesis() {
 
-	if ( ! class_exists( 'Kirki' ) ) {
+	if ( ! \class_exists( 'Kirki' ) ) {
 		return;
 	}
 
 	$init = \get_template_directory() . '/lib/init.php';
 
-	if ( is_readable( $init ) ) {
+	if ( \is_readable( $init ) ) {
 		require_once $init;
 	}
 }
 
-add_action( 'genesis_init', __NAMESPACE__ . '\remove_is_child_theme', 0 );
+\add_action( 'genesis_init', __NAMESPACE__ . '\remove_genesis_theme_supports', 5 );
 /**
- * Removes all Genesis functions that use the is_child_theme() function.
+ * Removes all Genesis functions that use the \is_child_theme() function.
  *
- * Workaround to enable the use of Genesis functions in the child theme functions.php
- * file without needing require_once get_template_directory() . '/lib/init.php'.
+ * Since we are loading Genesis on behalf of the child theme, functions won't
+ * correctly. This little workaround fixes that issue by removing functions
+ * that contain the check and adds theme support that is required early.
  *
  * @since 1.0.0
  *
  * @return void
  */
-function remove_is_child_theme() {
-	remove_action( 'admin_notices', 'genesis_use_child_theme_notice' );
-	remove_shortcode( 'footer_childtheme_link' );
-	remove_action( 'genesis_init', 'genesis_theme_support' );
-	remove_filter( 'debug_information', 'genesis_child_theme_recommendations' );
+function remove_genesis_theme_supports() {
+	\remove_action( 'genesis_init', 'genesis_theme_support' );
+	\add_theme_support( 'genesis-breadcrumbs' );
 }
 
-add_action( 'genesis_init', __NAMESPACE__ . '\load_files', 0 );
+\add_action( 'genesis_init', __NAMESPACE__ . '\load_files', 0 );
 /**
  * Load plugin files.
  *
@@ -119,12 +118,15 @@ function load_files() {
 	];
 
 	// Load admin.
-	if ( is_admin() ) {
+	if ( \is_admin() ) {
 
-		$files = array_merge( [
-			'admin/assets',
-			'admin/metabox',
-		], $files );
+		$files = \array_merge(
+			[
+				'admin/assets',
+				'admin/metabox',
+			],
+			$files
+		);
 	}
 
 	foreach ( $files as $filename ) {

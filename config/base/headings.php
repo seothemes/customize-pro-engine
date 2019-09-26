@@ -111,12 +111,12 @@ return [
 	[
 		'type'     => 'custom',
 		'settings' => 'tip',
-		'default'  => sprintf(
+		'default'  => \sprintf(
 			'<hr><p><strong>%s</strong>%s<a href="javascript:wp.customize.section( %s ).focus();">%s</a></p><hr>',
-			esc_html__( 'Tip: ', 'customize-pro' ),
-			esc_html__( 'Entry title typography settings can be customized from the ', 'customize-pro' ),
-			esc_attr( '"customize-pro_single_entry"' ),
-			esc_html__( 'Entry Section', 'customize-pro' )
+			\esc_html__( 'Tip: ', 'customize-pro' ),
+			\esc_html__( 'Entry title typography settings can be customized from the ', 'customize-pro' ),
+			\esc_attr( '"customize-pro_single_entry"' ),
+			\esc_html__( 'Entry Section', 'customize-pro' )
 		),
 	],
 	[

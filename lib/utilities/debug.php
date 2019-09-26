@@ -17,18 +17,18 @@ namespace CustomizePro;
 /**
  * Checks if debug mode is enabled.
  *
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @return bool
  */
 function _is_debug_mode() {
-	return defined( 'WP_DEBUG' ) && WP_DEBUG;
+	return \defined( 'WP_DEBUG' ) && WP_DEBUG;
 }
 
 /**
  * Outputs nicely formatted debugging info.
  *
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @param mixed $value Value to debug.
  *
@@ -36,14 +36,14 @@ function _is_debug_mode() {
  */
 function _debug( $value ) {
 	echo '<pre style="margin:20px;padding:20px;">';
-	print_r( $value ); // phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_print_r
+	\print_r( $value ); // phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_print_r
 	echo '</pre>';
 }
 
 /**
  * Shorthand alias for _debug utility function.
  *
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @param mixed $value Value to debug.
  *

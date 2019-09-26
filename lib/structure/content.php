@@ -14,11 +14,11 @@
 
 namespace CustomizePro;
 
-add_filter( 'genesis_attr_site-container', __NAMESPACE__ . '\site_container_id' );
+\add_filter( 'genesis_attr_site-container', __NAMESPACE__ . '\site_container_id' );
 /**
  * Add scroll to to anchor ID to site container.
  *
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @param array $atts Site container attributes.
  *
@@ -30,11 +30,11 @@ function site_container_id( $atts ) {
 	return $atts;
 }
 
-add_filter( 'genesis_breadcrumb_args', __NAMESPACE__ . '\breadcrumb_args' );
+\add_filter( 'genesis_breadcrumb_args', __NAMESPACE__ . '\breadcrumb_args' );
 /**
  * Modify breadcrumb labels.
  *
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @param array $args Breadcrumb arguments.
  *
@@ -55,18 +55,18 @@ function breadcrumb_args( $args ) {
 	return $args;
 }
 
-add_filter( 'genesis_404_entry_title', __NAMESPACE__ . '\error_404_entry_title', 10, 1 );
+\add_filter( 'genesis_404_entry_title', __NAMESPACE__ . '\error_404_entry_title', 10, 1 );
 /**
  * Set the custom 404 title.
  *
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @param string $default Default 404 page title.
  *
  * @return string
  */
 function error_404_entry_title( $default ) {
-	$custom = get_page_by_path( 'error-404', OBJECT );
+	$custom = \get_page_by_path( 'error-404', OBJECT );
 
 	if ( isset( $custom ) ) {
 		return $custom->post_title;
@@ -76,18 +76,18 @@ function error_404_entry_title( $default ) {
 }
 
 
-add_filter( 'genesis_404_entry_content', __NAMESPACE__ . '\error_404_entry_content', 10, 1 );
+\add_filter( 'genesis_404_entry_content', __NAMESPACE__ . '\error_404_entry_content', 10, 1 );
 /**
  * Set custom 404 page content.
  *
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @param string $default Default 404 page content.
  *
  * @return string
  */
 function error_404_entry_content( $default ) {
-	$custom = get_page_by_path( 'error-404', OBJECT );
+	$custom = \get_page_by_path( 'error-404', OBJECT );
 
 	if ( isset( $custom ) ) {
 		return $custom->post_content;
@@ -96,7 +96,7 @@ function error_404_entry_content( $default ) {
 	return $default;
 }
 
-add_filter( 'genesis_search_text', __NAMESPACE__ . '\search_input_text' );
+\add_filter( 'genesis_search_text', __NAMESPACE__ . '\search_input_text' );
 /**
  * Modify the search input text.
  *
@@ -108,7 +108,7 @@ function search_input_text() {
 	return _get_value( 'content_search-form_input-text' );
 }
 
-add_filter( 'genesis_search_button_text', __NAMESPACE__ . '\search_button_text' );
+\add_filter( 'genesis_search_button_text', __NAMESPACE__ . '\search_button_text' );
 /**
  * Modify the search button text.
  *
@@ -124,7 +124,7 @@ function search_button_text() {
 	return _get_value( 'content_search-form_button-text' );
 }
 
-add_action( 'genesis_before_content_sidebar_wrap', __NAMESPACE__ . '\above_content', 15 );
+\add_action( 'genesis_before_content_sidebar_wrap', __NAMESPACE__ . '\above_content', 15 );
 /**
  * Display the Above Footer widget area.
  *
@@ -139,7 +139,7 @@ function above_content() {
 		return;
 	}
 
-	genesis_widget_area(
+	\genesis_widget_area(
 		'above-content',
 		[
 			'before' => '<div class="above-content widget-area"><div class="wrap">',
@@ -148,7 +148,7 @@ function above_content() {
 	);
 }
 
-add_action( 'genesis_after_content_sidebar_wrap', __NAMESPACE__ . '\below_content' );
+\add_action( 'genesis_after_content_sidebar_wrap', __NAMESPACE__ . '\below_content' );
 /**
  * Display the Above Footer widget area.
  *

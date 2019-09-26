@@ -91,18 +91,18 @@ return [
 	[
 		'type'     => 'custom',
 		'settings' => 'tip',
-		'default'  => sprintf(
+		'default'  => \sprintf(
 			'<hr><p><strong>%s</strong> %s <a href="javascript:wp.customize.section( %s ).focus();">%s</a></p><hr>',
-			esc_html__( 'Tip:', 'customize-pro' ),
-			esc_html__( 'Add widgets to the mega menu widget area from the', 'customize-pro' ),
-			esc_attr( '"sidebar-widgets-mega-menu"' ),
-			esc_html__( 'Mega Menu Widgets Section', 'customize-pro' )
+			\esc_html__( 'Tip:', 'customize-pro' ),
+			\esc_html__( 'Add widgets to the mega menu widget area from the', 'customize-pro' ),
+			\esc_attr( '"sidebar-widgets-mega-menu"' ),
+			\esc_html__( 'Mega Menu Widgets Section', 'customize-pro' )
 		),
 	],
 	[
 		'type'     => 'background',
 		'settings' => 'background-image',
-		'label'    => esc_html__( 'Background Image', 'customize-pro' ),
+		'label'    => \esc_html__( 'Background Image', 'customize-pro' ),
 		'default'  => [
 			'background-image'    => '',
 			'background-repeat'   => 'repeat',

@@ -54,13 +54,13 @@ return [
 	[
 		'type'     => 'custom',
 		'settings' => 'tip',
-		'default'  => sprintf(
+		'default'  => \sprintf(
 			'<hr><p><strong>%s</strong> %s <a href="javascript:wp.customize.section( %s ).focus();">%s</a> %s</p><hr>',
-			esc_html__( 'Tip: ', 'customize-pro' ),
-			esc_html__( 'These settings are for the default desktop colors only and will be overridden by the ', 'customize-pro' ),
-			esc_attr( '"customize-pro_menus_mobile"' ),
-			esc_html__( 'Mobile Menu', 'customize-pro' ),
-			esc_html__( 'settings on smaller screens.', 'customize-pro' )
+			\esc_html__( 'Tip: ', 'customize-pro' ),
+			\esc_html__( 'These settings are for the default desktop colors only and will be overridden by the ', 'customize-pro' ),
+			\esc_attr( '"customize-pro_menus_mobile"' ),
+			\esc_html__( 'Mobile Menu', 'customize-pro' ),
+			\esc_html__( 'settings on smaller screens.', 'customize-pro' )
 		),
 	],
 	[

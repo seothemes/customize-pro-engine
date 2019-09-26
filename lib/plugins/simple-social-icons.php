@@ -14,11 +14,11 @@
 
 namespace CustomizePro;
 
-add_filter( 'simple_social_default_styles', __NAMESPACE__ . '\simple_social_icons_defaults' );
+\add_filter( 'simple_social_default_styles', __NAMESPACE__ . '\simple_social_icons_defaults' );
 /**
  * Set the Simple Social Icon defaults.
  *
- * @since  0.1.0
+ * @since  1.0.0
  *
  * @param  array $defaults Default Simple Social Icons settings.
  *
@@ -41,7 +41,7 @@ function simple_social_icons_defaults( $defaults ) {
 		'instagram'              => '#',
 		'twitter'                => '#',
 	];
-	$args = wp_parse_args( $args, $defaults );
+	$args = \wp_parse_args( $args, $defaults );
 
 	return $args;
 }

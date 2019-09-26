@@ -14,7 +14,7 @@
 
 namespace CustomizePro;
 
-add_action( 'genesis_before', __NAMESPACE__ . '\js_no_js', 0 );
+\add_action( 'genesis_before', __NAMESPACE__ . '\js_no_js', 0 );
 /**
  * Echo out the script that changes 'no-js' class to 'js'.
  *
@@ -27,7 +27,7 @@ add_action( 'genesis_before', __NAMESPACE__ . '\js_no_js', 0 );
  * styled content, as the page does not load with no-js styles, then
  * switch to js once everything has finished loading.
  *
- * @since  0.1.0
+ * @since  1.0.0
  *
  * @return void
  */
@@ -45,34 +45,34 @@ function js_no_js() {
 	<?php
 }
 
-add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\enqueue_scripts' );
+\add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\enqueue_scripts' );
 /**
  * Enqueue main scripts.
  *
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @return void
  */
 function enqueue_scripts() {
 	$handle = _get_handle();
 
-	wp_register_script(
+	\wp_register_script(
 		$handle,
 		_get_url() . 'assets/js/min/customize-pro.js',
 		[ 'jquery' ],
 		_get_asset_version( 'js/min/customize-pro.js' ),
 		true
 	);
-	wp_enqueue_script( $handle );
+	\wp_enqueue_script( $handle );
 
 	$button = _get_value( 'menus_menu-toggle_text' );
-	$button = $button ? sprintf( '<span class="menu-toggle-text">%s</span>', $button ) : sprintf( '<span class="screen-reader-text">%s</span>', __( 'Toggle Menu', 'customize-pro' ) );
+	$button = $button ? \sprintf( '<span class="menu-toggle-text">%s</span>', $button ) : \sprintf( '<span class="screen-reader-text">%s</span>', __( 'Toggle Menu', 'customize-pro' ) );
 
 	if ( _get_value( 'menus_menu-toggle_icon' ) ) {
 		$button = '<span class="menu-toggle-icon"></span>' . $button;
 	}
 
-	wp_localize_script(
+	\wp_localize_script(
 		$handle,
 		'genesis_responsive_menu',
 		[

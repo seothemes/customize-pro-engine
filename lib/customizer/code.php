@@ -14,24 +14,24 @@
 
 namespace CustomizePro;
 
-add_action( 'wp_ajax_dynamic_css', __NAMESPACE__ . '\dynamic_css' );
-add_action( 'wp_ajax_nopriv_dynamic_css', __NAMESPACE__ . '\dynamic_css' );
+\add_action( 'wp_ajax_dynamic_css', __NAMESPACE__ . '\dynamic_css' );
+\add_action( 'wp_ajax_nopriv_dynamic_css', __NAMESPACE__ . '\dynamic_css' );
 /**
  * Load the dynamic CSS with ajax.
  *
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @return void
  */
 function dynamic_css() {
-	if ( is_customize_preview() ) {
+	if ( \is_customize_preview() ) {
 		exit;
 	}
 
-	$nonce = isset( $_REQUEST['wpnonce'] ) ? wp_verify_nonce( sanitize_key( $_REQUEST['wpnonce'] ), 'dynamic-css-nonce' ) : false;
+	$nonce = isset( $_REQUEST['wpnonce'] ) ? \wp_verify_nonce( sanitize_key( $_REQUEST['wpnonce'] ), 'dynamic-css-nonce' ) : false;
 
 	if ( ! $nonce ) {
-		die( esc_html__( 'Invalid nonce.', 'customize-pro' ) );
+		die( \esc_html__( 'Invalid nonce.', 'customize-pro' ) );
 
 	} else {
 		header( 'Content-type: text/css; charset: UTF-8' );
@@ -42,27 +42,27 @@ function dynamic_css() {
 	exit;
 }
 
-add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\responsive_css_output' );
+\add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\responsive_css_output' );
 /**
  * Outputs Additional JS to site footer.
  *
- * @since  0.1.0
+ * @since  1.0.0
  *
  * @return void
  */
 function responsive_css_output() {
 	$handle = _get_handle() . '-responsive-css';
 
-	if ( is_customize_preview() ) {
+	if ( \is_customize_preview() ) {
 		$css = generate_css();
-		wp_register_style( $handle, false, [], _get_version(), 'all' );
-		wp_enqueue_style( $handle );
-		wp_add_inline_style( $handle, $css );
+		\wp_register_style( $handle, false, [], _get_version(), 'all' );
+		\wp_enqueue_style( $handle );
+		\wp_add_inline_style( $handle, $css );
 
 	} else {
-		wp_enqueue_style(
+		\wp_enqueue_style(
 			$handle,
-			admin_url( 'admin-ajax.php' ) . '?action=dynamic_css&wpnonce=' . wp_create_nonce( 'dynamic-css-nonce' ),
+			\admin_url( 'admin-ajax.php' ) . '?action=dynamic_css&wpnonce=' . \wp_create_nonce( 'dynamic-css-nonce' ),
 			[],
 			_get_version(),
 			'all'
@@ -73,7 +73,7 @@ function responsive_css_output() {
 /**
  * Generates the CSS output.
  *
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @return mixed|string
  */
@@ -89,11 +89,11 @@ function generate_css() {
 	return minify( $css );
 }
 
-add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\custom_js_output' );
+\add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\custom_js_output' );
 /**
  * Outputs Additional JS to site footer.
  *
- * @since  0.1.0
+ * @since  1.0.0
  *
  * @return void
  */
@@ -101,13 +101,13 @@ function custom_js_output() {
 	$handle = _get_handle() . '-custom-js';
 	$output = _get_value( 'code_js_output' );
 
-	if ( 'inline' === $output || is_customize_preview() ) {
-		add_action( 'wp_footer', __NAMESPACE__ . '\inline_js' );
+	if ( 'inline' === $output || \is_customize_preview() ) {
+		\add_action( 'wp_footer', __NAMESPACE__ . '\inline_js' );
 
 	} else {
-		wp_enqueue_script(
+		\wp_enqueue_script(
 			$handle,
-			admin_url( 'admin-ajax.php' ) . '?action=dynamic_js&wpnonce=' . wp_create_nonce( 'dynamic-js-nonce' ),
+			\admin_url( 'admin-ajax.php' ) . '?action=dynamic_js&wpnonce=' . \wp_create_nonce( 'dynamic-js-nonce' ),
 			[],
 			_get_version(),
 			'all'
@@ -118,14 +118,14 @@ function custom_js_output() {
 /**
  * Outputs Additional JS to site footer.
  *
- * @since  0.1.0
+ * @since  1.0.0
  *
  * @return void
  */
 function inline_js() {
 	$output = _get_value( 'code_js_output' );
 
-	if ( 'inline' !== $output && ! is_customize_preview() ) {
+	if ( 'inline' !== $output && ! \is_customize_preview() ) {
 		return;
 	}
 
@@ -151,24 +151,24 @@ function inline_js() {
 	}
 }
 
-add_action( 'wp_ajax_dynamic_js', __NAMESPACE__ . '\dynamic_js' );
-add_action( 'wp_ajax_nopriv_dynamic_js', __NAMESPACE__ . '\dynamic_js' );
+\add_action( 'wp_ajax_dynamic_js', __NAMESPACE__ . '\dynamic_js' );
+\add_action( 'wp_ajax_nopriv_dynamic_js', __NAMESPACE__ . '\dynamic_js' );
 /**
  * Load the dynamic CSS with ajax.
  *
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @return void
  */
 function dynamic_js() {
-	if ( is_customize_preview() ) {
+	if ( \is_customize_preview() ) {
 		exit;
 	}
 
-	$nonce = isset( $_REQUEST['wpnonce'] ) ? wp_verify_nonce( sanitize_key( $_REQUEST['wpnonce'] ), 'dynamic-js-nonce' ) : false;
+	$nonce = isset( $_REQUEST['wpnonce'] ) ? \wp_verify_nonce( sanitize_key( $_REQUEST['wpnonce'] ), 'dynamic-js-nonce' ) : false;
 
 	if ( ! $nonce ) {
-		die( esc_html__( 'Invalid nonce.', 'customize-pro' ) );
+		die( \esc_html__( 'Invalid nonce.', 'customize-pro' ) );
 
 	} else {
 		header( 'Content-type: text/javascript; charset: UTF-8' );

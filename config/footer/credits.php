@@ -168,12 +168,12 @@ return [
 	[
 		'type'     => 'custom',
 		'settings' => 'tip',
-		'default'  => sprintf(
+		'default'  => \sprintf(
 			'<hr><p><strong>%s</strong>%s<a href="javascript:wp.customize.section( %s ).focus();">%s</a></p>',
-			esc_html__( 'Tip: ', 'customize-pro' ),
-			esc_html__( 'The footer credits text can be changed from the ', 'customize-pro' ),
-			esc_attr( '"genesis_footer"' ),
-			esc_html__( 'Genesis Footer Section', 'customize-pro' )
+			\esc_html__( 'Tip: ', 'customize-pro' ),
+			\esc_html__( 'The footer credits text can be changed from the ', 'customize-pro' ),
+			\esc_attr( '"genesis_footer"' ),
+			\esc_html__( 'Genesis Footer Section', 'customize-pro' )
 		),
 	],
 	[

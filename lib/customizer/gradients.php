@@ -17,7 +17,7 @@ namespace CustomizePro;
 /**
  * Build a background-gradient style for CSS
  *
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @param string $angle   Gradient angle.
  * @param string $color_1 Hex color value.
@@ -38,7 +38,7 @@ function build_gradients( $angle, $color_1, $color_2 ) {
 /**
  * Build & enqueue the complete CSS for headers.
  *
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @return string
  */
@@ -72,11 +72,11 @@ function generate_gradient_css() {
 	return $css;
 }
 
-add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\gradient_css_output' );
+\add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\gradient_css_output' );
 /**
  * Outputs Additional JS to site footer.
  *
- * @since  0.1.0
+ * @since  1.0.0
  *
  * @return void
  */
@@ -84,15 +84,15 @@ function gradient_css_output() {
 	$css    = generate_gradient_css();
 	$handle = _get_handle() . '-gradient';
 
-	if ( is_customize_preview() ) {
-		wp_register_style( $handle, false, [], _get_version(), 'all' );
-		wp_enqueue_style( $handle );
-		wp_add_inline_style( $handle, $css );
+	if ( \is_customize_preview() ) {
+		\wp_register_style( $handle, false, [], _get_version(), 'all' );
+		\wp_enqueue_style( $handle );
+		\wp_add_inline_style( $handle, $css );
 
 	} else {
-		wp_enqueue_style(
+		\wp_enqueue_style(
 			$handle,
-			admin_url( 'admin-ajax.php' ) . '?action=gradient_css&wpnonce=' . wp_create_nonce( 'gradient-css-nonce' ),
+			\admin_url( 'admin-ajax.php' ) . '?action=gradient_css&wpnonce=' . \wp_create_nonce( 'gradient-css-nonce' ),
 			[],
 			_get_version(),
 			'all'
@@ -100,23 +100,23 @@ function gradient_css_output() {
 	}
 }
 
-add_action( 'wp_ajax_gradient_css', __NAMESPACE__ . '\gradient_css' );
-add_action( 'wp_ajax_nopriv_gradient_css', __NAMESPACE__ . '\gradient_css' );
+\add_action( 'wp_ajax_gradient_css', __NAMESPACE__ . '\gradient_css' );
+\add_action( 'wp_ajax_nopriv_gradient_css', __NAMESPACE__ . '\gradient_css' );
 /**
  * Load the gradient CSS with ajax.
  *
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @return void
  */
 function gradient_css() {
-	$nonce = isset( $_REQUEST['wpnonce'] ) ? wp_verify_nonce( sanitize_key( $_REQUEST['wpnonce'] ), 'gradient-css-nonce' ) : false;
+	$nonce = isset( $_REQUEST['wpnonce'] ) ? \wp_verify_nonce( \sanitize_key( $_REQUEST['wpnonce'] ), 'gradient-css-nonce' ) : false;
 
 	if ( ! $nonce ) {
-		die( esc_html__( 'Invalid nonce.', 'customize-pro' ) );
+		die( \esc_html__( 'Invalid nonce.', 'customize-pro' ) );
 
 	} else {
-		header( 'Content-type: text/css; charset: UTF-8' );
+		\header( 'Content-type: text/css; charset: UTF-8' );
 
 		echo generate_gradient_css(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 	}

@@ -14,7 +14,7 @@
 
 namespace CustomizePro;
 
-$transition_elements = array_merge(
+$transition_elements = \array_merge(
 	_get_elements( 'button', false, true ),
 	_get_elements( 'input', false, true ),
 	[
@@ -354,7 +354,7 @@ return [
 		],
 		'output'      => [
 			[
-				'element'       => array_merge(
+				'element'       => \array_merge(
 					_get_elements( 'button', false, true ),
 					_get_elements( 'input', false, true ),
 					[

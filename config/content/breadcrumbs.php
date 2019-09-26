@@ -150,7 +150,7 @@ $labels = [
 foreach ( $labels as $label => $default ) {
 	$breadcrumb_title = ucwords( str_replace( '_', ' ', $label ) );
 
-	$tooltip = sprintf(
+	$tooltip = \sprintf(
 		/* translators: 1 is the breadcrumb title, 2 is the default value. */
 		__( 'Changes the %1$s label. Default value is "%2$s".', 'customize-pro' ),
 		$breadcrumb_title,

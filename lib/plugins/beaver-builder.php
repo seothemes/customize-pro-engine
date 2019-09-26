@@ -14,11 +14,11 @@
 
 namespace CustomizePro;
 
-add_filter( 'fl_builder_ui_bar_buttons', __NAMESPACE__ . '\beaver_builder_site_header', 10, 1 );
+\add_filter( 'fl_builder_ui_bar_buttons', __NAMESPACE__ . '\beaver_builder_site_header', 10, 1 );
 /**
  * Adds a hide/show site header button to Beaver Builder.
  *
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @param array $buttons List of Beaver Builder header buttons.
  *

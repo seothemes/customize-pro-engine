@@ -17,7 +17,7 @@ namespace CustomizePro;
 /**
  * Returns array of default Customizer panels.
  *
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @return array
  */
@@ -39,18 +39,18 @@ function _get_default_panels() {
 	];
 }
 
-add_action( 'genesis_setup', __NAMESPACE__ . '\add_panels' );
+\add_action( 'genesis_setup', __NAMESPACE__ . '\add_panels' );
 /**
  * Adds Kirki panels.
  *
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @return void
  */
 function add_panels() {
 	$priority = 10;
 	$handle   = _get_handle();
-	$panels   = apply_filters( 'customize_pro_panels', _get_default_panels() );
+	$panels   = \apply_filters( 'customize_pro_panels', _get_default_panels() );
 
 	foreach ( $panels as $panel => $title ) {
 		\Kirki::add_panel(

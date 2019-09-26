@@ -14,11 +14,11 @@
 
 namespace CustomizePro;
 
-add_filter( 'comment_author_says_text', __NAMESPACE__ . '\comment_author_says' );
+\add_filter( 'comment_author_says_text', __NAMESPACE__ . '\comment_author_says' );
 /**
  * Filter the comment author says text.
  *
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @return string
  */
@@ -26,11 +26,11 @@ function comment_author_says() {
 	return _get_value( 'single_comments_says' );
 }
 
-add_filter( 'genesis_title_comments', __NAMESPACE__ . '\comments_title' );
+\add_filter( 'genesis_title_comments', __NAMESPACE__ . '\comments_title' );
 /**
  * Filter the comments title.
  *
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @return string
  */
@@ -38,11 +38,11 @@ function comments_title() {
 	return '<h3>' . _get_value( 'single_comments_title' ) . '</h3>';
 }
 
-add_filter( 'comment_form_defaults', __NAMESPACE__ . '\comment_title_reply' );
+\add_filter( 'comment_form_defaults', __NAMESPACE__ . '\comment_title_reply' );
 /**
  * Filter the comment reply title.
  *
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @param array $defaults Comment title default args.
  *
@@ -54,11 +54,11 @@ function comment_title_reply( $defaults ) {
 	return $defaults;
 }
 
-add_filter( 'comment_form_defaults', __NAMESPACE__ . '\comment_submit_button' );
+\add_filter( 'comment_form_defaults', __NAMESPACE__ . '\comment_submit_button' );
 /**
  * Filter the submit button text.
  *
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @param array $defaults Comment form default args.
  *

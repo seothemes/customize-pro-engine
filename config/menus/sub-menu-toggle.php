@@ -18,12 +18,12 @@ return [
 	[
 		'type'     => 'custom',
 		'settings' => 'tip',
-		'default'  => sprintf(
+		'default'  => \sprintf(
 			'<p><strong>%s</strong> %s <a href="javascript:wp.customize.section( %s ).focus();">%s</a></p><hr>',
-			esc_html__( 'Tip: ', 'customize-pro' ),
-			esc_html__( 'Sub menu toggle buttons are displayed on mobile screen sizes only. Sub menus for desktop devices can be customized from the ', 'customize-pro' ),
-			esc_attr( '"customize-pro_menus_sub-menu"' ),
-			esc_html__( 'Sub Menu Section', 'customize-pro' )
+			\esc_html__( 'Tip: ', 'customize-pro' ),
+			\esc_html__( 'Sub menu toggle buttons are displayed on mobile screen sizes only. Sub menus for desktop devices can be customized from the ', 'customize-pro' ),
+			\esc_attr( '"customize-pro_menus_sub-menu"' ),
+			\esc_html__( 'Sub Menu Section', 'customize-pro' )
 		),
 	],
 	[

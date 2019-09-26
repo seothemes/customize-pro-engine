@@ -14,11 +14,11 @@
 
 namespace CustomizePro;
 
-add_action( 'genesis_after_title_area', __NAMESPACE__ . '\search_toggle', 20 );
+\add_action( 'genesis_after_title_area', __NAMESPACE__ . '\search_toggle', 20 );
 /**
  * Display the search toggle button.
  *
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @return void
  */
@@ -28,15 +28,15 @@ function search_toggle() {
 	if ( 'show' === $enable || 'hide-desktop' === $enable ) {
 
 		// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-		echo get_search_button( 'hide-desktop' );
+		echo \get_search_button( 'hide-desktop' );
 	}
 }
 
-add_action( 'genesis_after_header_wrap', __NAMESPACE__ . '\search_form', 20 );
+\add_action( 'genesis_after_header_wrap', __NAMESPACE__ . '\search_form', 20 );
 /**
  * Display header search form.
  *
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @return void
  */
@@ -51,9 +51,9 @@ function search_form() {
 	$form  = \get_search_form( false );
 	$close = _get_svg( 'close-button' );
 
-	printf(
+	\printf(
 		'<div class="header-search %s"><div class="wrap">%s</div><button class="header-search-close">%s</button></div>',
-		esc_attr( $style ),
+		\esc_attr( $style ),
 		$form, // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 		$close // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 	);
@@ -62,7 +62,7 @@ function search_form() {
 /**
  * Display search button.
  *
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @param string $additional_classes Additional button classes.
  *
@@ -70,20 +70,20 @@ function search_form() {
  */
 function get_search_button( $additional_classes = '' ) {
 	$location = _get_value( 'header_search_location' );
-	$classes  = trim( 'header-search-toggle ' . $location . ' ' . $additional_classes );
+	$classes  = \trim( 'header-search-toggle ' . $location . ' ' . $additional_classes );
 
-	return sprintf(
+	return \sprintf(
 		'<button class="%s">%s</button>',
 		$classes,
 		_get_svg( 'search-button' )
 	);
 }
 
-add_filter( 'wp_nav_menu_items', __NAMESPACE__ . '\nav_menu_search', 10, 2 );
+\add_filter( 'wp_nav_menu_items', __NAMESPACE__ . '\nav_menu_search', 10, 2 );
 /**
  * Filter menu items, appending a search form.
  *
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @param string $menu HTML string of list items.
  * @param object $args Menu arguments.
@@ -91,17 +91,17 @@ add_filter( 'wp_nav_menu_items', __NAMESPACE__ . '\nav_menu_search', 10, 2 );
  * @return string Amended HTML string of list items.
  */
 function nav_menu_search( $menu, $args ) {
-	$settings = get_option( 'genesis-settings', false );
+	$settings = \get_option( 'genesis-settings', false );
 
 	if ( isset( $settings['nav_extras'] ) && 'search' === $settings['nav_extras'] ) {
 		return $menu;
 	}
 
-	if ( has_nav_menu( 'primary' ) && 'primary' !== $args->theme_location ) {
+	if ( \has_nav_menu( 'primary' ) && 'primary' !== $args->theme_location ) {
 		return $menu;
 	}
 
-	if ( ! has_nav_menu( 'primary' ) && 'secondary' !== $args->theme_location ) {
+	if ( ! \has_nav_menu( 'primary' ) && 'secondary' !== $args->theme_location ) {
 		return $menu;
 	}
 
@@ -114,11 +114,11 @@ function nav_menu_search( $menu, $args ) {
 	return $menu . get_search_button( 'hide-mobile' );
 }
 
-add_filter( 'genesis_attr_search-form', __NAMESPACE__ . '\search_form_has_button' );
+\add_filter( 'genesis_attr_search-form', __NAMESPACE__ . '\search_form_has_button' );
 /**
  * Add button class to search form.
  *
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @param array $attr Search form attributes.
  *

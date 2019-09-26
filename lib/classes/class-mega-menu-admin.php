@@ -19,7 +19,7 @@ namespace CustomizePro;
  *
  * This class demonstrate the usage of Menu Item Custom Fields in plugins/themes.
  *
- * @since 0.1.0
+ * @since 1.0.0
  */
 class Mega_Menu_Admin {
 
@@ -38,14 +38,14 @@ class Mega_Menu_Admin {
 	/**
 	 * Initialize plugin.
 	 *
-	 * @since 0.1.0
+	 * @since 1.0.0
 	 *
 	 * @return void
 	 */
 	public static function init() {
-		add_action( 'wp_nav_menu_item_custom_fields', [ __CLASS__, 'fields' ], 10, 4 );
-		add_action( 'wp_update_nav_menu_item', [ __CLASS__, 'save' ], 10, 3 );
-		add_filter( 'manage_nav-menus_columns', [ __CLASS__, 'columns' ], 99 );
+		\add_action( 'wp_nav_menu_item_custom_fields', [ __CLASS__, 'fields' ], 10, 4 );
+		\add_action( 'wp_update_nav_menu_item', [ __CLASS__, 'save' ], 10, 3 );
+		\add_filter( 'manage_nav-menus_columns', [ __CLASS__, 'columns' ], 99 );
 		self::$fields = [
 			'mega-menu' => __( 'Mega Menu', 'customize-pro' ),
 		];
@@ -54,9 +54,9 @@ class Mega_Menu_Admin {
 	/**
 	 * Save custom field value.
 	 *
-	 * @since   0.1.0
+	 * @since   1.0.0
 	 *
-	 * @wp_hook action wp_update_nav_menu_item
+	 * @wp_hook action \wp_update_nav_menu_item
 	 *
 	 * @param int   $menu_id         Nav menu ID.
 	 * @param int   $menu_item_db_id Menu item ID.
@@ -65,18 +65,19 @@ class Mega_Menu_Admin {
 	 * @return void
 	 */
 	public static function save( $menu_id, $menu_item_db_id, $menu_item_args ) {
-		if ( defined( 'DOING_AJAX' ) && DOING_AJAX ) {
+		if ( \defined( 'DOING_AJAX' ) && DOING_AJAX ) {
 			return;
 		}
-		check_admin_referer( 'update-nav_menu', 'update-nav-menu-nonce' );
+
+		\check_admin_referer( 'update-nav_menu', 'update-nav-menu-nonce' );
 		foreach ( self::$fields as $_key => $label ) {
-			$key = sprintf( 'menu-item-%s', $_key );
+			$key = \sprintf( 'menu-item-%s', $_key );
 
 			// Sanitize.
 			if ( ! empty( $_POST[ $key ][ $menu_item_db_id ] ) ) {
-				update_post_meta( $menu_item_db_id, $key, 'has-mega-menu' );
+				\update_post_meta( $menu_item_db_id, $key, 'has-mega-menu' );
 			} else {
-				delete_post_meta( $menu_item_db_id, $key );
+				\delete_post_meta( $menu_item_db_id, $key );
 			}
 		}
 	}
@@ -84,7 +85,7 @@ class Mega_Menu_Admin {
 	/**
 	 * Print field.
 	 *
-	 * @since 0.1.0
+	 * @since 1.0.0
 	 *
 	 * @param int    $id    Nav menu ID.
 	 * @param object $item  Menu item data object.
@@ -95,11 +96,11 @@ class Mega_Menu_Admin {
 	 */
 	public static function fields( $id, $item, $depth, $args ) {
 		foreach ( self::$fields as $_key => $label ) {
-			$key   = sprintf( 'menu-item-%s', $_key );
-			$id    = sprintf( 'edit-%s-%s', $key, $item->ID );
-			$name  = sprintf( '%s[%s]', $key, $item->ID );
-			$value = get_post_meta( $item->ID, $key, true );
-			$class = sprintf( 'field-%s', $_key );
+			$key   = \sprintf( 'menu-item-%s', $_key );
+			$id    = \sprintf( 'edit-%s-%s', $key, $item->ID );
+			$name  = \sprintf( '%s[%s]', $key, $item->ID );
+			$value = \get_post_meta( $item->ID, $key, true );
+			$class = \sprintf( 'field-%s', $_key );
 			$check = empty( $value ) ? '' : $value;
 			?>
 			<style>
@@ -112,11 +113,11 @@ class Mega_Menu_Admin {
 					display: block
 				}
 			</style>
-			<p class="mega-menu description description-wide <?php echo esc_attr( $class ); ?>">
-				<label for="<?php echo esc_attr( $id ); ?>">
-					<input type="checkbox" id="<?php echo esc_attr( $id ); ?>" class="widefat <?php echo esc_attr( $id ); ?>" name="<?php echo esc_attr( $name ); ?>"
-						<?php checked( $check, 'has-mega-menu' ); ?>/>
-					<?php echo esc_attr( $label ); ?>
+			<p class="mega-menu description description-wide <?php echo \esc_attr( $class ); ?>">
+				<label for="<?php echo \esc_attr( $id ); ?>">
+					<input type="checkbox" id="<?php echo \esc_attr( $id ); ?>" class="widefat <?php echo \esc_attr( $id ); ?>" name="<?php echo \esc_attr( $name ); ?>"
+						<?php \checked( $check, 'has-mega-menu' ); ?>/>
+					<?php echo \esc_attr( $label ); ?>
 				</label>
 			</p>
 			<?php
@@ -126,14 +127,14 @@ class Mega_Menu_Admin {
 	/**
 	 * Add our fields to the screen options toggle.
 	 *
-	 * @since 0.1.0
+	 * @since 1.0.0
 	 *
 	 * @param array $columns Menu item columns.
 	 *
 	 * @return array
 	 */
 	public static function columns( $columns ) {
-		$columns = array_merge( $columns, self::$fields );
+		$columns = \array_merge( $columns, self::$fields );
 
 		return $columns;
 	}

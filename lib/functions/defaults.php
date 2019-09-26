@@ -14,11 +14,11 @@
 
 namespace CustomizePro;
 
-add_filter( 'genesis_theme_settings_defaults', __NAMESPACE__ . '\theme_defaults' );
+\add_filter( 'genesis_theme_settings_defaults', __NAMESPACE__ . '\theme_defaults' );
 /**
  * Update theme settings upon reset.
  *
- * @since  0.1.0
+ * @since  1.0.0
  *
  * @param  array $defaults Default theme settings.
  *

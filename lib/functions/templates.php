@@ -14,11 +14,11 @@
 
 namespace CustomizePro;
 
-add_filter( 'theme_page_templates', __NAMESPACE__ . '\register_templates' );
+\add_filter( 'theme_page_templates', __NAMESPACE__ . '\register_templates' );
 /**
  * Add custom page templates to admin dropdown.
  *
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @param array $templates Array of page templates.
  *
@@ -33,21 +33,21 @@ function register_templates( $templates ) {
 		$custom['beaver-builder.php'] = 'Beaver Builder';
 	}
 
-	return array_merge( $custom, $templates );
+	return \array_merge( $custom, $templates );
 }
 
-add_filter( 'template_include', __NAMESPACE__ . '\include_templates' );
+\add_filter( 'template_include', __NAMESPACE__ . '\include_templates' );
 /**
  * Swap out template for custom if set.
  *
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @param string $template Page template to override.
  *
  * @return string
  */
 function include_templates( $template ) {
-	$template_name    = get_post_meta( get_the_ID(), '_wp_page_template', true );
+	$template_name    = \get_post_meta( \get_the_ID(), '_wp_page_template', true );
 	$template_path    = _get_path() . 'assets/templates/' . $template_name;
 	$custom_templates = [
 		'blocks.php',
@@ -55,11 +55,11 @@ function include_templates( $template ) {
 		'landing.php',
 	];
 
-	if ( ! in_array( $template_name, $custom_templates, true ) ) {
+	if ( ! \in_array( $template_name, $custom_templates, true ) ) {
 		return $template;
 	}
 
-	if ( file_exists( $template_path ) ) {
+	if ( \is_readable( $template_path ) ) {
 		$template = $template_path;
 	}
 

@@ -14,11 +14,11 @@
 
 namespace CustomizePro;
 
-add_action( 'genesis_setup', __NAMESPACE__ . '\add_extra_fields', 15 );
+\add_action( 'genesis_setup', __NAMESPACE__ . '\add_extra_fields', 15 );
 /**
  * Add extra fields not specified in config to Customizer.
  *
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @return void
  */
@@ -191,15 +191,15 @@ function add_extra_fields() {
 			'section'  => 'title_tagline',
 			'settings' => 'tip-38739',
 			'priority' => 7,
-			'default'  => sprintf(
+			'default'  => \sprintf(
 				'<p><strong>%s</strong> %s <a href="javascript:wp.customize.control( %s ).focus();">%s</a> %s <a href="javascript:wp.customize.control( %s ).focus();">%s</a></p><hr>',
-				esc_html__( 'Tip: ', 'customize-pro' ),
-				esc_html__( 'Using a transparent or sticky header? Set an alternative logo from the ', 'customize-pro' ),
-				esc_attr( '"customize-pro_header_transparent_different-logo"' ),
-				esc_html__( 'Transparent Header Logo Setting', 'customize-pro' ),
-				esc_html__( 'or the', 'customize-pro' ),
-				esc_attr( '"customize-pro_header_sticky_different-logo"' ),
-				esc_html__( 'Sticky Header Logo Setting', 'customize-pro' )
+				\esc_html__( 'Tip: ', 'customize-pro' ),
+				\esc_html__( 'Using a transparent or sticky header? Set an alternative logo from the ', 'customize-pro' ),
+				\esc_attr( '"customize-pro_header_transparent_different-logo"' ),
+				\esc_html__( 'Transparent Header Logo Setting', 'customize-pro' ),
+				\esc_html__( 'or the', 'customize-pro' ),
+				\esc_attr( '"customize-pro_header_sticky_different-logo"' ),
+				\esc_html__( 'Sticky Header Logo Setting', 'customize-pro' )
 			),
 		]
 	);

@@ -50,12 +50,12 @@ return [
 	[
 		'type'     => 'custom',
 		'settings' => 'tip',
-		'default'  => sprintf(
+		'default'  => \sprintf(
 			'<hr><p><strong>%s</strong> %s <a href="javascript:wp.customize.section( %s ).focus();">%s</a></p><hr>',
-			esc_html__( 'Tip: ', 'customize-pro' ),
-			esc_html__( 'Looking for the Custom Logo settings? Change them in the ', 'customize-pro' ),
-			esc_attr( '"title_tagline"' ),
-			esc_html__( 'Site Identity Section', 'customize-pro' )
+			\esc_html__( 'Tip: ', 'customize-pro' ),
+			\esc_html__( 'Looking for the Custom Logo settings? Change them in the ', 'customize-pro' ),
+			\esc_attr( '"title_tagline"' ),
+			\esc_html__( 'Site Identity Section', 'customize-pro' )
 		),
 	],
 	[
@@ -107,12 +107,12 @@ return [
 	[
 		'type'     => 'custom',
 		'settings' => 'tip',
-		'default'  => sprintf(
+		'default'  => \sprintf(
 			'<hr><p><strong>%s</strong> %s <a href="javascript:wp.customize.section( %s ).focus();">%s</a></p><hr>',
-			esc_html__( 'Tip: ', 'customize-pro' ),
-			esc_html__( 'The site title and site description can be changed from the ', 'customize-pro' ),
-			esc_attr( '"title_tagline"' ),
-			esc_html__( 'Site Identity Section', 'customize-pro' )
+			\esc_html__( 'Tip: ', 'customize-pro' ),
+			\esc_html__( 'The site title and site description can be changed from the ', 'customize-pro' ),
+			\esc_attr( '"title_tagline"' ),
+			\esc_html__( 'Site Identity Section', 'customize-pro' )
 		),
 	],
 	[

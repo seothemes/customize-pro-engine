@@ -14,7 +14,6 @@
 
 namespace CustomizePro;
 
-
 /**
  * Autoload classes.
  *
@@ -23,13 +22,13 @@ namespace CustomizePro;
 \spl_autoload_register(
 	function ( $class ) {
 
-		if ( strpos( $class, __NAMESPACE__ ) === false ) {
+		if ( \strpos( $class, __NAMESPACE__ ) === false ) {
 			return;
 		}
 
 		$class_dir  = _get_path() . 'lib/classes/';
-		$class_name = str_replace( __NAMESPACE__, '', $class );
-		$class_file = strtolower( str_replace( [ '\\', '_' ], '-', $class_name ) );
+		$class_name = \str_replace( __NAMESPACE__, '', $class );
+		$class_file = \strtolower( \str_replace( [ '\\', '_' ], '-', $class_name ) );
 
 		/* @noinspection PhpIncludeInspection */
 		require_once "{$class_dir}class{$class_file}.php";

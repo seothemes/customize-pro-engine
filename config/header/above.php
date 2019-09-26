@@ -18,12 +18,12 @@ return [
 	[
 		'type'     => 'custom',
 		'settings' => 'tip',
-		'default'  => sprintf(
+		'default'  => \sprintf(
 			'<p><strong>%s</strong> %s <a href="javascript:wp.customize.section( %s ).focus();">%s</a></p><hr>',
-			esc_html__( 'Tip: ', 'customize-pro' ),
-			esc_html__( 'This is a widget area. Add or remove widgets from the  ', 'customize-pro' ),
-			esc_attr( '"sidebar-widgets-above-header"' ),
-			esc_html__( 'Above Header Widgets Screen', 'customize-pro' )
+			\esc_html__( 'Tip: ', 'customize-pro' ),
+			\esc_html__( 'This is a widget area. Add or remove widgets from the  ', 'customize-pro' ),
+			\esc_attr( '"sidebar-widgets-above-header"' ),
+			\esc_html__( 'Above Header Widgets Screen', 'customize-pro' )
 		),
 	],
 	[

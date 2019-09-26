@@ -18,21 +18,21 @@ return [
 	[
 		'type'     => 'select',
 		'settings' => 'output',
-		'label'    => esc_html__( 'Output', 'customize-pro' ),
+		'label'    => \esc_html__( 'Output', 'customize-pro' ),
 		'default'  => 'inline',
 		'choices'  => [
-			'inline' => esc_html__( 'Inline', 'customize-pro' ),
-			'file'   => esc_html__( 'File', 'customize-pro' ),
+			'inline' => \esc_html__( 'Inline', 'customize-pro' ),
+			'file'   => \esc_html__( 'File', 'customize-pro' ),
 		],
 	],
 	[
 		'type'     => 'radio-buttonset',
 		'settings' => 'type',
-		'label'    => esc_html__( 'Type', 'customize-pro' ),
+		'label'    => \esc_html__( 'Type', 'customize-pro' ),
 		'default'  => 'jquery',
 		'choices'  => [
-			'jquery'  => esc_html__( 'jQuery', 'customize-pro' ),
-			'vanilla' => esc_html__( 'Vanilla', 'customize-pro' ),
+			'jquery'  => \esc_html__( 'jQuery', 'customize-pro' ),
+			'vanilla' => \esc_html__( 'Vanilla', 'customize-pro' ),
 		],
 	],
 	[

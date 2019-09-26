@@ -18,7 +18,7 @@ return [
 	[
 		'type'     => 'number',
 		'settings' => 'breakpoint',
-		'label'    => esc_html__( 'Global Breakpoint', 'kirki' ),
+		'label'    => \esc_html__( 'Global Breakpoint', 'kirki' ),
 		'default'  => _get_breakpoint(),
 		'choices'  => [
 			'min'  => 0,

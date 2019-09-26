@@ -123,11 +123,11 @@ return [
 	[
 		'type'            => 'radio-buttonset',
 		'settings'        => 'position',
-		'label'           => esc_html__( 'Positioning', 'customize-pro' ),
+		'label'           => \esc_html__( 'Positioning', 'customize-pro' ),
 		'default'         => 'absolute',
 		'choices'         => [
-			'absolute' => esc_html__( 'Absolute', 'customize-pro' ),
-			'relative' => esc_html__( 'Relative', 'customize-pro' ),
+			'absolute' => \esc_html__( 'Absolute', 'customize-pro' ),
+			'relative' => \esc_html__( 'Relative', 'customize-pro' ),
 		],
 		'output'          => [
 			[

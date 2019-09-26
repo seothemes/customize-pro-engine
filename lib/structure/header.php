@@ -14,29 +14,29 @@
 
 namespace CustomizePro;
 
-add_filter( 'language_attributes', __NAMESPACE__ . '\admin_bar_class' );
+\add_filter( 'language_attributes', __NAMESPACE__ . '\admin_bar_class' );
 /**
  * Add class to html element for styling.
  *
  * @since 1.0.0
  *
- * @param $output
+ * @param string $output Language attributes markup.
  *
  * @return string
  */
 function admin_bar_class( $output ) {
-	if ( is_admin_bar_showing() ) {
+	if ( \is_admin_bar_showing() ) {
 		$output .= ' class=\'admin-bar-showing\'';
 	}
 
 	return $output;
 }
 
-add_filter( 'body_class', __NAMESPACE__ . '\header_body_classes', 100, 1 );
+\add_filter( 'body_class', __NAMESPACE__ . '\header_body_classes', 100, 1 );
 /**
  * Add header specific body classes.
  *
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @param array $classes All body classes.
  *
@@ -65,22 +65,22 @@ function header_body_classes( $classes ) {
 
 	if ( _is_single() ) {
 		$classes[] = 'single';
-		$classes   = array_diff( $classes, [ 'archive' ] );
+		$classes   = \array_diff( $classes, [ 'archive' ] );
 	}
 
 	if ( _is_archive() ) {
 		$classes[] = 'archive';
-		$classes   = array_diff( $classes, [ 'single' ] );
+		$classes   = \array_diff( $classes, [ 'single' ] );
 	}
 
 	return $classes;
 }
 
-add_filter( 'genesis_attr_site-title', __NAMESPACE__ . '\display_site_title' );
+\add_filter( 'genesis_attr_site-title', __NAMESPACE__ . '\display_site_title' );
 /**
  * Hide/show site title.
  *
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @param array $atts Sit title attributes.
  *
@@ -96,11 +96,11 @@ function display_site_title( $atts ) {
 	return $atts;
 }
 
-add_filter( 'genesis_attr_site-description', __NAMESPACE__ . '\display_site_tagline' );
+\add_filter( 'genesis_attr_site-description', __NAMESPACE__ . '\display_site_tagline' );
 /**
  * Hide/show site description.
  *
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @param array $atts Site description attributes.
  *
@@ -116,16 +116,16 @@ function display_site_tagline( $atts ) {
 	return $atts;
 }
 
-add_action( 'genesis_site_title', __NAMESPACE__ . '\custom_logo', 5 );
+\add_action( 'genesis_site_title', __NAMESPACE__ . '\custom_logo', 5 );
 /**
  * Display custom logo, sticky logo and transparent logo.
  *
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @return void
  */
 function custom_logo() {
-	$html             = has_custom_logo() ? the_custom_logo() : '';
+	$html             = \has_custom_logo() ? \the_custom_logo() : '';
 	$sticky           = _get_value( 'header_sticky_different-logo' );
 	$sticky_logo      = _get_value( 'header_sticky_logo' );
 	$transparent      = _get_value( 'header_transparent_different-logo' );
@@ -136,16 +136,16 @@ function custom_logo() {
 			'class' => 'sticky-logo',
 		];
 
-		$alt = get_post_meta( $sticky_logo, '_wp_attachment_image_alt', true );
+		$alt = \get_post_meta( $sticky_logo, '_wp_attachment_image_alt', true );
 
 		if ( empty( $alt ) ) {
-			$attr['alt'] = get_bloginfo( 'name', 'display' );
+			$attr['alt'] = \get_bloginfo( 'name', 'display' );
 		}
 
-		$html .= sprintf(
+		$html .= \sprintf(
 			'<a href="%1$s" class="sticky-logo-link" rel="home" itemprop="url">%2$s</a>',
-			esc_url( home_url( '/' ) ),
-			wp_get_attachment_image( $sticky_logo, 'full', false, $attr )
+			\esc_url( \home_url( '/' ) ),
+			\wp_get_attachment_image( $sticky_logo, 'full', false, $attr )
 		);
 	}
 
@@ -154,33 +154,33 @@ function custom_logo() {
 			'class' => 'transparent-logo',
 		];
 
-		$alt = get_post_meta( $transparent_logo, '_wp_attachment_image_alt', true );
+		$alt = \get_post_meta( $transparent_logo, '_wp_attachment_image_alt', true );
 
 		if ( empty( $alt ) ) {
-			$attr['alt'] = get_bloginfo( 'name', 'display' );
+			$attr['alt'] = \get_bloginfo( 'name', 'display' );
 		}
 
-		$html .= sprintf(
+		$html .= \sprintf(
 			'<a href="%1$s" class="transparent-logo-link" rel="home" itemprop="url">%2$s</a>',
-			esc_url( home_url( '/' ) ),
-			wp_get_attachment_image( $transparent_logo, 'full', false, $attr )
+			\esc_url( \home_url( '/' ) ),
+			\wp_get_attachment_image( $transparent_logo, 'full', false, $attr )
 		);
 	}
 
 	// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-	echo apply_filters( 'customize_pro_logo', $html );
+	echo \apply_filters( 'customize_pro_logo', $html );
 }
 
-add_action( 'genesis_before_header_wrap', __NAMESPACE__ . '\primary_header_open', 100 );
+\add_action( 'genesis_before_header_wrap', __NAMESPACE__ . '\primary_header_open', 100 );
 /**
  * Opening wrap for primary header.
  *
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @return void
  */
 function primary_header_open() {
-	genesis_markup(
+	\genesis_markup(
 		[
 			'open'    => '<div %s>',
 			'context' => 'primary-header',
@@ -188,16 +188,16 @@ function primary_header_open() {
 	);
 }
 
-add_action( 'genesis_after_header_wrap', __NAMESPACE__ . '\primary_header_close', 5 );
+\add_action( 'genesis_after_header_wrap', __NAMESPACE__ . '\primary_header_close', 5 );
 /**
  * Closing wrap for primary header.
  *
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @return void
  */
 function primary_header_close() {
-	genesis_markup(
+	\genesis_markup(
 		[
 			'close'   => '</div>',
 			'context' => 'primary-header',
@@ -205,11 +205,11 @@ function primary_header_close() {
 	);
 }
 
-add_action( 'genesis_markup_title-area_open', __NAMESPACE__ . '\before_title_area' );
+\add_action( 'genesis_markup_title-area_open', __NAMESPACE__ . '\before_title_area' );
 /**
  * Add hook location before title area.
  *
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @param string $open_html Opening HTML.
  *
@@ -217,19 +217,19 @@ add_action( 'genesis_markup_title-area_open', __NAMESPACE__ . '\before_title_are
  */
 function before_title_area( $open_html ) {
 	if ( $open_html ) {
-		ob_start();
-		do_action( 'genesis_before_title_area' );
-		$open_html = ob_get_clean() . $open_html;
+		\ob_start();
+		\do_action( 'genesis_before_title_area' );
+		$open_html = \ob_get_clean() . $open_html;
 	}
 
 	return $open_html;
 }
 
-add_action( 'genesis_markup_title-area_close', __NAMESPACE__ . '\after_title_area' );
+\add_action( 'genesis_markup_title-area_close', __NAMESPACE__ . '\after_title_area' );
 /**
  * Add hook location after title area.
  *
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @param string $close_html Closing HTML.
  *
@@ -237,19 +237,19 @@ add_action( 'genesis_markup_title-area_close', __NAMESPACE__ . '\after_title_are
  */
 function after_title_area( $close_html ) {
 	if ( $close_html ) {
-		ob_start();
-		do_action( 'genesis_after_title_area' );
+		\ob_start();
+		\do_action( 'genesis_after_title_area' );
 		$close_html = $close_html . ob_get_clean();
 	}
 
 	return $close_html;
 }
 
-add_filter( 'genesis_seo_title', __NAMESPACE__ . '\site_title_link', 10, 3 );
+\add_filter( 'genesis_seo_title', __NAMESPACE__ . '\site_title_link', 10, 3 );
 /**
  * Add 'site-title-link' class to site title link for better CSS targeting.
  *
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @param string $title  Site title text.
  * @param string $inside Site title inner markup.
@@ -258,37 +258,37 @@ add_filter( 'genesis_seo_title', __NAMESPACE__ . '\site_title_link', 10, 3 );
  * @return string
  */
 function site_title_link( $title, $inside, $wrap ) {
-	$link = sprintf(
+	$link = \sprintf(
 		'<a href="%s" class="%s">%s</a>',
-		trailingslashit( home_url() ),
-		apply_filters( 'customize_pro_site_title_link', 'site-title-link' ),
-		get_bloginfo( 'name' )
+		\trailingslashit( home_url() ),
+		\apply_filters( 'customize_pro_site_title_link', 'site-title-link' ),
+		\get_bloginfo( 'name' )
 	);
 
-	return str_replace( $inside, $link, $title );
+	return \str_replace( $inside, $link, $title );
 }
 
-add_action( 'genesis_meta', __NAMESPACE__ . '\hide_site_header' );
+\add_action( 'genesis_meta', __NAMESPACE__ . '\hide_site_header' );
 /**
  * Hide site header if page setting is checked.
  *
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @return void
  */
 function hide_site_header() {
-	if ( get_post_meta( get_the_ID(), 'header_disabled', true ) ) {
-		remove_action( 'genesis_header', 'genesis_header_markup_open', 5 );
-		remove_action( 'genesis_header', 'genesis_do_header' );
-		remove_action( 'genesis_header', 'genesis_header_markup_close', 15 );
+	if ( \get_post_meta( \get_the_ID(), 'header_disabled', true ) ) {
+		\remove_action( 'genesis_header', 'genesis_header_markup_open', 5 );
+		\remove_action( 'genesis_header', 'genesis_do_header' );
+		\remove_action( 'genesis_header', 'genesis_header_markup_close', 15 );
 	}
 }
 
-add_action( 'genesis_before_header_wrap', __NAMESPACE__ . '\above_header' );
+\add_action( 'genesis_before_header_wrap', __NAMESPACE__ . '\above_header' );
 /**
  * Display Above Header widget area.
  *
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @return void
  */
@@ -299,20 +299,20 @@ function above_header() {
 		return;
 	}
 
-	genesis_widget_area(
+	\genesis_widget_area(
 		'above-header',
 		[
-			'before' => sprintf( '<div class="above-header widget-area %s"><div class="wrap">', $enabled ),
+			'before' => \sprintf( '<div class="above-header widget-area %s"><div class="wrap">', $enabled ),
 			'after'  => '</div></div>',
 		]
 	);
 }
 
-add_action( 'genesis_before_title_area', __NAMESPACE__ . '\header_left', 5 );
+\add_action( 'genesis_before_title_area', __NAMESPACE__ . '\header_left', 5 );
 /**
  * Display Header Left widget area.
  *
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @return void
  */
@@ -323,7 +323,7 @@ function header_left() {
 		return;
 	}
 
-	genesis_widget_area(
+	\genesis_widget_area(
 		'header-left-widget',
 		[
 			'before' => '<div class="header-left widget-area ' . $enabled . '">',
@@ -332,11 +332,11 @@ function header_left() {
 	);
 }
 
-add_action( 'genesis_before_content_sidebar_wrap', __NAMESPACE__ . '\below_header' );
+\add_action( 'genesis_before_content_sidebar_wrap', __NAMESPACE__ . '\below_header' );
 /**
  * Display Below Header widget area.
  *
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @return void
  */
@@ -347,21 +347,20 @@ function below_header() {
 		return;
 	}
 
-	genesis_widget_area(
+	\genesis_widget_area(
 		'below-header',
 		[
-			'before' => sprintf( '<div class="below-header widget-area %s"><div class="wrap">', $enabled ),
+			'before' => \sprintf( '<div class="below-header widget-area %s"><div class="wrap">', $enabled ),
 			'after'  => '</div></div>',
 		]
 	);
 }
 
-
-add_filter( 'body_class', __NAMESPACE__ . '\transparent_header_logo_class', 1000 );
+\add_filter( 'body_class', __NAMESPACE__ . '\transparent_header_logo_class', 1000 );
 /**
  * Add transparent header body class.
  *
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @param array $classes Body classes.
  *
@@ -379,11 +378,11 @@ function transparent_header_logo_class( $classes ) {
 	return $classes;
 }
 
-add_filter( 'body_class', __NAMESPACE__ . '\sticky_header_logo_class', 1000 );
+\add_filter( 'body_class', __NAMESPACE__ . '\sticky_header_logo_class', 1000 );
 /**
  * Add sticky header logo class to body.
  *
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @param array $classes Body classes.
  *

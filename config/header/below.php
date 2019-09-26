@@ -18,12 +18,12 @@ return [
 	[
 		'type'     => 'custom',
 		'settings' => 'tip',
-		'default'  => sprintf(
+		'default'  => \sprintf(
 			'<p><strong>%s</strong> %s <a href="javascript:wp.customize.section( %s ).focus();">%s</a></p><hr>',
-			esc_html__( 'Tip: ', 'customize-pro' ),
-			esc_html__( 'This is a widget area. Add or remove widgets from the  ', 'customize-pro' ),
-			esc_attr( '"sidebar-widgets-below-header"' ),
-			esc_html__( 'Below Header Widgets Screen', 'customize-pro' )
+			\esc_html__( 'Tip: ', 'customize-pro' ),
+			\esc_html__( 'This is a widget area. Add or remove widgets from the  ', 'customize-pro' ),
+			\esc_attr( '"sidebar-widgets-below-header"' ),
+			\esc_html__( 'Below Header Widgets Screen', 'customize-pro' )
 		),
 	],
 	[
@@ -70,12 +70,12 @@ return [
 	[
 		'type'     => 'radio-buttonset',
 		'settings' => 'type',
-		'label'    => esc_html__( 'Text Alignment', 'customize-pro' ),
+		'label'    => \esc_html__( 'Text Alignment', 'customize-pro' ),
 		'default'  => 'center',
 		'choices'  => [
-			'left'   => esc_html__( 'Left', 'customize-pro' ),
-			'center' => esc_html__( 'Center', 'customize-pro' ),
-			'right'  => esc_html__( 'Right', 'customize-pro' ),
+			'left'   => \esc_html__( 'Left', 'customize-pro' ),
+			'center' => \esc_html__( 'Center', 'customize-pro' ),
+			'right'  => \esc_html__( 'Right', 'customize-pro' ),
 		],
 		'output'   => [
 			[
@@ -206,7 +206,7 @@ return [
 	[
 		'type'     => 'background',
 		'settings' => 'background-image',
-		'label'    => esc_html__( 'Background Image', 'customize-pro' ),
+		'label'    => \esc_html__( 'Background Image', 'customize-pro' ),
 		'default'  => [
 			'background-image'    => '',
 			'background-repeat'   => 'repeat',

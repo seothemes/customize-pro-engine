@@ -15,15 +15,15 @@
 namespace CustomizePro;
 
 // Enable excerpts on pages.
-add_post_type_support( 'page', 'excerpt' );
+\add_post_type_support( 'page', 'excerpt' );
 
 // Enable title toggle.
-add_post_type_support( 'post', 'genesis-title-toggle' );
-add_post_type_support( 'portfolio', 'genesis-title-toggle' );
-add_post_type_support( 'product', 'genesis-title-toggle' );
+\add_post_type_support( 'post', 'genesis-title-toggle' );
+\add_post_type_support( 'portfolio', 'genesis-title-toggle' );
+\add_post_type_support( 'product', 'genesis-title-toggle' );
 
 // Enable theme support by default.
-add_theme_support(
+\add_theme_support(
 	'custom-header',
 	[
 		'header-selector'  => '.hero-section',
@@ -39,17 +39,17 @@ add_theme_support(
 	]
 );
 
-add_action( 'genesis_meta', __NAMESPACE__ . '\hero_init' );
+\add_action( 'genesis_meta', __NAMESPACE__ . '\hero_init' );
 /**
  * Initialize class.
  *
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @return void
  */
 function hero_init() {
-	add_theme_support( 'hero-section' );
-	add_filter( 'body_class', __NAMESPACE__ . '\hero_body_class' );
+	\add_theme_support( 'hero-section' );
+	\add_filter( 'body_class', __NAMESPACE__ . '\hero_body_class' );
 
 	if ( hero_enabled( _get_value( 'hero_settings_enable' ) ) ) {
 		hero_setup();
@@ -59,7 +59,7 @@ function hero_init() {
 /**
  * Add hero specific body classes.
  *
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @param array $classes Default classes.
  *
@@ -81,7 +81,7 @@ function hero_body_class( $classes ) {
 /**
  * Checks if hero section is enabled.
  *
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @param array $settings Plugin settings.
  *
@@ -90,26 +90,26 @@ function hero_body_class( $classes ) {
 function hero_enabled( $settings ) {
 	$has = false;
 
-	if ( ! is_array( $settings ) ) {
+	if ( ! \is_array( $settings ) ) {
 		return $has;
 	}
 
-	if ( in_array( 'archive', $settings, true ) && _is_archive() ) {
+	if ( \in_array( 'archive', $settings, true ) && _is_archive() ) {
 		$has = 'archive';
 
-	} elseif ( in_array( 'post', $settings, true ) && ( is_singular() && ! is_page() ) ) {
+	} elseif ( \in_array( 'post', $settings, true ) && ( \is_singular() && ! \is_page() ) ) {
 		$has = 'post';
 
-	} elseif ( in_array( 'page', $settings, true ) && ( is_singular( 'page' ) && ! genesis_is_blog_template() || is_404() ) ) {
+	} elseif ( \in_array( 'page', $settings, true ) && ( \is_singular( 'page' ) && ! genesis_is_blog_template() || \is_404() ) ) {
 		$has = 'page';
 
 	}
 
-	if ( get_post_meta( get_the_ID(), 'hero_disabled', true ) ) {
+	if ( \get_post_meta( \get_the_ID(), 'hero_disabled', true ) ) {
 		$has = false;
 	}
 
-	if ( ! current_theme_supports( 'hero-section' ) ) {
+	if ( ! \current_theme_supports( 'hero-section' ) ) {
 		$has = false;
 	}
 
@@ -119,86 +119,86 @@ function hero_enabled( $settings ) {
 /**
  * Sets up hero section.
  *
- * @since  0.1.0
+ * @since  1.0.0
  *
  * @return void
  */
 function hero_setup() {
-	if ( is_admin() ) {
+	if ( \is_admin() ) {
 		return;
 	}
 
-	if ( is_singular() && ! genesis_is_blog_template() ) {
-		remove_action( 'genesis_entry_header', 'genesis_do_post_title' );
+	if ( \is_singular() && ! genesis_is_blog_template() ) {
+		\remove_action( 'genesis_entry_header', 'genesis_do_post_title' );
 	}
 
 	$breadcrumbs = _get_value( 'hero_settings_breadcrumbs' );
 
 	if ( $breadcrumbs ) {
-		remove_action( 'genesis_before_loop', 'genesis_do_breadcrumbs' );
-		add_action( 'customize_pro_hero_section', 'genesis_do_breadcrumbs', 30 );
+		\remove_action( 'genesis_before_loop', 'genesis_do_breadcrumbs' );
+		\add_action( 'customize_pro_hero_section', 'genesis_do_breadcrumbs', 30 );
 	}
 
-	remove_action( 'genesis_entry_header', 'genesis_entry_header_markup_open', 5 );
-	remove_action( 'genesis_entry_header', 'genesis_entry_header_markup_close', 15 );
-	remove_action( 'genesis_before_loop', 'genesis_do_posts_page_heading' );
-	remove_action( 'genesis_archive_title_descriptions', 'genesis_do_archive_headings_open', 5, 3 );
-	remove_action( 'genesis_archive_title_descriptions', 'genesis_do_archive_headings_close', 15, 3 );
-	remove_action( 'genesis_archive_title_descriptions', 'genesis_do_archive_headings_intro_text', 12, 3 );
-	remove_action( 'genesis_before_loop', 'genesis_do_date_archive_title' );
-	remove_action( 'genesis_before_loop', 'genesis_do_blog_template_heading' );
-	remove_action( 'genesis_before_loop', 'genesis_do_taxonomy_title_description', 15 );
-	remove_action( 'genesis_before_loop', 'genesis_do_author_title_description', 15 );
-	remove_action( 'genesis_before_loop', 'genesis_do_cpt_archive_title_description' );
-	remove_action( 'genesis_before_loop', 'genesis_do_search_title' );
-	remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_title', 5 );
-	remove_action( 'woocommerce_before_shop_loop', 'woocommerce_result_count', 20 );
+	\remove_action( 'genesis_entry_header', 'genesis_entry_header_markup_open', 5 );
+	\remove_action( 'genesis_entry_header', 'genesis_entry_header_markup_close', 15 );
+	\remove_action( 'genesis_before_loop', 'genesis_do_posts_page_heading' );
+	\remove_action( 'genesis_archive_title_descriptions', 'genesis_do_archive_headings_open', 5, 3 );
+	\remove_action( 'genesis_archive_title_descriptions', 'genesis_do_archive_headings_close', 15, 3 );
+	\remove_action( 'genesis_archive_title_descriptions', 'genesis_do_archive_headings_intro_text', 12, 3 );
+	\remove_action( 'genesis_before_loop', 'genesis_do_date_archive_title' );
+	\remove_action( 'genesis_before_loop', 'genesis_do_blog_template_heading' );
+	\remove_action( 'genesis_before_loop', 'genesis_do_taxonomy_title_description', 15 );
+	\remove_action( 'genesis_before_loop', 'genesis_do_author_title_description', 15 );
+	\remove_action( 'genesis_before_loop', 'genesis_do_cpt_archive_title_description' );
+	\remove_action( 'genesis_before_loop', 'genesis_do_search_title' );
+	\remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_title', 5 );
+	\remove_action( 'woocommerce_before_shop_loop', 'woocommerce_result_count', 20 );
 
-	remove_filter( 'genesis_term_intro_text_output', 'wpautop' );
-	remove_filter( 'genesis_author_intro_text_output', 'wpautop' );
-	remove_filter( 'genesis_cpt_archive_intro_text_output', 'wpautop' );
+	\remove_filter( 'genesis_term_intro_text_output', 'wpautop' );
+	\remove_filter( 'genesis_author_intro_text_output', 'wpautop' );
+	\remove_filter( 'genesis_cpt_archive_intro_text_output', 'wpautop' );
 
-	add_filter( 'woocommerce_show_page_title', '__return_null' );
-	add_filter( 'genesis_search_title_output', '__return_false' );
-	add_filter( 'genesis_attr_archive-title', __NAMESPACE__ . '\hero_archive_title_attr' );
-	add_filter( 'genesis_attr_entry', __NAMESPACE__ . '\hero_entry_attr' );
+	\add_filter( 'woocommerce_show_page_title', '__return_null' );
+	\add_filter( 'genesis_search_title_output', '__return_false' );
+	\add_filter( 'genesis_attr_archive-title', __NAMESPACE__ . '\hero_archive_title_attr' );
+	\add_filter( 'genesis_attr_entry', __NAMESPACE__ . '\hero_entry_attr' );
 
-	if ( ! is_customize_preview() ) {
-		add_action( 'genesis_before_hero-section_wrap', 'the_custom_header_markup' );
+	if ( ! \is_customize_preview() ) {
+		\add_action( 'genesis_before_hero-section_wrap', 'the_custom_header_markup' );
 	}
 
-	add_action( 'customize_pro_hero_section', 'genesis_do_posts_page_heading' );
-	add_action( 'customize_pro_hero_section', 'genesis_do_date_archive_title' );
-	add_action( 'customize_pro_hero_section', 'genesis_do_taxonomy_title_description' );
-	add_action( 'customize_pro_hero_section', 'genesis_do_author_title_description' );
-	add_action( 'customize_pro_hero_section', 'genesis_do_cpt_archive_title_description' );
-	add_action( 'genesis_archive_title_descriptions', __NAMESPACE__ . '\do_archive_headings_intro_text', 12, 3 );
-	add_action( 'customize_pro_hero_section', __NAMESPACE__ . '\hero_title', 10 );
-	add_action( 'customize_pro_hero_section', __NAMESPACE__ . '\hero_excerpt', 20 );
-	add_action( 'be_title_toggle_remove', __NAMESPACE__ . '\hero_title_toggle' );
-	add_action( 'genesis_before_content', __NAMESPACE__ . '\hero_remove_404_title' );
-	add_action( 'genesis_before_content_sidebar_wrap', __NAMESPACE__ . '\hero_display' );
+	\add_action( 'customize_pro_hero_section', 'genesis_do_posts_page_heading' );
+	\add_action( 'customize_pro_hero_section', 'genesis_do_date_archive_title' );
+	\add_action( 'customize_pro_hero_section', 'genesis_do_taxonomy_title_description' );
+	\add_action( 'customize_pro_hero_section', 'genesis_do_author_title_description' );
+	\add_action( 'customize_pro_hero_section', 'genesis_do_cpt_archive_title_description' );
+	\add_action( 'genesis_archive_title_descriptions', __NAMESPACE__ . '\do_archive_headings_intro_text', 12, 3 );
+	\add_action( 'customize_pro_hero_section', __NAMESPACE__ . '\hero_title', 10 );
+	\add_action( 'customize_pro_hero_section', __NAMESPACE__ . '\hero_excerpt', 20 );
+	\add_action( 'be_title_toggle_remove', __NAMESPACE__ . '\hero_title_toggle' );
+	\add_action( 'genesis_before_content', __NAMESPACE__ . '\hero_remove_404_title' );
+	\add_action( 'genesis_before_content_sidebar_wrap', __NAMESPACE__ . '\hero_display' );
 }
 
 /**
  * Remove default title of 404 pages.
  *
- * @since  0.1.0
+ * @since  1.0.0
  *
  * @return void
  */
 function hero_remove_404_title() {
-	if ( is_404() ) {
-		add_filter( 'genesis_markup_entry-title_open', '__return_false' );
-		add_filter( 'genesis_markup_entry-title_content', '__return_false' );
-		add_filter( 'genesis_markup_entry-title_close', '__return_false' );
+	if ( \is_404() ) {
+		\add_filter( 'genesis_markup_entry-title_open', '__return_false' );
+		\add_filter( 'genesis_markup_entry-title_content', '__return_false' );
+		\add_filter( 'genesis_markup_entry-title_close', '__return_false' );
 	}
 }
 
 /**
  * Integrate with Genesis Title Toggle plugin.
  *
- * @since  0.1.0
+ * @since  1.0.0
  *
  * @author Bill Erickson
  * @link   http://billerickson.net/code/genesis-title-toggle-theme-integration
@@ -206,41 +206,41 @@ function hero_remove_404_title() {
  * @return void
  */
 function hero_title_toggle() {
-	remove_action( 'customize_pro_hero_section', __NAMESPACE__ . '\hero_title', 10 );
-	remove_action( 'customize_pro_hero_section', __NAMESPACE__ . '\hero_excerpt', 20 );
+	\remove_action( 'customize_pro_hero_section', __NAMESPACE__ . '\hero_title', 10 );
+	\remove_action( 'customize_pro_hero_section', __NAMESPACE__ . '\hero_excerpt', 20 );
 }
 
 /**
  * Display title in hero section.
  *
- * @since  0.1.0
+ * @since  1.0.0
  *
  * @return void
  */
 function hero_title() {
 	if ( _is_plugin_active( 'woocommerce' ) && \is_shop() ) {
-		$title = get_the_title( \wc_get_page_id( 'shop' ) );
+		$title = \get_the_title( \wc_get_page_id( 'shop' ) );
 
-	} elseif ( is_home() && 'posts' === get_option( 'show_on_front' ) ) {
+	} elseif ( \is_home() && 'posts' === \get_option( 'show_on_front' ) ) {
 		$title = _get_value( 'hero_settings_latest-posts-title' );
 
-	} elseif ( is_404() ) {
-		$title = apply_filters( 'genesis_404_entry_title', esc_html__( 'Not found, error 404', 'customize-pro' ) );
+	} elseif ( \is_404() ) {
+		$title = \apply_filters( 'genesis_404_entry_title', \esc_html__( 'Not found, error 404', 'customize-pro' ) );
 
-	} elseif ( is_search() ) {
-		$title = apply_filters( 'genesis_search_title_text', esc_html__( 'Search results for: ', 'customize-pro' ) . get_search_query() );
+	} elseif ( \is_search() ) {
+		$title = \apply_filters( 'genesis_search_title_text', \esc_html__( 'Search results for: ', 'customize-pro' ) . \get_search_query() );
 
 	} elseif ( genesis_is_blog_template() ) {
-		ob_start();
-		do_action( 'genesis_archive_title_descriptions', get_the_title(), '', 'posts-page-description' );
-		$title = ob_get_clean();
+		\ob_start();
+		\do_action( 'genesis_archive_title_descriptions', \get_the_title(), '', 'posts-page-description' );
+		$title = \ob_get_clean();
 
-	} elseif ( is_singular() ) {
-		$title = get_the_title();
+	} elseif ( \is_singular() ) {
+		$title = \get_the_title();
 	}
 
 	if ( isset( $title ) && $title ) {
-		genesis_markup(
+		\genesis_markup(
 			[
 				'open'    => '<h1 %s itemprop="headline">',
 				'close'   => '</h1>',
@@ -254,7 +254,7 @@ function hero_title() {
 /**
  * Display page excerpt.
  *
- * @since  0.1.0
+ * @since  1.0.0
  *
  * @return void
  */
@@ -263,32 +263,32 @@ function hero_excerpt() {
 	$id      = '';
 
 	if ( _is_plugin_active( 'woocommerce' ) && \is_shop() ) {
-		ob_start();
+		\ob_start();
 		\woocommerce_result_count();
-		$excerpt = ob_get_clean();
+		$excerpt = \ob_get_clean();
 
-	} elseif ( is_home() && 'posts' === get_option( 'show_on_front' ) ) {
+	} elseif ( \is_home() && 'posts' === \get_option( 'show_on_front' ) ) {
 		$excerpt = _get_value( 'hero_settings_latest-posts-subtitle' );
 
-	} elseif ( is_home() ) {
-		$id = get_option( 'page_for_posts' );
+	} elseif ( \is_home() ) {
+		$id = \get_option( 'page_for_posts' );
 
-	} elseif ( is_search() ) {
-		$id = get_page_by_path( 'search' );
+	} elseif ( \is_search() ) {
+		$id = \get_page_by_path( 'search' );
 
-	} elseif ( is_404() ) {
-		$id = get_page_by_path( 'error-404' );
+	} elseif ( \is_404() ) {
+		$id = \get_page_by_path( 'error-404' );
 
-	} elseif ( ( is_singular() ) && ! is_singular( 'product' ) ) {
-		$id = get_the_ID();
+	} elseif ( ( \is_singular() ) && ! \is_singular( 'product' ) ) {
+		$id = \get_the_ID();
 	}
 
 	if ( $id ) {
-		$excerpt = has_excerpt( $id ) ? do_shortcode( get_the_excerpt( $id ) ) : '';
+		$excerpt = \has_excerpt( $id ) ? \do_shortcode( \get_the_excerpt( $id ) ) : '';
 	}
 
 	if ( $excerpt ) {
-		genesis_markup(
+		\genesis_markup(
 			[
 				'open'    => '<p %s itemprop="description">',
 				'close'   => '</p>',
@@ -311,7 +311,7 @@ function hero_excerpt() {
 function do_archive_headings_intro_text( $heading = '', $intro_text = '', $context = '' ) {
 
 	if ( $context && $intro_text ) {
-		genesis_markup(
+		\genesis_markup(
 			[
 				'open'    => '<p %s itemprop="description">',
 				'close'   => '</p>',
@@ -325,7 +325,7 @@ function do_archive_headings_intro_text( $heading = '', $intro_text = '', $conte
 /**
  * Adds attributes to hero archive title markup.
  *
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @param array $atts Hero title attributes.
  *
@@ -341,14 +341,14 @@ function hero_archive_title_attr( $atts ) {
 /**
  * Adds attributes to hero section markup.
  *
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @param array $atts Hero entry attributes.
  *
  * @return array
  */
 function hero_entry_attr( $atts ) {
-	if ( is_singular() ) {
+	if ( \is_singular() ) {
 		$atts['itemref'] = 'hero-section';
 	}
 
@@ -358,39 +358,39 @@ function hero_entry_attr( $atts ) {
 /**
  * Display the hero section.
  *
- * @since  0.1.0
+ * @since  1.0.0
  *
  * @return void
  */
 function hero_display() {
-	genesis_markup(
+	\genesis_markup(
 		[
 			'open'    => '<section %s role="banner">',
 			'context' => 'hero-section',
 		]
 	);
 
-	genesis_structural_wrap( 'hero-section', 'open' );
+	\genesis_structural_wrap( 'hero-section', 'open' );
 
-	genesis_markup(
+	\genesis_markup(
 		[
 			'open'    => '<div %s>',
 			'context' => 'hero-inner',
 		]
 	);
 
-	do_action( 'customize_pro_hero_section' );
+	\do_action( 'customize_pro_hero_section' );
 
-	genesis_markup(
+	\genesis_markup(
 		[
 			'close'   => '</div>',
 			'context' => 'hero-inner',
 		]
 	);
 
-	genesis_structural_wrap( 'hero-section', 'close' );
+	\genesis_structural_wrap( 'hero-section', 'close' );
 
-	genesis_markup(
+	\genesis_markup(
 		[
 			'close'   => '</section>',
 			'context' => 'hero-section',
@@ -398,11 +398,11 @@ function hero_display() {
 	);
 }
 
-add_filter( 'customize_pro_sections', __NAMESPACE__ . '\post_type_hero_images', 15, 1 );
+\add_filter( 'customize_pro_sections', __NAMESPACE__ . '\post_type_hero_images', 15, 1 );
 /**
  * Adds image settings for each post type archive to Customizer.
  *
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @param array $sections Default sections.
  *
@@ -418,7 +418,7 @@ function post_type_hero_images( $sections ) {
 			'attachment',
 		];
 
-		if ( in_array( $post_type, $exclude, true ) ) {
+		if ( \in_array( $post_type, $exclude, true ) ) {
 			continue;
 		}
 
@@ -436,16 +436,16 @@ function post_type_hero_images( $sections ) {
 
 	$new_sections['hero']['archives'] = __( 'Post Type Archives', 'customize-pro' );
 
-	$merged = array_merge_recursive( $sections, $new_sections );
+	$merged = \array_merge_recursive( $sections, $new_sections );
 
 	return $merged;
 }
 
-add_filter( 'customize_pro_sections', __NAMESPACE__ . '\term_hero_images', 20, 1 );
+\add_filter( 'customize_pro_sections', __NAMESPACE__ . '\term_hero_images', 20, 1 );
 /**
  * Adds term image settings to Customizer.
  *
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @param array $sections Default sections.
  *
@@ -478,7 +478,7 @@ function term_hero_images( $sections ) {
 		}
 	}
 
-	$merged = array_merge_recursive( $sections, $new_sections );
+	$merged = \array_merge_recursive( $sections, $new_sections );
 
 	return $merged;
 }

@@ -87,9 +87,9 @@ class Box_Shadow_Control extends \WP_Customize_Control {
 	public function enqueue() {
 
 		// Enqueue the script and style.
-		wp_enqueue_script(
+		\wp_enqueue_script(
 			'kirki_box_shadow_control',
-			apply_filters(
+			\apply_filters(
 				'kirki_box_shadow_control_url',
 				_get_url() . 'assets/js/box-shadow.js',
 				[
@@ -106,7 +106,7 @@ class Box_Shadow_Control extends \WP_Customize_Control {
 			true
 		);
 
-		wp_enqueue_style(
+		\wp_enqueue_style(
 			'kirki_box_shadow_control',
 			_get_url() . 'assets/css/box-shadow.css',
 			[],
@@ -187,7 +187,7 @@ class Box_Shadow_Control extends \WP_Customize_Control {
 			<div class="preview-wrapper">
 				<div class="preview-object">
 					<span class="dashicons dashicons-move"></span>
-					<span class="screen-reader-text"><?php esc_html_e( 'Click and drag to adjust horizontal & vertical length', 'customize-pro' ); ?></span>
+					<span class="screen-reader-text"><?php \esc_html_e( 'Click and drag to adjust horizontal & vertical length', 'customize-pro' ); ?></span>
 					<span class="coordinates"></span>
 				</div>
 			</div>
@@ -201,13 +201,13 @@ class Box_Shadow_Control extends \WP_Customize_Control {
 
 		<div class="customize-control-kirki-slider">
 			<div class="kirki-input-container">
-				<label for="{{ data.id }}-blur-radius"><?php esc_html_e( 'Blur Radius', 'customize-pro' ); ?></label>
+				<label for="{{ data.id }}-blur-radius"><?php \esc_html_e( 'Blur Radius', 'customize-pro' ); ?></label>
 				<div class="wrapper">
 					<input class="blur-radius" type="range" min="0" max="50" step="1" value="0" id="{{ data.id }}-blur-radius" data-context="blur-radius"/>
 				</div>
 			</div>
 			<div class="kirki-input-container">
-				<label for="{{ data.id }}-spread-radius"><?php esc_html_e( 'Spread Radius', 'customize-pro' ); ?></label>
+				<label for="{{ data.id }}-spread-radius"><?php \esc_html_e( 'Spread Radius', 'customize-pro' ); ?></label>
 				<div class="wrapper">
 					<input class="spread-radius" type="range" min="0" max="50" step="1" value="0" id="{{ data.id }}-spread-radius" data-context="spread-radius"/>
 				</div>

@@ -18,12 +18,12 @@ return [
 	[
 		'type'     => 'custom',
 		'settings' => 'tip',
-		'default'  => sprintf(
+		'default'  => \sprintf(
 			'<p><strong>%s</strong> %s <a href="javascript:wp.customize.section( %s ).focus();">%s</a></p><hr>',
-			esc_html__( 'Tip: ', 'customize-pro' ),
-			esc_html__( 'Secondary Menu not showing? Make sure it has been assigned from the', 'customize-pro' ),
-			esc_attr( '"menu_locations"' ),
-			esc_html__( 'Menu Locations Screen', 'customize-pro' )
+			\esc_html__( 'Tip: ', 'customize-pro' ),
+			\esc_html__( 'Secondary Menu not showing? Make sure it has been assigned from the', 'customize-pro' ),
+			\esc_attr( '"menu_locations"' ),
+			\esc_html__( 'Menu Locations Screen', 'customize-pro' )
 		),
 	],
 	[

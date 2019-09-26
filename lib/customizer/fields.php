@@ -14,34 +14,34 @@
 
 namespace CustomizePro;
 
-add_action( 'genesis_setup', __NAMESPACE__ . '\add_fields', 15 );
+\add_action( 'genesis_setup', __NAMESPACE__ . '\add_fields', 15 );
 /**
  * Add fields defined in config to Customizer.
  *
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @return array|mixed
  */
 function add_fields() {
 	$fields = [];
 	$handle = _get_handle();
-	$panels = glob( _get_path() . '/config/*', GLOB_ONLYDIR );
+	$panels = \glob( _get_path() . '/config/*', GLOB_ONLYDIR );
 
 	// Loop through config directories.
 	foreach ( $panels as $panel ) {
-		foreach ( glob( $panel . '/*.php' ) as $section ) {
+		foreach ( \glob( $panel . '/*.php' ) as $section ) {
 			$fields  = require_once $section;
 			$counter = 0;
-			$panel   = basename( dirname( $section ) );
-			$section = basename( $section, '.php' );
+			$panel   = \basename( \dirname( $section ) );
+			$section = \basename( $section, '.php' );
 			$prefix  = $handle . '_' . $panel . '_' . $section;
 
-			if ( ! is_array( $fields ) ) {
+			if ( ! \is_array( $fields ) ) {
 				continue;
 			}
 
 			foreach ( $fields as $field ) {
-				\Kirki::add_field( $handle, apply_filters( 'customize_pro_field', $field, $panel, $section, $prefix, $counter++ ) );
+				\Kirki::add_field( $handle, \apply_filters( 'customize_pro_field', $field, $panel, $section, $prefix, $counter++ ) );
 			}
 		}
 	}
@@ -49,11 +49,11 @@ function add_fields() {
 	return $fields;
 }
 
-add_filter( 'customize_pro_field', __NAMESPACE__ . '\format_field', 10, 5 );
+\add_filter( 'customize_pro_field', __NAMESPACE__ . '\format_field', 10, 5 );
 /**
  * Modify fields before adding them.
  *
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @param array  $field   Field array values.
  * @param string $panel   Field panel string.
@@ -74,8 +74,8 @@ function format_field( $field, $panel, $section, $prefix, $counter ) {
 	// Allow for element arrays.
 	if ( isset( $field['output'] ) && $field['output'] ) {
 		foreach ( $field['output'] as $output ) {
-			if ( isset( $output['element'] ) && is_array( $output['element'] ) ) {
-				$output['element'] = implode( ',', $output['element'] );
+			if ( isset( $output['element'] ) && \is_array( $output['element'] ) ) {
+				$output['element'] = \implode( ',', $output['element'] );
 			}
 		}
 

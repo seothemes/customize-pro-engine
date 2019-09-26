@@ -14,11 +14,11 @@
 
 namespace CustomizePro;
 
-add_filter( 'customize_pro_font_choices', __NAMESPACE__ . '\add_typekit_group', 20 );
+\add_filter( 'customize_pro_font_choices', __NAMESPACE__ . '\add_typekit_group', 20 );
 /**
  * Adds typekit font choices to typography controls.
  *
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @param array $custom Custom fonts.
  *
@@ -27,10 +27,10 @@ add_filter( 'customize_pro_font_choices', __NAMESPACE__ . '\add_typekit_group', 
 function add_typekit_group( $custom ) {
 	$children = [];
 	$variants = [];
-	$option   = get_option( 'custom-typekit-fonts' );
+	$option   = \get_option( 'custom-typekit-fonts' );
 	$fonts    = $option['custom-typekit-font-details'];
 
-	if ( ! is_array( $fonts ) ) {
+	if ( ! \is_array( $fonts ) ) {
 		return $custom;
 	}
 
@@ -44,7 +44,7 @@ function add_typekit_group( $custom ) {
 	}
 
 	$custom['families']['typekit'] = [
-		'text'     => esc_attr__( 'Typekit', 'customize-pro' ),
+		'text'     => \esc_attr__( 'Typekit', 'customize-pro' ),
 		'children' => $children,
 	];
 

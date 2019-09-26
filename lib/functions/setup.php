@@ -15,4 +15,4 @@
 namespace CustomizePro;
 
 // Load textdomain.
-load_child_theme_textdomain( _get_handle(), _get_path() . '/assets/lang' );
+\load_child_theme_textdomain( _get_handle(), _get_path() . '/assets/lang' );

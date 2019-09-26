@@ -14,7 +14,7 @@
 
 namespace CustomizePro;
 
-add_filter( 'body_class', __NAMESPACE__ . '\landing_body_class' );
+\add_filter( 'body_class', __NAMESPACE__ . '\landing_body_class' );
 /**
  * Add landing-page body class.
  *
@@ -30,7 +30,7 @@ function landing_body_class( $classes ) {
 	return $classes;
 }
 
-add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\dequeue_skip_links' );
+\add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\dequeue_skip_links' );
 /**
  * Dequeues Genesis skip links script.
  *
@@ -39,10 +39,10 @@ add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\dequeue_skip_links' );
  * @return void
  */
 function dequeue_skip_links() {
-	wp_dequeue_script( 'skip-links' );
+	\wp_dequeue_script( 'skip-links' );
 }
 
-add_action( 'genesis_before', __NAMESPACE__ . '\remove_footer_credits', 15 );
+\add_action( 'genesis_before', __NAMESPACE__ . '\remove_footer_credits', 15 );
 /**
  * Removes footer credits.
  *
@@ -58,7 +58,7 @@ function remove_footer_credits() {
 remove_action( 'genesis_before_header', 'genesis_skip_links', 5 );
 
 // Forces full width content layout.
-add_filter( 'genesis_site_layout', '__genesis_return_full_width_content' );
+\add_filter( 'genesis_site_layout', '__genesis_return_full_width_content' );
 
 // Removes site header elements.
 remove_action( 'genesis_header', 'genesis_header_markup_open', 5 );

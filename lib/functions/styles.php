@@ -14,20 +14,20 @@
 
 namespace CustomizePro;
 
-add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\enqueue_main_styles' );
+\add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\enqueue_main_styles' );
 /**
  * Load main stylesheets.
  *
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @return void
  */
 function enqueue_main_styles() {
 	$handle     = _get_handle();
 	$breakpoint = _get_value( 'breakpoint', _get_breakpoint() );
-	$mobile     = intval( $breakpoint );
+	$mobile     = \intval( $breakpoint );
 
-	wp_register_style(
+	\wp_register_style(
 		$handle . '-all',
 		_get_url() . 'assets/css/all.css',
 		[],
@@ -35,7 +35,7 @@ function enqueue_main_styles() {
 		'all'
 	);
 
-	wp_register_style(
+	\wp_register_style(
 		$handle . '-mobile',
 		_get_url() . 'assets/css/mobile.css',
 		[],
@@ -43,7 +43,7 @@ function enqueue_main_styles() {
 		'(max-width:' . $mobile . 'px)'
 	);
 
-	wp_register_style(
+	\wp_register_style(
 		$handle . '-desktop',
 		_get_url() . 'assets/css/desktop.css',
 		[],
@@ -51,7 +51,7 @@ function enqueue_main_styles() {
 		'(min-width:' . $breakpoint . 'px)'
 	);
 
-	wp_register_style(
+	\wp_register_style(
 		$handle . '-fontawesome',
 		'//use.fontawesome.com/releases/v5.2.0/css/all.css',
 		[],
@@ -59,26 +59,26 @@ function enqueue_main_styles() {
 		'all'
 	);
 
-	wp_enqueue_style( $handle . '-all' );
-	wp_enqueue_style( $handle . '-mobile' );
-	wp_enqueue_style( $handle . '-desktop' );
+	\wp_enqueue_style( $handle . '-all' );
+	\wp_enqueue_style( $handle . '-mobile' );
+	\wp_enqueue_style( $handle . '-desktop' );
 
 	if ( _get_value( 'general_performance_fontawesome' ) ) {
-		wp_enqueue_style( $handle . '-fontawesome' );
+		\wp_enqueue_style( $handle . '-fontawesome' );
 	}
 }
 
-add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\enqueue_vendor_styles' );
+\add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\enqueue_vendor_styles' );
 /**
  * Load vendor stylesheets conditionally.
  *
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @return void
  */
 function enqueue_vendor_styles() {
 	$handle  = _get_handle();
-	$plugins = apply_filters(
+	$plugins = \apply_filters(
 		'customize_pro_stylesheets',
 		[
 			'beaver-builder',
@@ -90,7 +90,7 @@ function enqueue_vendor_styles() {
 		if ( _is_plugin_active( $plugin ) ) {
 			$style = $handle . '-' . $plugin;
 
-			wp_register_style(
+			\wp_register_style(
 				$style,
 				_get_url() . 'assets/css/' . $plugin . '.css',
 				[],
@@ -98,16 +98,16 @@ function enqueue_vendor_styles() {
 				'all'
 			);
 
-			wp_enqueue_style( $style );
+			\wp_enqueue_style( $style );
 		}
 	}
 }
 
-add_action( 'genesis_setup', __NAMESPACE__ . '\load_child_theme_css', 15 );
+\add_action( 'genesis_setup', __NAMESPACE__ . '\load_child_theme_css', 15 );
 /**
  * Loads child theme CSS.
  *
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @return void
  */
@@ -116,10 +116,10 @@ function load_child_theme_css() {
 	$trump = _get_value( 'general_performance_style-trump', false );
 
 	if ( ! $load || $trump ) {
-		remove_action( 'genesis_meta', 'genesis_load_stylesheet' );
+		\remove_action( 'genesis_meta', 'genesis_load_stylesheet' );
 	}
 
 	if ( $trump ) {
-		add_action( 'wp_enqueue_scripts', 'genesis_enqueue_main_stylesheet', 999 );
+		\add_action( 'wp_enqueue_scripts', 'genesis_enqueue_main_stylesheet', 999 );
 	}
 }

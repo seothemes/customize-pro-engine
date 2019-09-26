@@ -18,13 +18,13 @@ return [
 	[
 		'type'     => 'custom',
 		'settings' => 'tip',
-		'default'  => sprintf(
+		'default'  => \sprintf(
 			'<p><strong>%s</strong> %s <a href="%s" target="_blank">%s</a> %s</p><hr>',
-			esc_html__( 'Tip: ', 'customize-pro' ),
-			esc_html__( 'For a list of available post shortcodes, please see the ', 'customize-pro' ),
-			esc_attr( 'https://my.studiopress.com/documentation/customization/shortcodes-reference/post-shortcode-reference/' ),
-			esc_html__( 'Post Shortcode Reference', 'customize-pro' ),
-			esc_html__( 'provided by StudioPress.', 'customize-pro' )
+			\esc_html__( 'Tip: ', 'customize-pro' ),
+			\esc_html__( 'For a list of available post shortcodes, please see the ', 'customize-pro' ),
+			\esc_attr( 'https://my.studiopress.com/documentation/customization/shortcodes-reference/post-shortcode-reference/' ),
+			\esc_html__( 'Post Shortcode Reference', 'customize-pro' ),
+			\esc_html__( 'provided by StudioPress.', 'customize-pro' )
 		),
 	],
 	[

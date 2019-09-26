@@ -17,29 +17,29 @@ namespace CustomizePro;
 /**
  * Returns the plugin path.
  *
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @return string
  */
 function _get_path() {
-	return \trailingslashit( dirname( dirname( __DIR__ ) ) );
+	return \trailingslashit( \dirname( \dirname( __DIR__ ) ) );
 }
 
 /**
  * Returns the plugin url.
  *
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @return string
  */
 function _get_url() {
-	return \trailingslashit( \plugins_url( basename( _get_path() ) ) );
+	return \trailingslashit( \plugins_url( \basename( _get_path() ) ) );
 }
 
 /**
  * Returns all plugin data.
  *
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @param string $header File header meta information to retrieve.
  *
@@ -50,21 +50,25 @@ function _get_url() {
 function _get_data( $header = '' ) {
 	static $data = null;
 
-	if ( is_null( $data ) ) {
-		$data = get_file_data( _get_path() . 'customize-pro-engine.php', [
-			'name'        => 'Plugin Name',
-			'version'     => 'Version',
-			'plugin-uri'  => 'Plugin URI',
-			'text-domain' => 'Text Domain',
-			'description' => 'Description',
-			'author'      => 'Author',
-			'author-uri'  => 'Author URI',
-			'domain-path' => 'Domain Path',
-			'network'     => 'Network',
-		], 'plugin' );
+	if ( \is_null( $data ) ) {
+		$data = \get_file_data(
+			_get_path() . 'customize-pro-engine.php',
+			[
+				'name'        => 'Plugin Name',
+				'version'     => 'Version',
+				'plugin-uri'  => 'Plugin URI',
+				'text-domain' => 'Text Domain',
+				'description' => 'Description',
+				'author'      => 'Author',
+				'author-uri'  => 'Author URI',
+				'domain-path' => 'Domain Path',
+				'network'     => 'Network',
+			],
+			'plugin'
+		);
 	}
 
-	if ( array_key_exists( $header, $data ) ) {
+	if ( \array_key_exists( $header, $data ) ) {
 		return $data[ $header ];
 	}
 
@@ -74,18 +78,18 @@ function _get_data( $header = '' ) {
 /**
  * Returns the plugin name.
  *
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @return string
  */
 function _get_name() {
-	return str_replace( ' Engine', '', _get_data( 'name' ) );
+	return \str_replace( ' Engine', '', _get_data( 'name' ) );
 }
 
 /**
  * Returns the plugin handle.
  *
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @return string
  */
@@ -96,7 +100,7 @@ function _get_handle() {
 /**
  * Returns the plugin author.
  *
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @return string
  */
@@ -107,7 +111,7 @@ function _get_author() {
 /**
  * Returns the plugin version.
  *
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @return string
  */
@@ -118,7 +122,7 @@ function _get_version() {
 /**
  * Returns the version of a given file.
  *
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @param string $file File to check.
  *
@@ -126,7 +130,7 @@ function _get_version() {
  */
 function _get_asset_version( $file ) {
 	$cache_busting = _get_value( 'general_performance_cache-busting', false );
-	$modified      = filemtime( _get_path() . 'assets' . DIRECTORY_SEPARATOR . $file );
+	$modified      = \filemtime( _get_path() . 'assets' . DIRECTORY_SEPARATOR . $file );
 
 	return _is_debug_mode() || $cache_busting ? $modified : _get_version();
 }
@@ -134,18 +138,18 @@ function _get_asset_version( $file ) {
 /**
  * Returns the default breakpoint.
  *
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @return mixed
  */
 function _get_breakpoint() {
-	return apply_filters( 'customize_pro_breakpoint', 896 );
+	return \apply_filters( 'customize_pro_breakpoint', 896 );
 }
 
 /**
  * Returns a media query.
  *
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @param string $query Defaults to mobile-first.
  *
@@ -154,13 +158,13 @@ function _get_breakpoint() {
 function _get_media_query( $query = 'min' ) {
 	$breakpoint = _get_value( 'breakpoint', _get_breakpoint() );
 
-	return sprintf( '@media (%s-width:%spx)', $query, $breakpoint );
+	return \sprintf( '@media (%s-width:%spx)', $query, $breakpoint );
 }
 
 /**
  * Returns setting value. Can only be called from config files.
  *
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @param string $setting Setting name.
  *
@@ -169,9 +173,9 @@ function _get_media_query( $query = 'min' ) {
 function _get_setting( $setting ) {
 
 	// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_debug_backtrace
-	$file    = debug_backtrace()[0]['file'];
-	$section = basename( $file, '.php' );
-	$panel   = basename( dirname( $file ) );
+	$file    = \debug_backtrace()[0]['file'];
+	$section = \basename( $file, '.php' );
+	$panel   = \basename( \dirname( $file ) );
 
 	return $panel . '_' . $section . '_' . $setting;
 }
@@ -179,7 +183,7 @@ function _get_setting( $setting ) {
 /**
  * Return default value for Customizer option.
  *
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @param string $field Field ID.
  *
@@ -198,7 +202,7 @@ function _get_default( $field ) {
 /**
  * Return value of Customizer option.
  *
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @param string $field   Setting name. Format `{$panel}_{$section}_{$setting}`.
  * @param string $default Default value to return if empty.
@@ -206,44 +210,44 @@ function _get_default( $field ) {
  * @return mixed
  */
 function _get_value( $field, $default = null ) {
-	$default = is_null( $default ) ? _get_default( $field ) : $default;
-	$value   = get_theme_mod( $field, $default );
+	$default = \is_null( $default ) ? _get_default( $field ) : $default;
+	$value   = \get_theme_mod( $field, $default );
 
-	return apply_filters( 'kirki_values_get_value', $value, $field );
+	return \apply_filters( 'kirki_values_get_value', $value, $field );
 }
 
 /**
  * Returns array of all image sizes.
  *
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @param array $additional Additional image sizes to include (optional).
  *
  * @return array
  */
 function _get_image_sizes( $additional = [ 'full' ] ) {
-	$image_names  = array_merge( get_intermediate_image_sizes(), $additional );
-	$image_labels = array_map(
+	$image_names  = \array_merge( \get_intermediate_image_sizes(), $additional );
+	$image_labels = \array_map(
 		function ( $string ) {
-			return ucwords( str_replace( '_', ' ', $string ) );
+			return \ucwords( \str_replace( '_', ' ', $string ) );
 		},
 		$image_names
 	);
 
-	return array_combine( $image_names, $image_labels );
+	return \array_combine( $image_names, $image_labels );
 }
 
 /**
  * Returns hex code for a color.
  *
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @param string $color Color to retrieve.
  *
  * @return mixed
  */
 function _get_color( $color = 'accent' ) {
-	$colors = apply_filters(
+	$colors = \apply_filters(
 		'customize_pro_colors',
 		[
 			'black'       => '#22292f',
@@ -263,12 +267,12 @@ function _get_color( $color = 'accent' ) {
 	);
 
 	if ( 'default' === $color ) {
-		return array_slice( $colors, 0, 11 );
+		return \array_slice( $colors, 0, 11 );
 	}
 
 	foreach ( $colors as $name => $hex ) {
 		$option          = _get_handle() . '-color-' . $name;
-		$colors[ $name ] = get_option( $option, $hex );
+		$colors[ $name ] = \get_option( $option, $hex );
 	}
 
 	if ( isset( $colors[ $color ] ) ) {
@@ -281,7 +285,7 @@ function _get_color( $color = 'accent' ) {
 /**
  * Returns size value.
  *
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @param string $size   Name of size.
  * @param string $suffix Units, leave empty for none.
@@ -289,7 +293,7 @@ function _get_color( $color = 'accent' ) {
  * @return mixed
  */
 function _get_size( $size = 'm', $suffix = 'px' ) {
-	$spacing = apply_filters(
+	$spacing = \apply_filters(
 		'customize_pro_spacing',
 		[
 
@@ -318,7 +322,7 @@ function _get_size( $size = 'm', $suffix = 'px' ) {
 /**
  * Returns array of similar CSS selectors.
  *
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @param string $element Elements to return (button, input, heading).
  * @param bool   $hover   Append hover and focus states.
@@ -327,7 +331,7 @@ function _get_size( $size = 'm', $suffix = 'px' ) {
  * @return array|string
  */
 function _get_elements( $element, $hover = false, $array = false ) {
-	$elements = apply_filters(
+	$elements = \apply_filters(
 		'customize_pro_elements',
 		[
 			'button'  => [
@@ -368,7 +372,7 @@ function _get_elements( $element, $hover = false, $array = false ) {
 		return $elements[ $element ];
 
 	} else {
-		return implode( ',', $elements[ $element ] );
+		return \implode( ',', $elements[ $element ] );
 	}
 }
 

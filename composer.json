@@ -23,11 +23,6 @@
     "wp-coding-standards/wpcs": "2.1.0",
     "wp-phpunit/wp-phpunit": "^5.1"
   },
-  "autoload": {
-    "classmap": [
-      "lib/classes"
-    ]
-  },
   "config": {
     "preferred-install": {
       "*": "dist"
@@ -36,8 +31,8 @@
   },
   "scripts": {
     "install-codestandards": "Dealerdirect\\Composer\\Plugin\\Installers\\PHPCodeSniffer\\Plugin::run",
-    "phpcs": "phpcs --standard=WordPress --extensions=php -p -s lib config assets/templates init.php",
-    "phpcbf": "phpcbf --standard=WordPress --extensions=php -p lib config assets/templates init.php",
+    "phpcs": "phpcs --standard=WordPress --extensions=php -p -s lib config assets/templates",
+    "phpcbf": "phpcbf --standard=WordPress --extensions=php -p lib config assets/templates",
     "test-unit": "composer dump && \"vendor/bin/phpunit\" --testsuite unit --color=always",
     "test-integration": "composer dump && \"vendor/bin/phpunit\" --testsuite integration --configuration tests/phpunit/integration/phpunit.xml.dist --color=always",
     "post-update-cmd": [
