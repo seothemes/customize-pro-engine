@@ -2,8 +2,8 @@
 Contributors: seothemes
 Tags: genesis
 Donate link: https://seothemes.com
-Requires at least: 5.2.3
-Tested up to: 5.2.3
+Requires at least: 5.3
+Tested up to: 5.3
 Requires PHP: 5.6
 Stable tag: trunk
 License: GPL-2.0-or-later
