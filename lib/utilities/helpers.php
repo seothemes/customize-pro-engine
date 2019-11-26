@@ -192,7 +192,7 @@ function _get_setting( $setting ) {
 function _get_default( $field ) {
 	$default = '';
 
-	if ( isset( \Kirki::$fields[ $field ] ) && isset( \Kirki::$fields[ $field ]['default'] ) ) {
+	if ( \class_exists( 'Kirki' ) && isset( \Kirki::$fields[ $field ] ) && isset( \Kirki::$fields[ $field ]['default'] ) ) {
 		$default = \Kirki::$fields[ $field ]['default'];
 	}
 

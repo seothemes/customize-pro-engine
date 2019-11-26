@@ -26,11 +26,6 @@ namespace CustomizePro;
  * @return void
  */
 function load_genesis() {
-
-	if ( ! \class_exists( 'Kirki' ) ) {
-		return;
-	}
-
 	$init = \get_template_directory() . '/lib/init.php';
 
 	if ( \is_readable( $init ) ) {
@@ -64,6 +59,9 @@ function remove_genesis_theme_supports() {
  * @return void
  */
 function load_files() {
+	if ( ! \class_exists( 'Kirki' ) ) {
+		return;
+	}
 
 	$files = [
 
@@ -88,17 +86,18 @@ function load_files() {
 		'functions/custom-header',
 
 		// Structure.
-		'structure/header',
-		'structure/wrap',
-		'structure/menus',
-		'structure/hero',
-		'structure/content',
-		'structure/search',
-		'structure/single',
 		'structure/archive',
 		'structure/blog',
 		'structure/comments',
+		'structure/content',
 		'structure/footer',
+		'structure/header',
+		'structure/hero',
+		'structure/menus',
+		'structure/search',
+		'structure/sidebar',
+		'structure/single',
+		'structure/wrap',
 
 		// Plugins.
 		'plugins/gutenberg',

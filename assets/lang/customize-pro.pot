@@ -41,7 +41,7 @@ msgstr ""
 msgid "Remove featured image spacing"
 msgstr ""
 
-#: config/archive/blog-layout.php:47, config/archive/blog-layout.php:61, config/archive/blog-layout.php:96, config/archive/post-info.php:23, config/base/headings.php:116, config/code/css.php:34, config/header/above.php:23, config/header/below.php:23, config/header/primary.php:101, config/header/sticky.php:104, config/header/title-area.php:55, config/header/title-area.php:112, config/header/transparent.php:143, config/menus/footer.php:40, config/menus/primary.php:59, config/menus/secondary.php:23, config/menus/sub-menu-toggle.php:23, config/menus/sub-menu.php:23, config/single/post-meta.php:23, lib/customizer/site-identity.php:196
+#: config/archive/blog-layout.php:47, config/archive/blog-layout.php:61, config/archive/blog-layout.php:96, config/archive/post-info.php:23, config/base/headings.php:116, config/code/css.php:34, config/footer/credits.php:173, config/header/above.php:23, config/header/below.php:23, config/header/primary.php:101, config/header/sticky.php:104, config/header/title-area.php:55, config/header/title-area.php:112, config/header/transparent.php:143, config/menus/footer.php:40, config/menus/primary.php:59, config/menus/secondary.php:23, config/menus/sub-menu-toggle.php:23, config/menus/sub-menu.php:23, config/single/post-meta.php:23, lib/customizer/site-identity.php:196
 msgid "Tip: "
 msgstr ""
 
@@ -85,7 +85,7 @@ msgstr ""
 msgid "Featured Image"
 msgstr ""
 
-#: config/archive/blog-layout.php:87, config/single/featured-image.php:38
+#: config/archive/blog-layout.php:87, config/single/featured-image.php:26
 msgid "Entry Content"
 msgstr ""
 
@@ -153,7 +153,7 @@ msgstr ""
 msgid "Entry Content Typography"
 msgstr ""
 
-#: config/archive/entries.php:104, config/sidebars/featured-content.php:83, config/single/entry.php:95
+#: config/archive/entries.php:104, config/sidebars/featured-content.php:83
 msgid "Entry Spacing"
 msgstr ""
 
@@ -193,7 +193,7 @@ msgstr ""
 msgid "Link Spacing"
 msgstr ""
 
-#: config/archive/pagination.php:113, config/footer/credits.php:126, config/header/primary.php:55, config/hero/settings.php:282, config/menus/footer.php:124, config/menus/secondary.php:104, config/single/featured-image.php:52
+#: config/archive/pagination.php:113, config/footer/credits.php:126, config/header/primary.php:38, config/hero/settings.php:282, config/menus/footer.php:124, config/menus/secondary.php:104
 msgid "Alignment"
 msgstr ""
 
@@ -241,7 +241,7 @@ msgstr ""
 msgid "provided by StudioPress."
 msgstr ""
 
-#: config/archive/post-info.php:60, config/archive/read-more.php:42, config/base/blockquotes.php:24, config/base/body.php:23, config/base/buttons.php:25, config/base/code.php:23, config/base/headings.php:23, config/base/inputs.php:25, config/base/links.php:23, config/content/above.php:59, config/content/below.php:59, config/content/breadcrumbs.php:24, config/footer/above.php:58, config/footer/below.php:59, config/footer/credits.php:35, config/footer/credits.php:164, config/footer/credits.php:171, config/footer/scroll-to-top.php:85, config/footer/widgets.php:46, config/header/above.php:76, config/header/below.php:99, config/header/sticky.php:43, config/header/transparent.php:43, config/hero/settings.php:84, config/menus/menu-toggle.php:21, config/sidebars/featured-content.php:24, config/sidebars/primary.php:24, config/sidebars/secondary.php:24
+#: config/archive/post-info.php:60, config/archive/read-more.php:42, config/base/blockquotes.php:24, config/base/body.php:23, config/base/buttons.php:25, config/base/code.php:23, config/base/headings.php:23, config/base/inputs.php:25, config/base/links.php:23, config/content/above.php:59, config/content/below.php:59, config/content/breadcrumbs.php:24, config/footer/above.php:58, config/footer/below.php:59, config/footer/credits.php:35, config/footer/credits.php:164, config/footer/scroll-to-top.php:85, config/footer/widgets.php:46, config/header/above.php:76, config/header/below.php:99, config/header/sticky.php:43, config/header/transparent.php:43, config/hero/settings.php:84, config/menus/menu-toggle.php:21, config/sidebars/featured-content.php:24, config/sidebars/primary.php:24, config/sidebars/secondary.php:24
 msgid "Text"
 msgstr ""
 
@@ -257,11 +257,11 @@ msgstr ""
 msgid "Typography"
 msgstr ""
 
-#: config/archive/post-info.php:118, config/footer/credits.php:195, config/footer/widgets.php:189, config/menus/footer.php:147, config/single/featured-image.php:68
+#: config/archive/post-info.php:118, config/footer/credits.php:193, config/footer/widgets.php:189, config/menus/footer.php:147, config/single/featured-image.php:38
 msgid "Spacing Top"
 msgstr ""
 
-#: config/archive/post-info.php:136, config/base/lists.php:60, config/footer/credits.php:213, config/footer/widgets.php:207, config/menus/footer.php:165, config/single/featured-image.php:86
+#: config/archive/post-info.php:136, config/base/lists.php:60, config/footer/credits.php:211, config/footer/widgets.php:207, config/menus/footer.php:165, config/single/featured-image.php:56
 msgid "Spacing Bottom"
 msgstr ""
 
@@ -726,7 +726,7 @@ msgstr ""
 msgid "Display Below Footer section"
 msgstr ""
 
-#: config/footer/credits.php:21, config/footer/credits.php:184
+#: config/footer/credits.php:21, config/footer/credits.php:182
 msgid "Display Footer Credits section"
 msgstr ""
 
@@ -748,6 +748,14 @@ msgstr ""
 
 #: config/footer/credits.php:165
 msgid "Widget Area"
+msgstr ""
+
+#: config/footer/credits.php:174
+msgid "The footer credits text can be changed from the "
+msgstr ""
+
+#: config/footer/credits.php:176
+msgid "Genesis Footer Section"
 msgstr ""
 
 #: config/footer/scroll-to-top.php:25
@@ -906,32 +914,32 @@ msgstr ""
 msgid "Desktop Layout"
 msgstr ""
 
-#: config/header/primary.php:39
-msgid "Mobile Layout"
-msgstr ""
-
-#: config/header/primary.php:53, config/menus/mega.php:96
+#: config/header/primary.php:36, config/menus/mega.php:96
 msgid "Tip:"
 msgstr ""
 
-#: config/header/primary.php:54
+#: config/header/primary.php:37
 msgid "Menu not aligning correctly? Try adjusting the"
 msgstr ""
 
-#: config/header/primary.php:56
+#: config/header/primary.php:39
 msgid "in the"
 msgstr ""
 
-#: config/header/primary.php:58
+#: config/header/primary.php:41
 msgid "Primary Menu Section"
 msgstr ""
 
-#: config/header/primary.php:59, lib/customizer/site-identity.php:200
+#: config/header/primary.php:42, lib/customizer/site-identity.php:200
 msgid "or the"
 msgstr ""
 
-#: config/header/primary.php:61
+#: config/header/primary.php:44
 msgid "Secondary Menu Section"
+msgstr ""
+
+#: config/header/primary.php:50
+msgid "Mobile Layout"
 msgstr ""
 
 #: config/header/primary.php:70
@@ -1238,7 +1246,7 @@ msgstr ""
 msgid "Menu Item Spacing Bottom"
 msgstr ""
 
-#: config/menus/footer.php:21, config/single/featured-image.php:33
+#: config/menus/footer.php:21, config/single/featured-image.php:21
 msgid "Position"
 msgstr ""
 
@@ -1370,7 +1378,7 @@ msgstr ""
 msgid "Menu Item Alignment"
 msgstr ""
 
-#: config/menus/mobile.php:230, config/single/featured-image.php:57
+#: config/menus/mobile.php:230
 msgid "Full"
 msgstr ""
 
@@ -1546,32 +1554,24 @@ msgstr ""
 msgid "Post Comment"
 msgstr ""
 
-#: config/single/featured-image.php:21
-msgid "Display on"
+#: config/single/entry.php:95
+msgid "Entry Spacing Mobile"
 msgstr ""
 
-#: config/single/featured-image.php:36
+#: config/single/entry.php:135
+msgid "Entry Spacing Desktop"
+msgstr ""
+
+#: config/single/featured-image.php:24
 msgid "Before Entry"
 msgstr ""
 
-#: config/single/featured-image.php:37
+#: config/single/featured-image.php:25
 msgid "Entry Header"
 msgstr ""
 
-#: config/single/featured-image.php:39
+#: config/single/featured-image.php:27
 msgid "Entry Footer"
-msgstr ""
-
-#: config/single/featured-image.php:45
-msgid "Size"
-msgstr ""
-
-#: config/single/featured-image.php:55
-msgid "Default"
-msgstr ""
-
-#: config/single/featured-image.php:56
-msgid "Wide"
 msgstr ""
 
 #: lib/admin/metabox.php:117
@@ -1730,11 +1730,11 @@ msgstr ""
 msgid "Sticky Header"
 msgstr ""
 
-#: lib/customizer/sections.php:55, lib/functions/theme-support.php:79
+#: lib/customizer/sections.php:55, lib/functions/theme-support.php:65
 msgid "Primary Menu"
 msgstr ""
 
-#: lib/customizer/sections.php:56, lib/functions/theme-support.php:80
+#: lib/customizer/sections.php:56, lib/functions/theme-support.php:66
 msgid "Secondary Menu"
 msgstr ""
 
@@ -1750,7 +1750,7 @@ msgstr ""
 msgid "Sub Menu Toggle"
 msgstr ""
 
-#: lib/customizer/sections.php:61, lib/functions/theme-support.php:81
+#: lib/customizer/sections.php:61, lib/functions/theme-support.php:67
 msgid "Footer Menu"
 msgstr ""
 
@@ -1907,7 +1907,7 @@ msgid "Default image"
 msgstr ""
 
 #: lib/functions/layouts.php:29
-msgid "Center Content"
+msgid "Narrow Content"
 msgstr ""
 
 #: lib/functions/scripts.php:69
@@ -1990,14 +1990,14 @@ msgstr ""
 msgid "Toggle Header"
 msgstr ""
 
-#: lib/structure/hero.php:223
+#: lib/structure/hero.php:228
 msgid "Not found, error 404"
 msgstr ""
 
-#: lib/structure/hero.php:226
+#: lib/structure/hero.php:231
 msgid "Search results for: "
 msgstr ""
 
-#: lib/structure/hero.php:432
+#: lib/structure/hero.php:437
 msgid "Post Type Archives"
 msgstr ""

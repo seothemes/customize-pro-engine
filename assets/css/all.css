@@ -1217,6 +1217,10 @@ iframe {
   margin-left: auto;
 }
 
+.narrow-content .content-sidebar-wrap {
+  justify-content: center;
+}
+
 .content-sidebar-wrap .wrap {
   width: 100%;
   max-width: 100%;
@@ -1252,7 +1256,7 @@ iframe {
   width: 100%;
 }
 
-.center-content .content {
+.narrow-content .content {
   margin-right: auto;
   margin-left: auto;
 }

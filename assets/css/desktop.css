@@ -272,7 +272,7 @@ html.admin-bar-showing {
   margin: 0 0 1.6rem 1.6rem;
 }
 
-.center-content .alignfull,
+.narrow-content .alignfull,
 .full-width-content .alignfull {
   width: 100vw;
   max-width: 100vw;
@@ -280,7 +280,7 @@ html.admin-bar-showing {
   margin-left: calc(-100vw / 2 + 100% / 2);
 }
 
-.center-content .alignwide,
+.narrow-content .alignwide,
 .full-width-content .alignwide {
   width: 140%;
   max-width: 140%;

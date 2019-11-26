@@ -37,7 +37,7 @@ return [
 			],
 			[
 				'element'         => [
-					'.center-content .content',
+					'.narrow-content .content',
 				],
 				'property'        => 'max-width',
 				'value_pattern'   => 'calc($px - sidebarPrimaryWidthpx - gutterWidthpx)',

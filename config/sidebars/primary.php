@@ -143,7 +143,7 @@ return [
 				'element'         => [
 					'.sidebar-content .content',
 					'.content-sidebar .content',
-					'.center-content .content',
+					'.narrow-content .content',
 					'.page-template-blocks .content',
 				],
 				'property'        => 'width',

@@ -49,7 +49,7 @@ return [
 				'element'         => [
 					'.sidebar-content .content',
 					'.content-sidebar .content',
-					'.center-content .content',
+					'.narrow-content .content',
 					'.page-template-blocks .content',
 				],
 				'property'        => 'width',
@@ -77,7 +77,7 @@ return [
 			[
 				'element'     => [
 					'.full-width-content .content',
-					'.center-content .content',
+					'.narrow-content .content',
 				],
 				'property'    => 'margin-bottom',
 				'units'       => 'px',
@@ -247,9 +247,9 @@ return [
 			[
 				'element'       => [
 					'.full-width-content .alignfull',
-					'.center-content .alignfull',
+					'.narrow-content .alignfull',
 					'.full-width-content .alignwide',
-					'.center-content .alignwide',
+					'.narrow-content .alignwide',
 				],
 				'property'      => 'margin-left',
 				'value_pattern' => 'calc((-100vw - -$vw) / 2)',

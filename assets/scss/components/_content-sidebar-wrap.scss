@@ -17,6 +17,10 @@
 		align-items: flex-start;
 	}
 
+	.narrow-content & {
+		justify-content: center;
+	}
+
 	// Sub wrap.
 	.wrap {
 		width: 100%;

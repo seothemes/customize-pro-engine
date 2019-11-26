@@ -24,26 +24,12 @@ namespace CustomizePro;
  */
 function setup_layouts() {
 	\genesis_register_layout(
-		'center-content',
+		'narrow-content',
 		[
-			'label' => __( 'Center Content', 'customize-pro' ),
-			'img'   => _get_url() . 'assets/img/center-content.gif',
+			'label' => __( 'Narrow Content', 'customize-pro' ),
+			'img'   => _get_url() . 'assets/img/narrow-content.gif',
 		]
 	);
-}
-
-\add_action( 'genesis_before', __NAMESPACE__ . '\center_content' );
-/**
- * Remove sidebars from center-content layout.
- *
- * @since 1.0.0
- *
- * @return void
- */
-function center_content() {
-	if ( 'center-content' === genesis_site_layout() ) {
-		\add_filter( 'genesis_site_layout', '__genesis_return_full_width_content' );
-	}
 }
 
 // Move Secondary Sidebar into content-sidebar-wrap.

@@ -41,7 +41,7 @@ function block_template_layout() {
 		return $full_width;
 	}
 
-	return 'center-content';
+	return 'narrow-content';
 }
 
 // Runs the Genesis loop.

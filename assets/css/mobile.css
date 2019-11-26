@@ -143,9 +143,9 @@
   display: flex;
 }
 
-.center-content .alignfull,
+.narrow-content .alignfull,
 .full-width-content .alignfull,
-.center-content .alignwide,
+.narrow-content .alignwide,
 .full-width-content .alignwide {
   width: 100vw;
 }
